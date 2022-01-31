@@ -302,7 +302,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
+        "x": 1450,
         "y": 420,
         "wires": []
     },
@@ -318,7 +318,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
+        "x": 1450,
         "y": 500,
         "wires": []
     },
