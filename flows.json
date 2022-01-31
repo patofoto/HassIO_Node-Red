@@ -227,7 +227,7 @@
         "id": "b89cf62ecef9cc0e",
         "type": "poll-state",
         "z": "b12c15a675080578",
-        "name": "",
+        "name": "Temperature >=77",
         "server": "e9663f53.9c91a",
         "version": 2,
         "exposeToHomeAssistant": false,
@@ -245,22 +245,21 @@
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
         "outputinitially": false,
-        "outputonchanged": false,
+        "outputonchanged": true,
         "entity_id": "sensor.ble_temperature_server_closet_temperature_monitor",
-        "state_type": "num",
-        "halt_if": "75",
+        "state_type": "habool",
+        "halt_if": "77",
         "halt_if_type": "num",
         "halt_if_compare": "gte",
         "outputs": 2,
-        "x": 290,
-        "y": 400,
+        "x": 210,
+        "y": 460,
         "wires": [
             [
-                "54d452286393b91c",
-                "fbc2516185eb63db"
+                "2898e7100656463d"
             ],
             [
-                "60cac9800ae110ad"
+                "163b401dfdbbf1b8"
             ]
         ]
     },
@@ -281,8 +280,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 730,
-        "y": 380,
+        "x": 1230,
+        "y": 420,
         "wires": [
             [
                 "b671cce6d1ba84d2"
@@ -306,8 +305,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 730,
-        "y": 460,
+        "x": 1230,
+        "y": 500,
         "wires": [
             [
                 "908954f71d858337"
@@ -327,8 +326,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
-        "y": 380,
+        "x": 1490,
+        "y": 420,
         "wires": []
     },
     {
@@ -343,82 +342,242 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
+        "x": 1490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "1acee13a8d25f1ac",
+        "type": "ping",
+        "z": "b12c15a675080578",
+        "protocol": "Automatic",
+        "mode": "timed",
+        "name": "",
+        "host": "192.168.1.240",
+        "timer": "5",
+        "inputs": 0,
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "d58f70113733b306"
+            ]
+        ]
+    },
+    {
+        "id": "d58f70113733b306",
+        "type": "switch",
+        "z": "b12c15a675080578",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "number",
+                "vt": "number"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 620,
+        "wires": [
+            [
+                "9dc0b4860edde826"
+            ],
+            [
+                "cb3b05f06a015418"
+            ]
+        ]
+    },
+    {
+        "id": "1a09924326b24164",
+        "type": "function",
+        "z": "b12c15a675080578",
+        "name": "",
+        "func": "let temperature = msg.payload;\nlet serverState = msg.topic;\n\nif (temperature === true || serverState === 'ON'){\n    msg.payload = 'ON';\n} else if (temperature === false || serverState === 'ON'){\n    msg.payload = 'ON';\n} else {\n    msg.payload = 'OFF';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
         "y": 460,
-        "wires": []
-    },
-    {
-        "id": "13975e2cb5a66afa",
-        "type": "telegram sender",
-        "z": "b12c15a675080578",
-        "name": "",
-        "bot": "66a315a4c050f1ba",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 1190,
-        "y": 300,
         "wires": [
             [
-                "52e525ac23648be5"
+                "2273bd2b2ed4f462"
             ]
         ]
     },
     {
-        "id": "279c93b067161523",
-        "type": "function",
+        "id": "2898e7100656463d",
+        "type": "change",
         "z": "b12c15a675080578",
-        "name": "",
-        "func": "msg.payload = {\n    content: 'Temperature high in server closet',\n    type: 'message',\n    chatId: 1951007350,\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1000,
-        "y": 300,
+        "name": "true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 440,
         "wires": [
             [
-                "13975e2cb5a66afa"
+                "1a09924326b24164"
             ]
         ]
     },
     {
-        "id": "fbc2516185eb63db",
-        "type": "function",
+        "id": "163b401dfdbbf1b8",
+        "type": "change",
         "z": "b12c15a675080578",
-        "name": "",
-        "func": "let tempCloset = msg.payload\n    if (tempCloset === 85){\n        msg.payload = 'ON';\n    } else if (tempCloset > 85) {\n        msg.payload = '';\n    } else if (tempCloset === 84.9) {\n        msg.payload = 'OFF';\n    } else {\n        msg.payload = '';\n    }\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 300,
+        "name": "false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 480,
         "wires": [
             [
-                "10a8a7b62ff7840f"
+                "1a09924326b24164"
             ]
         ]
     },
     {
-        "id": "52e525ac23648be5",
-        "type": "debug",
+        "id": "9dc0b4860edde826",
+        "type": "change",
         "z": "b12c15a675080578",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 300,
-        "wires": []
+        "name": "ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 600,
+        "wires": [
+            [
+                "f05d6472e8dafb21"
+            ]
+        ]
     },
     {
-        "id": "10a8a7b62ff7840f",
+        "id": "f05d6472e8dafb21",
+        "type": "change",
+        "z": "b12c15a675080578",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 600,
+        "wires": [
+            [
+                "1a09924326b24164"
+            ]
+        ]
+    },
+    {
+        "id": "4b14e59160fd8e7f",
+        "type": "change",
+        "z": "b12c15a675080578",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 640,
+        "wires": [
+            [
+                "1a09924326b24164"
+            ]
+        ]
+    },
+    {
+        "id": "cb3b05f06a015418",
+        "type": "change",
+        "z": "b12c15a675080578",
+        "name": "OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 640,
+        "wires": [
+            [
+                "4b14e59160fd8e7f"
+            ]
+        ]
+    },
+    {
+        "id": "2273bd2b2ed4f462",
         "type": "switch",
         "z": "b12c15a675080578",
         "name": "",
@@ -429,16 +588,24 @@
                 "t": "eq",
                 "v": "ON",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 850,
-        "y": 300,
+        "outputs": 2,
+        "x": 1030,
+        "y": 460,
         "wires": [
             [
-                "279c93b067161523"
+                "54d452286393b91c"
+            ],
+            [
+                "60cac9800ae110ad"
             ]
         ]
     }
