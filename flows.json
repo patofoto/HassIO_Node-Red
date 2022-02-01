@@ -376,7 +376,7 @@
         "type": "function",
         "z": "b12c15a675080578",
         "name": "",
-        "func": "let temperature = msg.payload;\nlet serverState = msg.topic;\n\nif (temperature === true && serverState === 'ON'){\n    msg.payload = 'ON';\n} else if (temperature === false || serverState === 'ON'){\n    msg.payload = 'ON';\n} else if (temperature === true || serverState === 'OFF'){\n    msg.payload = 'ON';\n} else {\n    msg.payload = 'OFF';\n}\n\nreturn msg;",
+        "func": "let temperature = msg.payload;\nlet serverState = msg.topic;\n\nif (temperature === true || serverState === 'ON'){\n    msg.payload = 'ON';\n} else {\n    msg.payload = 'OFF';\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
