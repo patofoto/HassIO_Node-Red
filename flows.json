@@ -463,17 +463,15 @@
         "z": "b12c15a675080578",
         "name": "",
         "server": "e9663f53.9c91a",
-        "version": 4,
+        "version": 5,
         "debugenabled": false,
         "domain": "switch",
         "service": "turn_on",
-        "target": {
-            "entityId": [
-                "switch.qiachip_smart_switch_socket_1"
-            ],
-            "areaId": [],
-            "deviceId": []
-        },
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.qiachip_smart_switch_socket_1"
+        ],
         "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
@@ -494,17 +492,15 @@
         "z": "b12c15a675080578",
         "name": "",
         "server": "e9663f53.9c91a",
-        "version": 4,
+        "version": 5,
         "debugenabled": false,
         "domain": "switch",
         "service": "turn_off",
-        "target": {
-            "entityId": [
-                "switch.qiachip_smart_switch_socket_1"
-            ],
-            "areaId": [],
-            "deviceId": []
-        },
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.qiachip_smart_switch_socket_1"
+        ],
         "data": "",
         "dataType": "jsonata",
         "mergeContext": "",
