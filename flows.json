@@ -23,28 +23,39 @@
         "info": ""
     },
     {
-        "id": "e9663f53.9c91a",
-        "type": "server",
-        "name": "Home Assistant",
-        "version": 2,
-        "addon": true,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true,
-        "cacheJson": true,
-        "heartbeat": false,
-        "heartbeatInterval": 30
+        "id": "a91cab19a70e1d04",
+        "type": "tab",
+        "label": "Xbox Cabinet Temp",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1424ae823a1bfa09",
+        "type": "tab",
+        "label": "API Request",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f6ce34598c56937e",
+        "type": "tab",
+        "label": "Plants",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "bb00bcd9e2f502fd",
         "type": "mqtt-broker",
-        "name": "",
+        "name": "MQTT Broker",
         "broker": "192.168.1.126",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
         "usetls": false,
-        "protocolVersion": "4",
+        "protocolVersion": "5",
         "keepalive": "60",
         "cleansession": true,
         "birthTopic": "",
@@ -59,84 +70,37 @@
         "willQos": "0",
         "willPayload": "",
         "willMsg": {},
+        "userProps": "",
         "sessionExpiry": ""
     },
     {
-        "id": "073616dff83a594c",
-        "type": "mqtt in",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "topic": "pimoroni/temperature",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "bb00bcd9e2f502fd",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 300,
-        "y": 260,
-        "wires": [
-            [
-                "90de78d1738cf7cd"
-            ]
-        ]
-    },
-    {
-        "id": "c89e97824000e461",
-        "type": "debug",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1070,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "90de78d1738cf7cd",
-        "type": "json",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 550,
-        "y": 260,
-        "wires": [
-            [
-                "9935bfbb5e81f39e"
-            ]
-        ]
-    },
-    {
-        "id": "7643a17584870c3c",
-        "type": "ha-entity",
-        "z": "4093e1bc0be41abd",
-        "name": "Pi_Zero_Temp",
-        "server": "e9663f53.9c91a",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
+        "id": "df200b87cd9ca7c3",
+        "type": "ha-entity-config",
+        "server": "ee1c5a06a5b46741",
+        "deviceConfig": "dcef3a76b045b8e5",
+        "name": "Server Closet BME280",
+        "version": "6",
         "entityType": "sensor",
-        "config": [
+        "haConfig": [
             {
                 "property": "name",
-                "value": "Pi_Zero_Temp_Server_Closet"
-            },
-            {
-                "property": "device_class",
-                "value": ""
+                "value": "Server_Closet_BME280"
             },
             {
                 "property": "icon",
                 "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": "temperature"
             },
             {
                 "property": "unit_of_measurement",
@@ -145,57 +109,203 @@
             {
                 "property": "state_class",
                 "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "71a74b2d787ad9f5",
+        "type": "ha-entity-config",
+        "server": "ee1c5a06a5b46741",
+        "deviceConfig": "87d54f07cef61703",
+        "name": "Dev Temp Sensor",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "developer_temperature"
             },
             {
-                "property": "last_reset",
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "°C"
+            },
+            {
+                "property": "state_class",
                 "value": ""
             }
         ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": true,
-        "outputLocation": "payload",
-        "outputLocationType": "none",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "$entity().state ? \"on\": \"off\"",
-        "outputPayloadType": "jsonata",
-        "x": 880,
-        "y": 260,
-        "wires": [
-            [
-                "c89e97824000e461"
-            ]
-        ]
+        "resend": false,
+        "debugEnabled": false
     },
     {
-        "id": "9935bfbb5e81f39e",
-        "type": "smooth",
-        "z": "4093e1bc0be41abd",
+        "id": "dcef3a76b045b8e5",
+        "type": "ha-device-config",
+        "name": "Server Closet BME280",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "620d15686ef0e03f",
+        "type": "ha-device-config",
+        "name": "Xbox_BME280",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "f887cc6fa41f9cfb",
+        "type": "ha-entity-config",
+        "server": "2e525fca57e97f6e",
+        "deviceConfig": "620d15686ef0e03f",
+        "name": "Xbox_BME280",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Xbox_BME280"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": "temperature"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "°F"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "87d54f07cef61703",
+        "type": "ha-device-config",
+        "name": "Dev-Temp",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "6c4b6868601ff61a",
+        "type": "chronos-config",
+        "name": "Greenwich, CT",
+        "timezone": "",
+        "sunPositions": []
+    },
+    {
+        "id": "314f67ab62278cc0",
+        "type": "moonNode-connector",
+        "server": "192.168.1.53:7125"
+    },
+    {
+        "id": "822f395fa7984149",
+        "type": "telegrambot-config",
+        "botname": "@patofoto_bot",
+        "usernames": "pato",
+        "chatIds": "1951007350",
+        "pollInterval": "300"
+    },
+    {
+        "id": "9a9e064f6ef2a08b",
+        "type": "position-config",
         "name": "",
-        "property": "payload",
-        "action": "mean",
-        "count": "10",
-        "round": "1",
-        "mult": "single",
-        "reduce": false,
-        "x": 700,
-        "y": 260,
-        "wires": [
-            [
-                "7643a17584870c3c"
-            ]
-        ]
+        "isValide": "true",
+        "angleType": "deg",
+        "timeZoneOffset": "99",
+        "timeZoneDST": "0",
+        "stateTimeFormat": "3",
+        "stateDateFormat": "12",
+        "contextStore": ""
+    },
+    {
+        "id": "2e525fca57e97f6e",
+        "type": "server",
+        "d": true,
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": false
+    },
+    {
+        "id": "ee1c5a06a5b46741",
+        "type": "server",
+        "name": "Home Assistant 2",
+        "version": 5,
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": false
     },
     {
         "id": "39f3bb83e5a22268",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
         "name": "",
-        "topic": "esp32-bme280-sensor/sensor/temperature/state",
+        "topic": "server-bme280-sensor/sensor/temperature/state",
         "qos": "2",
-        "datatype": "auto",
+        "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
         "nl": false,
         "rap": true,
@@ -223,63 +333,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1230,
+        "x": 1290,
         "y": 480,
         "wires": []
-    },
-    {
-        "id": "df200b87cd9ca7c3",
-        "type": "ha-entity",
-        "z": "4093e1bc0be41abd",
-        "name": "BME280",
-        "server": "e9663f53.9c91a",
-        "version": 2,
-        "debugenabled": false,
-        "outputs": 1,
-        "entityType": "sensor",
-        "config": [
-            {
-                "property": "name",
-                "value": "esp32_bme280"
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "°F"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            },
-            {
-                "property": "last_reset",
-                "value": ""
-            }
-        ],
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "resend": false,
-        "outputLocation": "payload.state",
-        "outputLocationType": "msg",
-        "inputOverride": "allow",
-        "outputOnStateChange": false,
-        "outputPayload": "$entity().state ? \"on\": \"off\"",
-        "outputPayloadType": "jsonata",
-        "x": 1040,
-        "y": 480,
-        "wires": [
-            [
-                "67218a632626f3b5"
-            ]
-        ]
     },
     {
         "id": "ae82b1607202d8c7",
@@ -305,7 +361,7 @@
         "type": "function",
         "z": "4093e1bc0be41abd",
         "name": "",
-        "func": "msg.payload = (((msg.payload*9)/5)+32).toFixed(1)\nreturn msg;",
+        "func": "msg.payload = (msg.payload).toFixed(1)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -315,7 +371,7 @@
         "y": 480,
         "wires": [
             [
-                "df200b87cd9ca7c3"
+                "24e1afc6db059761"
             ]
         ]
     },
@@ -328,7 +384,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 730,
@@ -336,31 +393,315 @@
         "wires": []
     },
     {
-        "id": "a33e709e972ae118",
+        "id": "b1c9f683f94e9ce2",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
         "name": "",
-        "topic": "motion-sensor/binary_sensor/status_led/state",
+        "topic": "dev-temp/sensor/developer_temperature/state",
         "qos": "2",
-        "datatype": "auto",
+        "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 470,
-        "y": 760,
+        "x": 400,
+        "y": 640,
         "wires": [
             [
-                "6e67a3a45f0a9416"
+                "542d8d8c1b4e7696",
+                "120adbe748b48278",
+                "ec1160e79fa27329"
             ]
         ]
     },
     {
-        "id": "6e67a3a45f0a9416",
+        "id": "542d8d8c1b4e7696",
         "type": "debug",
         "z": "4093e1bc0be41abd",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "120adbe748b48278",
+        "type": "switch",
+        "z": "4093e1bc0be41abd",
         "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "21",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "20.5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "20",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 790,
+        "y": 640,
+        "wires": [
+            [
+                "53c1247b55a5b8b3"
+            ],
+            [
+                "d782639776f416fa"
+            ],
+            [
+                "832f0803f117c2a4"
+            ]
+        ]
+    },
+    {
+        "id": "d782639776f416fa",
+        "type": "change",
+        "z": "4093e1bc0be41abd",
+        "name": "20.5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "20.5",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "832f0803f117c2a4",
+        "type": "change",
+        "z": "4093e1bc0be41abd",
+        "name": "20",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "20",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53c1247b55a5b8b3",
+        "type": "change",
+        "z": "4093e1bc0be41abd",
+        "name": "21",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "21",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24e1afc6db059761",
+        "type": "ha-sensor",
+        "z": "4093e1bc0be41abd",
+        "name": "Server Closet BME280",
+        "entityConfig": "df200b87cd9ca7c3",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1080,
+        "y": 480,
+        "wires": [
+            [
+                "67218a632626f3b5"
+            ]
+        ]
+    },
+    {
+        "id": "100ce984f4ece639",
+        "type": "mqtt in",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "xbox-bme280-sensor/sensor/temperature/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 400,
+        "y": 820,
+        "wires": [
+            [
+                "bca657bfafb23325"
+            ]
+        ]
+    },
+    {
+        "id": "5de0e43a69b7285a",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "bca657bfafb23325",
+        "type": "smooth",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 680,
+        "y": 820,
+        "wires": [
+            [
+                "5de0e43a69b7285a"
+            ]
+        ]
+    },
+    {
+        "id": "94c09b4b1b248357",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "ec1160e79fa27329",
+        "type": "ha-sensor",
+        "z": "4093e1bc0be41abd",
+        "name": "Dev Temp Sensor",
+        "entityConfig": "71a74b2d787ad9f5",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 830,
+        "y": 740,
+        "wires": [
+            [
+                "94c09b4b1b248357"
+            ]
+        ]
+    },
+    {
+        "id": "96f9066197e5f75a",
+        "type": "mqtt in",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "ender3v2_mqtt/moonraker/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 920,
+        "wires": [
+            [
+                "45859c3e68dedf69"
+            ]
+        ]
+    },
+    {
+        "id": "45859c3e68dedf69",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "aabda50bb7a9fdb8",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 21",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -368,36 +709,368 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 830,
-        "y": 760,
+        "x": 1500,
+        "y": 1380,
         "wires": []
     },
     {
-        "id": "20dbae6f6ee867b4",
-        "type": "mqtt out",
+        "id": "599a1a9c1a4a6c75",
+        "type": "api-call-service",
+        "z": "4093e1bc0be41abd",
+        "name": "Ender3v2 Power OFF",
+        "server": "2e525fca57e97f6e",
+        "version": 5,
+        "debugenabled": true,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.ender3v2_power_outlet_switch_0"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1280,
+        "y": 1400,
+        "wires": [
+            [
+                "aabda50bb7a9fdb8"
+            ]
+        ]
+    },
+    {
+        "id": "78b7bdf7ac2dc4ef",
+        "type": "switch",
         "z": "4093e1bc0be41abd",
         "name": "",
-        "topic": "motion-sensor/binary_sensor/status_led/state",
+        "property": "payload.fullModel.print_stats.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "standby",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "printing",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "complete",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "paused",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "cancelled",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "error",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": true,
+        "outputs": 6,
+        "x": 910,
+        "y": 1440,
+        "wires": [
+            [],
+            [],
+            [
+                "39742f4938cc7a09",
+                "d252993f105e19bc",
+                "f8171432a2fd98d7"
+            ],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "standby",
+            "printing",
+            "complete",
+            "paused",
+            "cancelled",
+            "error"
+        ]
+    },
+    {
+        "id": "e9c3a1a768eb7088",
+        "type": "mqtt in",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "ender3v2_mqtt/klipper/state/print_stats/state",
         "qos": "2",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
+        "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
-        "x": 900,
-        "y": 920,
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 370,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39742f4938cc7a09",
+        "type": "chronos-delay",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "config": "6c4b6868601ff61a",
+        "delayType": "fixedDuration",
+        "fixedDuration": "4",
+        "fixedDurationUnit": "minutes",
+        "randomDuration1": "1",
+        "randomDuration2": "5",
+        "randomDurationUnit": "seconds",
+        "randomizerMillis": false,
+        "whenType": "time",
+        "whenValue": "",
+        "offset": "0",
+        "random": false,
+        "preserveCtrlProps": false,
+        "ignoreCtrlProps": false,
+        "x": 1070,
+        "y": 1420,
+        "wires": [
+            [
+                "e34c51da90862f8e",
+                "599a1a9c1a4a6c75"
+            ]
+        ]
+    },
+    {
+        "id": "95054706fafa5bab",
+        "type": "moonNode-command",
+        "z": "4093e1bc0be41abd",
+        "name": "Shutdown Klipper",
+        "command": "SHUTDOWN_MACHINE",
+        "server": "314f67ab62278cc0",
+        "stateless": false,
+        "x": 1270,
+        "y": 1460,
+        "wires": [
+            [
+                "5aac262e5df2ce1b"
+            ],
+            [
+                "b8c1ca7c8435a0b5"
+            ],
+            [
+                "709e4550d774b93d"
+            ]
+        ]
+    },
+    {
+        "id": "5aac262e5df2ce1b",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 1420,
         "wires": []
     },
     {
-        "id": "4d24b1c263a3e340",
+        "id": "b8c1ca7c8435a0b5",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "709e4550d774b93d",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "d252993f105e19bc",
+        "type": "chronos-delay",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "config": "6c4b6868601ff61a",
+        "delayType": "fixedDuration",
+        "fixedDuration": "3",
+        "fixedDurationUnit": "minutes",
+        "randomDuration1": "1",
+        "randomDuration2": "5",
+        "randomDurationUnit": "seconds",
+        "randomizerMillis": false,
+        "whenType": "time",
+        "whenValue": "",
+        "offset": "0",
+        "random": false,
+        "preserveCtrlProps": false,
+        "ignoreCtrlProps": false,
+        "x": 1070,
+        "y": 1460,
+        "wires": [
+            [
+                "95054706fafa5bab"
+            ]
+        ]
+    },
+    {
+        "id": "c36824865ed96062",
+        "type": "moonNode-monitor",
+        "z": "4093e1bc0be41abd",
+        "name": "diplay_status",
+        "server": "314f67ab62278cc0",
+        "autoStart": false,
+        "mObjSel": [
+            "print_stats",
+            "display_status"
+        ],
+        "mObjList": "{\"objects\":[{\"object\":\"webhooks\",\"selected\":false},{\"object\":\"configfile\",\"selected\":false},{\"object\":\"mcu\",\"selected\":false},{\"object\":\"gcode_move\",\"selected\":false},{\"object\":\"print_stats\",\"selected\":false},{\"object\":\"virtual_sdcard\",\"selected\":false},{\"object\":\"pause_resume\",\"selected\":false},{\"object\":\"display_status\",\"selected\":false},{\"object\":\"gcode_macro CANCEL_PRINT\",\"selected\":false},{\"object\":\"gcode_macro PAUSE\",\"selected\":false},{\"object\":\"gcode_macro RESUME\",\"selected\":false},{\"object\":\"gcode_macro SET_PAUSE_NEXT_LAYER\",\"selected\":false},{\"object\":\"gcode_macro SET_PAUSE_AT_LAYER\",\"selected\":false},{\"object\":\"gcode_macro SET_PRINT_STATS_INFO\",\"selected\":false},{\"object\":\"gcode_macro _TOOLHEAD_PARK_PAUSE_CANCEL\",\"selected\":false},{\"object\":\"gcode_macro _CLIENT_EXTRUDE\",\"selected\":false},{\"object\":\"gcode_macro _CLIENT_RETRACT\",\"selected\":false},{\"object\":\"heaters\",\"selected\":false},{\"object\":\"heater_bed\",\"selected\":false},{\"object\":\"stepper_enable\",\"selected\":false},{\"object\":\"tmc2209 stepper_x\",\"selected\":false},{\"object\":\"tmc2209 stepper_y\",\"selected\":false},{\"object\":\"tmc2209 stepper_z\",\"selected\":false},{\"object\":\"tmc2209 extruder\",\"selected\":false},{\"object\":\"probe\",\"selected\":false},{\"object\":\"bed_mesh\",\"selected\":false},{\"object\":\"bed_screws\",\"selected\":false},{\"object\":\"screws_tilt_adjust\",\"selected\":false},{\"object\":\"output_pin beeper\",\"selected\":false},{\"object\":\"temperature_host raspberry_pi\",\"selected\":false},{\"object\":\"temperature_sensor raspberry_pi\",\"selected\":false},{\"object\":\"fan\",\"selected\":false},{\"object\":\"heater_fan extruder_motor_fan\",\"selected\":false},{\"object\":\"controller_fan board_fan\",\"selected\":false},{\"object\":\"gcode_macro _CLIENT_VARIABLE\",\"selected\":false},{\"object\":\"gcode_macro M600\",\"selected\":false},{\"object\":\"gcode_macro START_PRINT\",\"selected\":false},{\"object\":\"gcode_macro END_PRINT\",\"selected\":false},{\"object\":\"gcode_macro PID_AUTOTUNE_EXTRUDER_210\",\"selected\":false},{\"object\":\"gcode_macro PID_AUTOTUNE_BED_60\",\"selected\":false},{\"object\":\"gcode_macro LOAD\",\"selected\":false},{\"object\":\"gcode_macro UNLOAD\",\"selected\":false},{\"object\":\"gcode_macro SHUTDOWN_MACHINE\",\"selected\":false},{\"object\":\"gcode_macro PRESSURE_ADVANCE_SETUP\",\"selected\":false},{\"object\":\"gcode_macro BUILD_MESH\",\"selected\":false},{\"object\":\"gcode_macro PRINTER_POWER_OFF\",\"selected\":false},{\"object\":\"gcode_macro PRINTER_POWER_ON\",\"selected\":false},{\"object\":\"gcode_macro QUICK_PURGE_LINE\",\"selected\":false},{\"object\":\"gcode_macro EXTRUDE_100\",\"selected\":false},{\"object\":\"gcode_macro GET_TIMELAPSE_SETUP\",\"selected\":false},{\"object\":\"gcode_macro _SET_TIMELAPSE_SETUP\",\"selected\":false},{\"object\":\"gcode_macro TIMELAPSE_TAKE_FRAME\",\"selected\":false},{\"object\":\"gcode_macro _TIMELAPSE_NEW_FRAME\",\"selected\":false},{\"object\":\"gcode_macro HYPERLAPSE\",\"selected\":false},{\"object\":\"gcode_macro TIMELAPSE_RENDER\",\"selected\":false},{\"object\":\"gcode_macro TEST_STREAM_DELAY\",\"selected\":false},{\"object\":\"motion_report\",\"selected\":false},{\"object\":\"query_endstops\",\"selected\":false},{\"object\":\"idle_timeout\",\"selected\":false},{\"object\":\"system_stats\",\"selected\":false},{\"object\":\"manual_probe\",\"selected\":false},{\"object\":\"toolhead\",\"selected\":false},{\"object\":\"extruder\",\"selected\":false}]}",
+        "x": 730,
+        "y": 1480,
+        "wires": [
+            [
+                "78b7bdf7ac2dc4ef",
+                "28a1627ecbb4cfb1"
+            ],
+            [
+                "6bb11160f1e86e60"
+            ]
+        ]
+    },
+    {
+        "id": "f4af94d76f0db7d6",
+        "type": "server-state-changed",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "server": "2e525fca57e97f6e",
+        "version": 4,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.auto_shutdown",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 170,
+        "y": 1480,
+        "wires": [
+            [
+                "e05a6876b5c3d602"
+            ]
+        ]
+    },
+    {
+        "id": "e05a6876b5c3d602",
+        "type": "switch",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 1480,
+        "wires": [
+            [
+                "9ce22e9d936bfe77"
+            ],
+            [
+                "40583d0ba5bc90eb"
+            ]
+        ]
+    },
+    {
+        "id": "0be4c89496586d5a",
         "type": "inject",
         "z": "4093e1bc0be41abd",
-        "name": "",
+        "name": "Cancel",
         "props": [
             {
                 "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -405,13 +1078,287 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "ON",
-        "payloadType": "str",
-        "x": 470,
-        "y": 920,
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 850,
+        "y": 1740,
         "wires": [
             [
-                "20dbae6f6ee867b4"
+                "4add54433443ce95"
+            ]
+        ]
+    },
+    {
+        "id": "6bb11160f1e86e60",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 35",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "9ce22e9d936bfe77",
+        "type": "change",
+        "z": "4093e1bc0be41abd",
+        "name": "ON",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "on",
+                "fromt": "str",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.monitorState",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 1460,
+        "wires": [
+            [
+                "c36824865ed96062"
+            ]
+        ]
+    },
+    {
+        "id": "40583d0ba5bc90eb",
+        "type": "change",
+        "z": "4093e1bc0be41abd",
+        "name": "OFF",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "off",
+                "fromt": "str",
+                "to": "OFF",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.monitorState",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 1500,
+        "wires": [
+            [
+                "c36824865ed96062"
+            ]
+        ]
+    },
+    {
+        "id": "28a1627ecbb4cfb1",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "Complete Object",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "e34c51da90862f8e",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "f8171432a2fd98d7",
+        "type": "telegrambot-notify",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "bot": "822f395fa7984149",
+        "chatId": "1951007350",
+        "message": "Printer Auto Shutdown Started",
+        "parseMode": "",
+        "x": 1080,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "4496f17b005259f2",
+        "type": "inject",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 880,
+        "y": 1300,
+        "wires": [
+            [
+                "f8171432a2fd98d7"
+            ]
+        ]
+    },
+    {
+        "id": "4add54433443ce95",
+        "type": "rdg-delay-until",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "positionConfig": "9a9e064f6ef2a08b",
+        "time": "payload",
+        "timeType": "msg",
+        "offset": "5",
+        "offsetType": "num",
+        "offsetMultiplier": 1000,
+        "queuingBehavior": "first",
+        "flushMsgs": "",
+        "flushMsgsType": "none",
+        "flushMsgsValue": "true",
+        "flushMsgsValueType": "bool",
+        "dropMsgs": "payload",
+        "dropMsgsType": "msg",
+        "dropMsgsValue": "false",
+        "dropMsgsValueType": "bool",
+        "enqueueMsg": "payload",
+        "enqueueMsgType": "msg",
+        "enqueueMsgValue": "true",
+        "enqueueMsgValueType": "bool",
+        "ctrlPropChange": false,
+        "ctrlPropValue": "",
+        "ctrlPropValueType": "delete",
+        "tsCompare": "0",
+        "x": 1070,
+        "y": 1780,
+        "wires": [
+            [
+                "b6efb53a96dc1280"
+            ]
+        ]
+    },
+    {
+        "id": "2e3c5c4272b8592c",
+        "type": "inject",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 860,
+        "y": 1700,
+        "wires": [
+            [
+                "4add54433443ce95"
+            ]
+        ]
+    },
+    {
+        "id": "b6efb53a96dc1280",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "9e56c7af218aceeb",
+        "type": "inject",
+        "z": "4093e1bc0be41abd",
+        "name": "Restart",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 850,
+        "y": 1780,
+        "wires": [
+            [
+                "4add54433443ce95"
             ]
         ]
     },
@@ -419,8 +1366,8 @@
         "id": "b89cf62ecef9cc0e",
         "type": "poll-state",
         "z": "b12c15a675080578",
-        "name": "Temperature >=76",
-        "server": "e9663f53.9c91a",
+        "name": "Temperature >=80",
+        "server": "2e525fca57e97f6e",
         "version": 2,
         "exposeToHomeAssistant": false,
         "haConfig": [
@@ -438,9 +1385,9 @@
         "updateIntervalUnits": "seconds",
         "outputinitially": false,
         "outputonchanged": false,
-        "entity_id": "sensor.esp32_bme280",
+        "entity_id": "sensor.server_closet_bme280",
         "state_type": "num",
-        "halt_if": "76",
+        "halt_if": "80",
         "halt_if_type": "num",
         "halt_if_compare": "gte",
         "outputs": 2,
@@ -462,7 +1409,7 @@
         "type": "api-call-service",
         "z": "b12c15a675080578",
         "name": "",
-        "server": "e9663f53.9c91a",
+        "server": "2e525fca57e97f6e",
         "version": 5,
         "debugenabled": false,
         "domain": "switch",
@@ -491,7 +1438,7 @@
         "type": "api-call-service",
         "z": "b12c15a675080578",
         "name": "",
-        "server": "e9663f53.9c91a",
+        "server": "2e525fca57e97f6e",
         "version": 5,
         "debugenabled": false,
         "domain": "switch",
@@ -632,8 +1579,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 100,
+        "x": 790,
+        "y": 80,
         "wires": []
     },
     {
@@ -644,7 +1591,7 @@
         "persistId": "",
         "humanizeLocale": "",
         "x": 560,
-        "y": 100,
+        "y": 80,
         "wires": [
             [
                 "f5591325b29aa478"
@@ -708,7 +1655,7 @@
         "type": "server-state-changed",
         "z": "eda7241b54bb3bab",
         "name": "Start",
-        "server": "e9663f53.9c91a",
+        "server": "2e525fca57e97f6e",
         "version": 4,
         "exposeToHomeAssistant": false,
         "haConfig": [
@@ -746,7 +1693,7 @@
                 "valueType": "str"
             }
         ],
-        "x": 170,
+        "x": 130,
         "y": 100,
         "wires": [
             [
@@ -788,6 +1735,607 @@
         "wires": [
             [
                 "32cfb961f06d7f0b"
+            ]
+        ]
+    },
+    {
+        "id": "1751a7f227bb3e4e",
+        "type": "mqtt in",
+        "z": "a91cab19a70e1d04",
+        "name": "Xbox BME280",
+        "topic": "xbox-bme280-sensor/sensor/temperature/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "122df5a71a060f58",
+                "ab80a2d0647f244f"
+            ]
+        ]
+    },
+    {
+        "id": "ab80a2d0647f244f",
+        "type": "smooth",
+        "z": "a91cab19a70e1d04",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "5",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 480,
+        "y": 440,
+        "wires": [
+            [
+                "2797407d6855e43a"
+            ]
+        ]
+    },
+    {
+        "id": "2797407d6855e43a",
+        "type": "ha-sensor",
+        "z": "a91cab19a70e1d04",
+        "name": "Xbox BME280",
+        "entityConfig": "f887cc6fa41f9cfb",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 700,
+        "y": 440,
+        "wires": [
+            [
+                "ee08a130b1797763"
+            ]
+        ]
+    },
+    {
+        "id": "ee08a130b1797763",
+        "type": "debug",
+        "z": "a91cab19a70e1d04",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "122df5a71a060f58",
+        "type": "debug",
+        "z": "a91cab19a70e1d04",
+        "name": "Sensor Reading in C",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f372109837f0c7e9",
+        "type": "inject",
+        "z": "1424ae823a1bfa09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "1d4d86264db45237"
+            ]
+        ]
+    },
+    {
+        "id": "78366975c5ca66ef",
+        "type": "debug",
+        "z": "1424ae823a1bfa09",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1d4d86264db45237",
+        "type": "http request",
+        "z": "1424ae823a1bfa09",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "body",
+        "url": "https://public-api.cloud.meater.com/v1/devices",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "bearer",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Authorization",
+                "valueType": "other",
+                "valueValue": "Bearer <JWT>"
+            }
+        ],
+        "x": 570,
+        "y": 340,
+        "wires": [
+            [
+                "78366975c5ca66ef"
+            ]
+        ]
+    },
+    {
+        "id": "cda729c2b1b34ab8",
+        "type": "poll-state",
+        "z": "f6ce34598c56937e",
+        "name": "Philodendron",
+        "server": "2e525fca57e97f6e",
+        "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "updateinterval": "10",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "sensor.philodendron_bipinnatifidum_moisture",
+        "state_type": "str",
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "aa44e5359ba79be6"
+            ]
+        ]
+    },
+    {
+        "id": "94d0d0ce26292622",
+        "type": "debug",
+        "z": "f6ce34598c56937e",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "aa44e5359ba79be6",
+        "type": "switch",
+        "z": "f6ce34598c56937e",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "15",
+                "vt": "num",
+                "v2": "60",
+                "v2t": "num"
+            },
+            {
+                "t": "lte",
+                "v": "14",
+                "vt": "str"
+            },
+            {
+                "t": "gte",
+                "v": "60",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "7e3128efdcc741cd"
+            ],
+            [
+                "6780b5c5ee667448"
+            ],
+            [
+                "de0db67e0ec12742"
+            ]
+        ],
+        "outputLabels": [
+            "Good Moisture",
+            "Below",
+            "Above"
+        ]
+    },
+    {
+        "id": "7fc65a2a1506cc91",
+        "type": "debug",
+        "z": "f6ce34598c56937e",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "deea17b7915ea2f3",
+        "type": "debug",
+        "z": "f6ce34598c56937e",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7e3128efdcc741cd",
+        "type": "change",
+        "z": "f6ce34598c56937e",
+        "name": "Good",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Philodendron has enough water",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 160,
+        "wires": [
+            [
+                "94d0d0ce26292622"
+            ]
+        ]
+    },
+    {
+        "id": "de0db67e0ec12742",
+        "type": "change",
+        "z": "f6ce34598c56937e",
+        "name": "High",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Philodendron has too much water!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 240,
+        "wires": [
+            [
+                "deea17b7915ea2f3"
+            ]
+        ]
+    },
+    {
+        "id": "6780b5c5ee667448",
+        "type": "change",
+        "z": "f6ce34598c56937e",
+        "name": "Low",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Philodendron needs water!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 200,
+        "wires": [
+            [
+                "7fc65a2a1506cc91"
+            ]
+        ]
+    },
+    {
+        "id": "40ea3cf711fe2a76",
+        "type": "poll-state",
+        "z": "f6ce34598c56937e",
+        "name": "Dracanea",
+        "server": "2e525fca57e97f6e",
+        "version": 2,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "updateinterval": "10",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "sensor.dracaena_massangeana_moisture",
+        "state_type": "str",
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "x": 220,
+        "y": 440,
+        "wires": [
+            [
+                "86492af56e74993a"
+            ]
+        ]
+    },
+    {
+        "id": "f054eefbb0de53a8",
+        "type": "debug",
+        "z": "f6ce34598c56937e",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "86492af56e74993a",
+        "type": "switch",
+        "z": "f6ce34598c56937e",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "50",
+                "vt": "num",
+                "v2": "60",
+                "v2t": "num"
+            },
+            {
+                "t": "lte",
+                "v": "50",
+                "vt": "str"
+            },
+            {
+                "t": "gte",
+                "v": "60",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "d5914e4f9a475d0c"
+            ],
+            [
+                "ff389f1ddee59b2c"
+            ],
+            [
+                "4dd33389af23e4fe"
+            ]
+        ],
+        "outputLabels": [
+            "Good Moisture",
+            "Below",
+            "Above"
+        ]
+    },
+    {
+        "id": "36adea97723fede8",
+        "type": "debug",
+        "z": "f6ce34598c56937e",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a89bc2de3bdc4327",
+        "type": "debug",
+        "z": "f6ce34598c56937e",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d5914e4f9a475d0c",
+        "type": "change",
+        "z": "f6ce34598c56937e",
+        "name": "Good",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Dracanea has enough water",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "f054eefbb0de53a8"
+            ]
+        ]
+    },
+    {
+        "id": "4dd33389af23e4fe",
+        "type": "change",
+        "z": "f6ce34598c56937e",
+        "name": "High",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Dracanea has too much water!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "a89bc2de3bdc4327"
+            ]
+        ]
+    },
+    {
+        "id": "ff389f1ddee59b2c",
+        "type": "change",
+        "z": "f6ce34598c56937e",
+        "name": "Low",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Dracanea needs water!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "36adea97723fede8"
             ]
         ]
     }

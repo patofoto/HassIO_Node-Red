@@ -2,5 +2,30 @@
     "bb00bcd9e2f502fd": {
         "user": "patofotomqtt",
         "password": "306537"
+    },
+    "1d4d86264db45237": {
+        "password": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzRTR1Z282U3JWS1loRnkzd2N4bTJGIiwiaWF0IjoxNjY4MTA4NjQwfQ.Yl_THf6YdXIVp0jryBTmpXkzCF7Sb-QtWysIj8WCFMg"
+    },
+    "6c4b6868601ff61a": {
+        "latitude": "41.02",
+        "longitude": "-73.62"
+    },
+    "314f67ab62278cc0": {
+        "mrapi": "f22750be4f48415ab669310562db31da"
+    },
+    "822f395fa7984149": {
+        "token": "5867851128:AAEMWz_h27EpjQEA5KZUvbzcO6SArAQg7jk"
+    },
+    "9a9e064f6ef2a08b": {
+        "posLatitude": "41.02",
+        "posLongitude": "-73.62"
+    },
+    "2e525fca57e97f6e": {
+        "host": "http://192.168.1.126:8123",
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI4YjZhZmVmNWQyYzQ0MjEwOGQxOTkxMjk1NjZjMDFiMSIsImlhdCI6MTY3ODE5OTkyNSwiZXhwIjoxOTkzNTU5OTI1fQ.afYro45XXBkwboN0IB2zgwLltpp68mdMJMZ_O3ocIHU"
+    },
+    "ee1c5a06a5b46741": {
+        "host": "http://192.168.1.126:8123",
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIwMGFiMGJkMDdlNGY0MzRkYWM1Y2IzMWQxMjZmOWM1OSIsImlhdCI6MTY3ODc5NTAyOCwiZXhwIjoxOTk0MTU1MDI4fQ.4mhDWG_b3qer_f0Yh6MJmOkspAg8iK7-MP2pfWEOOzs"
     }
 }
