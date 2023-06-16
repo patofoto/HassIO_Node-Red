@@ -16,16 +16,5 @@
     "822f395fa7984149": {
         "token": "5867851128:AAEMWz_h27EpjQEA5KZUvbzcO6SArAQg7jk"
     },
-    "9a9e064f6ef2a08b": {
-        "posLatitude": "41.02",
-        "posLongitude": "-73.62"
-    },
-    "2e525fca57e97f6e": {
-        "host": "http://192.168.1.126:8123",
-        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI4YjZhZmVmNWQyYzQ0MjEwOGQxOTkxMjk1NjZjMDFiMSIsImlhdCI6MTY3ODE5OTkyNSwiZXhwIjoxOTkzNTU5OTI1fQ.afYro45XXBkwboN0IB2zgwLltpp68mdMJMZ_O3ocIHU"
-    },
-    "ee1c5a06a5b46741": {
-        "host": "http://192.168.1.126:8123",
-        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIwMGFiMGJkMDdlNGY0MzRkYWM1Y2IzMWQxMjZmOWM1OSIsImlhdCI6MTY3ODc5NTAyOCwiZXhwIjoxOTk0MTU1MDI4fQ.4mhDWG_b3qer_f0Yh6MJmOkspAg8iK7-MP2pfWEOOzs"
-    }
+    "250dc57f3ec20508": {}
 }
