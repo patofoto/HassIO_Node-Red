@@ -31,10 +31,18 @@
         "env": []
     },
     {
+        "id": "17db9c0281734025",
+        "type": "tab",
+        "label": "LED Matrix",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "bb00bcd9e2f502fd",
         "type": "mqtt-broker",
         "name": "MQTT Broker",
-        "broker": "192.168.1.58",
+        "broker": "10.0.20.55",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -501,7 +509,7 @@
         "round": "1",
         "mult": "single",
         "reduce": false,
-        "x": 680,
+        "x": 660,
         "y": 820,
         "wires": [
             [
@@ -1115,7 +1123,7 @@
         "id": "7213d71888b5b0bc",
         "type": "wled2",
         "z": "4093e1bc0be41abd",
-        "address": "192.168.1.121",
+        "address": "10.0.20.119",
         "segmentId": 0,
         "brightness": 128,
         "delay": 0,
@@ -1631,5 +1639,73 @@
                 "78366975c5ca66ef"
             ]
         ]
+    },
+    {
+        "id": "eca4d87c08a7e152",
+        "type": "wled2",
+        "z": "17db9c0281734025",
+        "address": "10.0.20.119",
+        "segmentId": 0,
+        "brightness": 128,
+        "delay": 0,
+        "color1": "#b51a00",
+        "color2": "#000000",
+        "color3": "#000000",
+        "effect": "122",
+        "effectIntensity": 128,
+        "effectSpeed": 128,
+        "name": "LED Matrix",
+        "palette": "2",
+        "preset": 0,
+        "state": "on",
+        "debug": "off",
+        "x": 930,
+        "y": 320,
+        "wires": [
+            [
+                "b086a1e7298565dc"
+            ]
+        ]
+    },
+    {
+        "id": "383399a0c568f6d8",
+        "type": "inject",
+        "z": "17db9c0281734025",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Patricio",
+        "payloadType": "str",
+        "x": 650,
+        "y": 320,
+        "wires": [
+            [
+                "eca4d87c08a7e152"
+            ]
+        ]
+    },
+    {
+        "id": "b086a1e7298565dc",
+        "type": "debug",
+        "z": "17db9c0281734025",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 320,
+        "wires": []
     }
 ]
