@@ -1172,6 +1172,43 @@
         "wires": []
     },
     {
+        "id": "4e540754c96c5693",
+        "type": "mqtt in",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "shellyplus1-441793a41d68/status/switch:0",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "87c81233dc86d49a"
+            ]
+        ]
+    },
+    {
+        "id": "87c81233dc86d49a",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 280,
+        "wires": []
+    },
+    {
         "id": "b89cf62ecef9cc0e",
         "type": "poll-state",
         "z": "b12c15a675080578",
