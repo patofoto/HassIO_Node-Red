@@ -326,7 +326,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
+        "x": 780,
         "y": 560,
         "wires": []
     },
@@ -531,7 +531,7 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 830,
+        "x": 790,
         "y": 720,
         "wires": [
             [
@@ -572,7 +572,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
+        "x": 600,
         "y": 920,
         "wires": []
     },
