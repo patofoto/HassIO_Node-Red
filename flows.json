@@ -1410,7 +1410,7 @@
         "type": "debug",
         "z": "b12c15a675080578",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
