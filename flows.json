@@ -210,7 +210,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 320,
-        "y": 640,
+        "y": 520,
         "wires": [
             [
                 "542d8d8c1b4e7696",
@@ -233,7 +233,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 780,
-        "y": 560,
+        "y": 440,
         "wires": []
     },
     {
@@ -264,7 +264,7 @@
         "repair": false,
         "outputs": 3,
         "x": 1010,
-        "y": 640,
+        "y": 520,
         "wires": [
             [
                 "53c1247b55a5b8b3"
@@ -297,7 +297,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 640,
+        "y": 520,
         "wires": [
             []
         ]
@@ -322,7 +322,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 680,
+        "y": 560,
         "wires": [
             []
         ]
@@ -347,7 +347,7 @@
         "to": "",
         "reg": false,
         "x": 1210,
-        "y": 600,
+        "y": 480,
         "wires": [
             []
         ]
@@ -365,7 +365,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1020,
-        "y": 720,
+        "y": 600,
         "wires": []
     },
     {
@@ -382,7 +382,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 790,
-        "y": 720,
+        "y": 600,
         "wires": [
             [
                 "94c09b4b1b248357"
