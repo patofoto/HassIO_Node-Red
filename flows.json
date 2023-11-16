@@ -196,101 +196,6 @@
         "pollInterval": "300"
     },
     {
-        "id": "39f3bb83e5a22268",
-        "type": "mqtt in",
-        "z": "4093e1bc0be41abd",
-        "d": true,
-        "name": "",
-        "topic": "server-temp-sensor/sensor/server_closet_temperature/state",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "bb00bcd9e2f502fd",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 360,
-        "y": 440,
-        "wires": [
-            [
-                "ae82b1607202d8c7",
-                "8dafc46753eeda73"
-            ]
-        ]
-    },
-    {
-        "id": "67218a632626f3b5",
-        "type": "debug",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "ae82b1607202d8c7",
-        "type": "smooth",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "property": "payload",
-        "action": "mean",
-        "count": "10",
-        "round": "1",
-        "mult": "single",
-        "reduce": false,
-        "x": 720,
-        "y": 440,
-        "wires": [
-            [
-                "9734f46c5e9c5052"
-            ]
-        ]
-    },
-    {
-        "id": "9734f46c5e9c5052",
-        "type": "function",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "func": "msg.payload = (msg.payload).toFixed(1)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 440,
-        "wires": [
-            [
-                "f2499c8f0f3bead4"
-            ]
-        ]
-    },
-    {
-        "id": "8dafc46753eeda73",
-        "type": "debug",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 360,
-        "wires": []
-    },
-    {
         "id": "b1c9f683f94e9ce2",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
@@ -445,63 +350,6 @@
         "y": 600,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "100ce984f4ece639",
-        "type": "mqtt in",
-        "z": "4093e1bc0be41abd",
-        "d": true,
-        "name": "",
-        "topic": "xbox-temp-sensor/sensor/xbox_temperature/state",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "bb00bcd9e2f502fd",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 330,
-        "y": 820,
-        "wires": [
-            [
-                "bca657bfafb23325"
-            ]
-        ]
-    },
-    {
-        "id": "5de0e43a69b7285a",
-        "type": "debug",
-        "z": "4093e1bc0be41abd",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "bca657bfafb23325",
-        "type": "smooth",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "property": "payload",
-        "action": "mean",
-        "count": "10",
-        "round": "1",
-        "mult": "single",
-        "reduce": false,
-        "x": 660,
-        "y": 820,
-        "wires": [
-            [
-                "5de0e43a69b7285a"
-            ]
         ]
     },
     {
@@ -962,27 +810,6 @@
         ]
     },
     {
-        "id": "f2499c8f0f3bead4",
-        "type": "ha-sensor",
-        "z": "4093e1bc0be41abd",
-        "d": true,
-        "name": "Server Closet Temp",
-        "entityConfig": "05487bc83a277c47",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1070,
-        "y": 440,
-        "wires": [
-            [
-                "67218a632626f3b5"
-            ]
-        ]
-    },
-    {
         "id": "39742f4938cc7a09",
         "type": "chronos-delay",
         "z": "4093e1bc0be41abd",
@@ -1426,6 +1253,122 @@
         "wires": []
     },
     {
+        "id": "39f3bb83e5a22268",
+        "type": "mqtt in",
+        "z": "b12c15a675080578",
+        "d": true,
+        "name": "",
+        "topic": "server-temp-sensor/sensor/server_closet_temperature/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 760,
+        "wires": [
+            [
+                "ae82b1607202d8c7",
+                "8dafc46753eeda73"
+            ]
+        ]
+    },
+    {
+        "id": "67218a632626f3b5",
+        "type": "debug",
+        "z": "b12c15a675080578",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "ae82b1607202d8c7",
+        "type": "smooth",
+        "z": "b12c15a675080578",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 700,
+        "y": 760,
+        "wires": [
+            [
+                "9734f46c5e9c5052"
+            ]
+        ]
+    },
+    {
+        "id": "9734f46c5e9c5052",
+        "type": "function",
+        "z": "b12c15a675080578",
+        "name": "",
+        "func": "msg.payload = (msg.payload).toFixed(1)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 760,
+        "wires": [
+            [
+                "f2499c8f0f3bead4"
+            ]
+        ]
+    },
+    {
+        "id": "8dafc46753eeda73",
+        "type": "debug",
+        "z": "b12c15a675080578",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f2499c8f0f3bead4",
+        "type": "ha-sensor",
+        "z": "b12c15a675080578",
+        "d": true,
+        "name": "Server Closet Temp",
+        "entityConfig": "05487bc83a277c47",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1050,
+        "y": 760,
+        "wires": [
+            [
+                "67218a632626f3b5"
+            ]
+        ]
+    },
+    {
         "id": "f5591325b29aa478",
         "type": "debug",
         "z": "eda7241b54bb3bab",
@@ -1584,6 +1527,63 @@
         "wires": [
             [
                 "f5591325b29aa478"
+            ]
+        ]
+    },
+    {
+        "id": "100ce984f4ece639",
+        "type": "mqtt in",
+        "z": "eda7241b54bb3bab",
+        "d": true,
+        "name": "",
+        "topic": "xbox-temp-sensor/sensor/xbox_temperature/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 540,
+        "wires": [
+            [
+                "bca657bfafb23325"
+            ]
+        ]
+    },
+    {
+        "id": "5de0e43a69b7285a",
+        "type": "debug",
+        "z": "eda7241b54bb3bab",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "bca657bfafb23325",
+        "type": "smooth",
+        "z": "eda7241b54bb3bab",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 580,
+        "y": 540,
+        "wires": [
+            [
+                "5de0e43a69b7285a"
             ]
         ]
     }
