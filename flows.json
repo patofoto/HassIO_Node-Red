@@ -1117,7 +1117,7 @@
         "payload": "on",
         "payloadType": "str",
         "x": 290,
-        "y": 140,
+        "y": 120,
         "wires": [
             [
                 "2f85d0293b8e4810"
@@ -1167,7 +1167,7 @@
         "correl": "",
         "expiry": "",
         "broker": "bb00bcd9e2f502fd",
-        "x": 700,
+        "x": 640,
         "y": 160,
         "wires": []
     },
