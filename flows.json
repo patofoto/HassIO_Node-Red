@@ -1176,7 +1176,7 @@
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
         "name": "",
-        "topic": "shellyplus1-441793a41d68/status",
+        "topic": "shellyplus1-441793a41d68/command/switch:0",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
@@ -1184,7 +1184,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 380,
+        "x": 420,
         "y": 280,
         "wires": [
             [
