@@ -1158,7 +1158,7 @@
         "type": "mqtt out",
         "z": "4093e1bc0be41abd",
         "name": "",
-        "topic": "",
+        "topic": "shellyplus1-441793a41d68/command/switch:0",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -1167,7 +1167,7 @@
         "correl": "",
         "expiry": "",
         "broker": "bb00bcd9e2f502fd",
-        "x": 570,
+        "x": 700,
         "y": 160,
         "wires": []
     },
