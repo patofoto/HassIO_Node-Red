@@ -1096,6 +1096,82 @@
         "wires": []
     },
     {
+        "id": "46a4ee90663a50d8",
+        "type": "inject",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "2f85d0293b8e4810"
+            ]
+        ]
+    },
+    {
+        "id": "9e532fff72edd9a1",
+        "type": "inject",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "2f85d0293b8e4810"
+            ]
+        ]
+    },
+    {
+        "id": "2f85d0293b8e4810",
+        "type": "mqtt out",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bb00bcd9e2f502fd",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
         "id": "b89cf62ecef9cc0e",
         "type": "poll-state",
         "z": "b12c15a675080578",
