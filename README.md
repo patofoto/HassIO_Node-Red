@@ -1,4 +1,4 @@
-Home Assistant Node Red
+Node Red Home Assistant Integration 
 ==========
 
 ### About
