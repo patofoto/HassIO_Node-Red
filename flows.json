@@ -870,7 +870,7 @@
         "z": "4093e1bc0be41abd",
         "name": "diplay_status",
         "server": "347b0fac569fd9db",
-        "autoStart": false,
+        "autoStart": true,
         "mObjSel": [
             "print_stats",
             "display_status"
