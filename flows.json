@@ -182,11 +182,6 @@
         "sunPositions": []
     },
     {
-        "id": "314f67ab62278cc0",
-        "type": "moonNode-connector",
-        "server": "10.0.10.13:7125"
-    },
-    {
         "id": "822f395fa7984149",
         "type": "telegrambot-config",
         "d": true,
@@ -194,6 +189,11 @@
         "usernames": "pato",
         "chatIds": "1951007350",
         "pollInterval": "300"
+    },
+    {
+        "id": "347b0fac569fd9db",
+        "type": "moonNode-connector",
+        "server": "localhost:7125"
     },
     {
         "id": "b1c9f683f94e9ce2",
@@ -869,7 +869,7 @@
         "type": "moonNode-monitor",
         "z": "4093e1bc0be41abd",
         "name": "diplay_status",
-        "server": "314f67ab62278cc0",
+        "server": "347b0fac569fd9db",
         "autoStart": false,
         "mObjSel": [
             "print_stats",
@@ -895,7 +895,7 @@
         "z": "4093e1bc0be41abd",
         "name": "Shutdown Klipper",
         "command": "SHUTDOWN_MACHINE",
-        "server": "314f67ab62278cc0",
+        "server": "",
         "stateless": false,
         "x": 1410,
         "y": 1040,
