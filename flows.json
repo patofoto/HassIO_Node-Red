@@ -895,7 +895,7 @@
         "z": "4093e1bc0be41abd",
         "name": "Shutdown Klipper",
         "command": "SHUTDOWN_MACHINE",
-        "server": "",
+        "server": "347b0fac569fd9db",
         "stateless": false,
         "x": 1410,
         "y": 1040,
