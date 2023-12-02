@@ -193,7 +193,7 @@
     {
         "id": "347b0fac569fd9db",
         "type": "moonNode-connector",
-        "server": "localhost:7125"
+        "server": "10.0.10.13:7125"
     },
     {
         "id": "b1c9f683f94e9ce2",
