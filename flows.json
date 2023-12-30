@@ -983,16 +983,18 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": false,
+        "service_domain": "",
         "service": "turn_on",
         "entityId": [
             "switch.utility_closet_fan_socket"
         ],
         "data": "",
         "dataType": "jsonata",
+        "mergecontext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 720,
+        "x": 690,
         "y": 420,
         "wires": [
             [
@@ -1057,7 +1059,8 @@
         "wires": [
             [
                 "2898e7100656463d",
-                "445c9dc62b48bc07"
+                "445c9dc62b48bc07",
+                "163b401dfdbbf1b8"
             ]
         ]
     },
