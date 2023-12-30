@@ -8,8 +8,7 @@
         "node-red-node-smooth": "0.1.2",
         "node-red-contrib-chronos": "1.19.0",
         "node-red-contrib-moonnode": "0.1.5",
-        "node-red-contrib-telegrambot-home": "0.7.2",
-        "node-red-contrib-sun-position": "2.2.0-beta3"
+        "node-red-contrib-telegrambot-home": "0.7.2"
     },
     "node-red": {
         "settings": {
