@@ -51,6 +51,46 @@
         "sessionExpiry": ""
     },
     {
+        "id": "6c4b6868601ff61a",
+        "type": "chronos-config",
+        "name": "Greenwich, CT",
+        "timezone": "",
+        "sunPositions": []
+    },
+    {
+        "id": "822f395fa7984149",
+        "type": "telegrambot-config",
+        "d": true,
+        "botname": "@patofoto_bot",
+        "usernames": "pato",
+        "chatIds": "1951007350",
+        "pollInterval": "300"
+    },
+    {
+        "id": "347b0fac569fd9db",
+        "type": "moonNode-connector",
+        "server": "10.0.10.13:7125"
+    },
+    {
+        "id": "87d54f07cef61703",
+        "type": "ha-device-config",
+        "d": true,
+        "name": "Dev-Temp",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "f1b7f0251b4cb415",
+        "type": "ha-device-config",
+        "name": "Server Closet Temp",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
         "id": "71a74b2d787ad9f5",
         "type": "ha-entity-config",
         "server": "250dc57f3ec20508",
@@ -90,48 +130,6 @@
         ],
         "resend": false,
         "debugEnabled": false
-    },
-    {
-        "id": "87d54f07cef61703",
-        "type": "ha-device-config",
-        "d": true,
-        "name": "Dev-Temp",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
-        "id": "250dc57f3ec20508",
-        "type": "server",
-        "name": "Home Assistant",
-        "version": 5,
-        "addon": true,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true,
-        "cacheJson": true,
-        "heartbeat": false,
-        "heartbeatInterval": "30",
-        "areaSelector": "friendlyName",
-        "deviceSelector": "friendlyName",
-        "entitySelector": "friendlyName",
-        "statusSeparator": ": ",
-        "statusYear": "2-digit",
-        "statusMonth": "short",
-        "statusDay": "numeric",
-        "statusHourCycle": "default",
-        "statusTimeFormat": "h:m",
-        "enableGlobalContextStore": false
-    },
-    {
-        "id": "f1b7f0251b4cb415",
-        "type": "ha-device-config",
-        "name": "Server Closet Temp",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
     },
     {
         "id": "05487bc83a277c47",
@@ -175,25 +173,32 @@
         "debugEnabled": false
     },
     {
-        "id": "6c4b6868601ff61a",
-        "type": "chronos-config",
-        "name": "Greenwich, CT",
-        "timezone": "",
-        "sunPositions": []
+        "id": "250dc57f3ec20508",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "2-digit",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": false
     },
     {
-        "id": "822f395fa7984149",
-        "type": "telegrambot-config",
-        "d": true,
-        "botname": "@patofoto_bot",
-        "usernames": "pato",
-        "chatIds": "1951007350",
-        "pollInterval": "300"
-    },
-    {
-        "id": "347b0fac569fd9db",
+        "id": "6f49639effa0204d",
         "type": "moonNode-connector",
-        "server": "10.0.10.13:7125"
+        "server": "10.0.10.90:7125"
     },
     {
         "id": "b1c9f683f94e9ce2",
@@ -369,27 +374,6 @@
         "wires": []
     },
     {
-        "id": "ec1160e79fa27329",
-        "type": "ha-sensor",
-        "z": "4093e1bc0be41abd",
-        "d": true,
-        "name": "Dev Temp Sensor",
-        "entityConfig": "71a74b2d787ad9f5",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 790,
-        "y": 600,
-        "wires": [
-            [
-                "94c09b4b1b248357"
-            ]
-        ]
-    },
-    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
@@ -441,35 +425,6 @@
         "x": 1720,
         "y": 960,
         "wires": []
-    },
-    {
-        "id": "599a1a9c1a4a6c75",
-        "type": "api-call-service",
-        "z": "4093e1bc0be41abd",
-        "name": "Ender3v2 Power OFF",
-        "server": "250dc57f3ec20508",
-        "version": 5,
-        "debugenabled": true,
-        "domain": "switch",
-        "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.ender3v2_power"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1460,
-        "y": 980,
-        "wires": [
-            [
-                "aabda50bb7a9fdb8"
-            ]
-        ]
     },
     {
         "id": "78b7bdf7ac2dc4ef",
@@ -583,47 +538,6 @@
         "x": 1720,
         "y": 1080,
         "wires": []
-    },
-    {
-        "id": "f4af94d76f0db7d6",
-        "type": "server-state-changed",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "server": "250dc57f3ec20508",
-        "version": 5,
-        "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.auto_shutdown",
-        "entityIdType": "exact",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 290,
-        "y": 1060,
-        "wires": [
-            [
-                "e05a6876b5c3d602"
-            ]
-        ]
     },
     {
         "id": "e05a6876b5c3d602",
@@ -1039,100 +953,128 @@
         "wires": []
     },
     {
-        "id": "b89cf62ecef9cc0e",
-        "type": "poll-state",
-        "z": "b12c15a675080578",
-        "name": "Temperature >=85",
+        "id": "599a1a9c1a4a6c75",
+        "type": "api-call-service",
+        "z": "4093e1bc0be41abd",
+        "name": "Ender3v2 Power OFF",
         "server": "250dc57f3ec20508",
-        "version": 3,
+        "version": 5,
+        "debugenabled": true,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.ender3v2_power"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1460,
+        "y": 980,
+        "wires": [
+            [
+                "aabda50bb7a9fdb8"
+            ]
+        ]
+    },
+    {
+        "id": "f4af94d76f0db7d6",
+        "type": "server-state-changed",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "server": "250dc57f3ec20508",
+        "version": 5,
+        "outputs": 1,
         "exposeAsEntityConfig": "",
-        "updateInterval": "15",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
+        "entityId": "input_boolean.auto_shutdown",
+        "entityIdType": "exact",
         "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.server_closet_temperature_mqtt",
-        "stateType": "num",
-        "ifState": "85",
-        "ifStateType": "num",
-        "ifStateOperator": "gte",
-        "outputs": 2,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
         "outputProperties": [
             {
                 "property": "payload",
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
             }
         ],
-        "x": 230,
-        "y": 440,
+        "x": 290,
+        "y": 1060,
         "wires": [
             [
-                "2898e7100656463d",
-                "445c9dc62b48bc07"
-            ],
-            [
-                "163b401dfdbbf1b8",
-                "445c9dc62b48bc07"
+                "e05a6876b5c3d602",
+                "3c9a87aa20f68f32"
             ]
         ]
     },
     {
-        "id": "54d452286393b91c",
-        "type": "api-call-service",
-        "z": "b12c15a675080578",
-        "name": "",
-        "server": "250dc57f3ec20508",
-        "version": 5,
-        "debugenabled": false,
-        "domain": "switch",
-        "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
-        "entityId": [
-            "switch.utility_closet_fan_socket"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergeContext": "",
-        "mustacheAltTags": false,
+        "id": "ec1160e79fa27329",
+        "type": "ha-sensor",
+        "z": "4093e1bc0be41abd",
+        "d": true,
+        "name": "Dev Temp Sensor",
+        "entityConfig": "71a74b2d787ad9f5",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
         "outputProperties": [],
-        "queue": "none",
-        "x": 720,
-        "y": 420,
+        "x": 790,
+        "y": 600,
         "wires": [
             [
-                "b671cce6d1ba84d2"
+                "94c09b4b1b248357"
             ]
         ]
     },
     {
-        "id": "60cac9800ae110ad",
+        "id": "9083bc1475d846cc",
+        "type": "moonNode-monitor",
+        "z": "4093e1bc0be41abd",
+        "name": "Voron",
+        "server": "6f49639effa0204d",
+        "autoStart": false,
+        "mObjSel": [],
+        "mObjList": "{objects:[]}",
+        "x": 810,
+        "y": 1240,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c6ec5766a42c82b7",
         "type": "api-call-service",
-        "z": "b12c15a675080578",
-        "name": "",
+        "z": "4093e1bc0be41abd",
+        "name": "Ender3v2 Power OFF",
         "server": "250dc57f3ec20508",
         "version": 5,
-        "debugenabled": false,
+        "debugenabled": true,
         "domain": "switch",
         "service": "turn_off",
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.utility_closet_fan_socket"
+            "switch.voron_power_switch_0"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -1140,11 +1082,114 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 720,
-        "y": 500,
+        "x": 1360,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c9a87aa20f68f32",
+        "type": "switch",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 1240,
         "wires": [
             [
-                "908954f71d858337"
+                "63691f16a74f6643"
+            ],
+            [
+                "fc300362cc224546"
+            ]
+        ]
+    },
+    {
+        "id": "63691f16a74f6643",
+        "type": "change",
+        "z": "4093e1bc0be41abd",
+        "name": "ON",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "on",
+                "fromt": "str",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.monitorState",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1220,
+        "wires": [
+            [
+                "9083bc1475d846cc"
+            ]
+        ]
+    },
+    {
+        "id": "fc300362cc224546",
+        "type": "change",
+        "z": "4093e1bc0be41abd",
+        "name": "OFF",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "off",
+                "fromt": "str",
+                "to": "OFF",
+                "tot": "str"
+            },
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.monitorState",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1260,
+        "wires": [
+            [
+                "9083bc1475d846cc"
             ]
         ]
     },
@@ -1348,6 +1393,116 @@
         "wires": []
     },
     {
+        "id": "54d452286393b91c",
+        "type": "api-call-service",
+        "z": "b12c15a675080578",
+        "name": "",
+        "server": "250dc57f3ec20508",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.utility_closet_fan_socket"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 720,
+        "y": 420,
+        "wires": [
+            [
+                "b671cce6d1ba84d2"
+            ]
+        ]
+    },
+    {
+        "id": "60cac9800ae110ad",
+        "type": "api-call-service",
+        "z": "b12c15a675080578",
+        "name": "",
+        "server": "250dc57f3ec20508",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.utility_closet_fan_socket"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 720,
+        "y": 500,
+        "wires": [
+            [
+                "908954f71d858337"
+            ]
+        ]
+    },
+    {
+        "id": "b89cf62ecef9cc0e",
+        "type": "poll-state",
+        "z": "b12c15a675080578",
+        "name": "Temperature >=85",
+        "server": "250dc57f3ec20508",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "15",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.server_closet_temperature_mqtt",
+        "stateType": "num",
+        "ifState": "85",
+        "ifStateType": "num",
+        "ifStateOperator": "gte",
+        "outputs": 2,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "2898e7100656463d",
+                "445c9dc62b48bc07"
+            ],
+            [
+                "163b401dfdbbf1b8",
+                "445c9dc62b48bc07"
+            ]
+        ]
+    },
+    {
         "id": "f2499c8f0f3bead4",
         "type": "ha-sensor",
         "z": "b12c15a675080578",
@@ -1436,50 +1591,6 @@
             ]
         ],
         "icon": "font-awesome/fa-times-circle"
-    },
-    {
-        "id": "bf616e196635595b",
-        "type": "server-state-changed",
-        "z": "eda7241b54bb3bab",
-        "name": "Start",
-        "server": "250dc57f3ec20508",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.patofoto_in_game",
-        "entityIdType": "exact",
-        "outputInitially": true,
-        "stateType": "habool",
-        "ifState": "true",
-        "ifStateType": "bool",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "command",
-                "propertyType": "msg",
-                "value": "start",
-                "valueType": "str"
-            }
-        ],
-        "x": 130,
-        "y": 140,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
-            ],
-            [
-                "62a125cfc757cc53"
-            ]
-        ]
     },
     {
         "id": "62a125cfc757cc53",
@@ -1584,6 +1695,50 @@
         "wires": [
             [
                 "5de0e43a69b7285a"
+            ]
+        ]
+    },
+    {
+        "id": "bf616e196635595b",
+        "type": "server-state-changed",
+        "z": "eda7241b54bb3bab",
+        "name": "Start",
+        "server": "250dc57f3ec20508",
+        "version": 5,
+        "outputs": 2,
+        "exposeAsEntityConfig": "",
+        "entityId": "binary_sensor.patofoto_in_game",
+        "entityIdType": "exact",
+        "outputInitially": true,
+        "stateType": "habool",
+        "ifState": "true",
+        "ifStateType": "bool",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "command",
+                "propertyType": "msg",
+                "value": "start",
+                "valueType": "str"
+            }
+        ],
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ],
+            [
+                "62a125cfc757cc53"
             ]
         ]
     }
