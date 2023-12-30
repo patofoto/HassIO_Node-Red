@@ -72,82 +72,6 @@
         "server": "10.0.10.13:7125"
     },
     {
-        "id": "71a74b2d787ad9f5",
-        "type": "ha-entity-config",
-        "server": "250dc57f3ec20508",
-        "name": "Dev Temp Sensor",
-        "version": "6",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "developer_temperature"
-            },
-            {
-                "property": "icon",
-                "value": ""
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "°C"
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "entityType": "sensor"
-    },
-    {
-        "id": "05487bc83a277c47",
-        "type": "ha-entity-config",
-        "server": "250dc57f3ec20508",
-        "name": "Server Closet Temp",
-        "version": "6",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": ""
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": ""
-            },
-            {
-                "property": "state_class",
-                "value": ""
-            }
-        ],
-        "entityType": "sensor"
-    },
-    {
         "id": "250dc57f3ec20508",
         "type": "server",
         "name": "Home Assistant",
@@ -1108,18 +1032,31 @@
         "name": "Temperature >=85",
         "server": "250dc57f3ec20508",
         "version": 3,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "updateinterval": "",
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
-        "outputs": 2,
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "sensor.server_closet_temperature_mqtt",
+        "halt_if": "",
+        "halt_if_type": "str",
+        "outputs": 1,
         "x": 230,
         "y": 440,
         "wires": [
             [
                 "2898e7100656463d",
-                "445c9dc62b48bc07"
-            ],
-            [
-                "163b401dfdbbf1b8",
                 "445c9dc62b48bc07"
             ]
         ]
