@@ -72,32 +72,11 @@
         "server": "10.0.10.13:7125"
     },
     {
-        "id": "87d54f07cef61703",
-        "type": "ha-device-config",
-        "d": true,
-        "name": "Dev-Temp",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
-        "id": "f1b7f0251b4cb415",
-        "type": "ha-device-config",
-        "name": "Server Closet Temp",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
         "id": "71a74b2d787ad9f5",
         "type": "ha-entity-config",
         "server": "250dc57f3ec20508",
-        "deviceConfig": "87d54f07cef61703",
         "name": "Dev Temp Sensor",
         "version": "6",
-        "entityType": "sensor",
         "haConfig": [
             {
                 "property": "name",
@@ -128,17 +107,14 @@
                 "value": ""
             }
         ],
-        "resend": false,
-        "debugEnabled": false
+        "entityType": "sensor"
     },
     {
         "id": "05487bc83a277c47",
         "type": "ha-entity-config",
         "server": "250dc57f3ec20508",
-        "deviceConfig": "f1b7f0251b4cb415",
         "name": "Server Closet Temp",
         "version": "6",
-        "entityType": "sensor",
         "haConfig": [
             {
                 "property": "name",
@@ -169,8 +145,7 @@
                 "value": ""
             }
         ],
-        "resend": false,
-        "debugEnabled": false
+        "entityType": "sensor"
     },
     {
         "id": "250dc57f3ec20508",
@@ -183,17 +158,7 @@
         "connectionDelay": true,
         "cacheJson": true,
         "heartbeat": false,
-        "heartbeatInterval": "30",
-        "areaSelector": "friendlyName",
-        "deviceSelector": "friendlyName",
-        "entitySelector": "friendlyName",
-        "statusSeparator": ": ",
-        "statusYear": "2-digit",
-        "statusMonth": "short",
-        "statusDay": "numeric",
-        "statusHourCycle": "default",
-        "statusTimeFormat": "h:m",
-        "enableGlobalContextStore": false
+        "heartbeatInterval": "30"
     },
     {
         "id": "6f49639effa0204d",
@@ -201,177 +166,23 @@
         "server": "10.0.10.90:7125"
     },
     {
-        "id": "b1c9f683f94e9ce2",
-        "type": "mqtt in",
-        "z": "4093e1bc0be41abd",
+        "id": "87d54f07cef61703",
+        "type": "ha-device-config",
         "d": true,
-        "name": "",
-        "topic": "t-display-s3/sensor/developer_temperature/state",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "bb00bcd9e2f502fd",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 320,
-        "y": 520,
-        "wires": [
-            [
-                "542d8d8c1b4e7696",
-                "120adbe748b48278",
-                "ec1160e79fa27329"
-            ]
-        ]
+        "name": "Dev-Temp",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
     },
     {
-        "id": "542d8d8c1b4e7696",
-        "type": "debug",
-        "z": "4093e1bc0be41abd",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "120adbe748b48278",
-        "type": "switch",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "21",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "20.5",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "20",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 1010,
-        "y": 520,
-        "wires": [
-            [
-                "53c1247b55a5b8b3"
-            ],
-            [
-                "d782639776f416fa"
-            ],
-            [
-                "832f0803f117c2a4"
-            ]
-        ]
-    },
-    {
-        "id": "d782639776f416fa",
-        "type": "change",
-        "z": "4093e1bc0be41abd",
-        "name": "20.5",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "20.5",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1210,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "832f0803f117c2a4",
-        "type": "change",
-        "z": "4093e1bc0be41abd",
-        "name": "20",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "20",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1210,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "53c1247b55a5b8b3",
-        "type": "change",
-        "z": "4093e1bc0be41abd",
-        "name": "21",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "21",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1210,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "94c09b4b1b248357",
-        "type": "debug",
-        "z": "4093e1bc0be41abd",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 600,
-        "wires": []
+        "id": "f1b7f0251b4cb415",
+        "type": "ha-device-config",
+        "name": "Server Closet Temp",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
     },
     {
         "id": "96f9066197e5f75a",
@@ -960,16 +771,12 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": true,
-        "domain": "switch",
         "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
         "entityId": [
             "switch.ender3v2_power"
         ],
         "data": "",
         "dataType": "jsonata",
-        "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
@@ -989,15 +796,6 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.auto_shutdown",
-        "entityIdType": "exact",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
         "for": "0",
         "forType": "num",
         "forUnits": "minutes",
@@ -1020,27 +818,6 @@
             [
                 "e05a6876b5c3d602",
                 "3c9a87aa20f68f32"
-            ]
-        ]
-    },
-    {
-        "id": "ec1160e79fa27329",
-        "type": "ha-sensor",
-        "z": "4093e1bc0be41abd",
-        "d": true,
-        "name": "Dev Temp Sensor",
-        "entityConfig": "71a74b2d787ad9f5",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 790,
-        "y": 600,
-        "wires": [
-            [
-                "94c09b4b1b248357"
             ]
         ]
     },
@@ -1069,16 +846,12 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": true,
-        "domain": "switch",
         "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
         "entityId": [
             "switch.voron_power_switch_0"
         ],
         "data": "",
         "dataType": "jsonata",
-        "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
@@ -1298,101 +1071,6 @@
         "wires": []
     },
     {
-        "id": "39f3bb83e5a22268",
-        "type": "mqtt in",
-        "z": "b12c15a675080578",
-        "d": true,
-        "name": "",
-        "topic": "server-temp-sensor/sensor/server_closet_temperature/state",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "bb00bcd9e2f502fd",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 340,
-        "y": 760,
-        "wires": [
-            [
-                "ae82b1607202d8c7",
-                "8dafc46753eeda73"
-            ]
-        ]
-    },
-    {
-        "id": "67218a632626f3b5",
-        "type": "debug",
-        "z": "b12c15a675080578",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1270,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "ae82b1607202d8c7",
-        "type": "smooth",
-        "z": "b12c15a675080578",
-        "name": "",
-        "property": "payload",
-        "action": "mean",
-        "count": "10",
-        "round": "1",
-        "mult": "single",
-        "reduce": false,
-        "x": 700,
-        "y": 760,
-        "wires": [
-            [
-                "9734f46c5e9c5052"
-            ]
-        ]
-    },
-    {
-        "id": "9734f46c5e9c5052",
-        "type": "function",
-        "z": "b12c15a675080578",
-        "name": "",
-        "func": "msg.payload = (msg.payload).toFixed(1)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 860,
-        "y": 760,
-        "wires": [
-            [
-                "f2499c8f0f3bead4"
-            ]
-        ]
-    },
-    {
-        "id": "8dafc46753eeda73",
-        "type": "debug",
-        "z": "b12c15a675080578",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 680,
-        "wires": []
-    },
-    {
         "id": "54d452286393b91c",
         "type": "api-call-service",
         "z": "b12c15a675080578",
@@ -1400,16 +1078,12 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": false,
-        "domain": "switch",
         "service": "turn_on",
-        "areaId": [],
-        "deviceId": [],
         "entityId": [
             "switch.utility_closet_fan_socket"
         ],
         "data": "",
         "dataType": "jsonata",
-        "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
@@ -1429,16 +1103,12 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": false,
-        "domain": "switch",
         "service": "turn_off",
-        "areaId": [],
-        "deviceId": [],
         "entityId": [
             "switch.utility_closet_fan_socket"
         ],
         "data": "",
         "dataType": "jsonata",
-        "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
@@ -1457,38 +1127,9 @@
         "name": "Temperature >=85",
         "server": "250dc57f3ec20508",
         "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "15",
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.server_closet_temperature_mqtt",
-        "stateType": "num",
-        "ifState": "85",
-        "ifStateType": "num",
-        "ifStateOperator": "gte",
         "outputs": 2,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
         "x": 230,
         "y": 440,
         "wires": [
@@ -1499,27 +1140,6 @@
             [
                 "163b401dfdbbf1b8",
                 "445c9dc62b48bc07"
-            ]
-        ]
-    },
-    {
-        "id": "f2499c8f0f3bead4",
-        "type": "ha-sensor",
-        "z": "b12c15a675080578",
-        "d": true,
-        "name": "Server Closet Temp",
-        "entityConfig": "05487bc83a277c47",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 1050,
-        "y": 760,
-        "wires": [
-            [
-                "67218a632626f3b5"
             ]
         ]
     },
@@ -1706,15 +1326,6 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "binary_sensor.patofoto_in_game",
-        "entityIdType": "exact",
-        "outputInitially": true,
-        "stateType": "habool",
-        "ifState": "true",
-        "ifStateType": "bool",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
