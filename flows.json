@@ -166,25 +166,6 @@
         "server": "10.0.10.90:7125"
     },
     {
-        "id": "87d54f07cef61703",
-        "type": "ha-device-config",
-        "d": true,
-        "name": "Dev-Temp",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
-        "id": "f1b7f0251b4cb415",
-        "type": "ha-device-config",
-        "name": "Server Closet Temp",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
@@ -1258,63 +1239,6 @@
         "wires": [
             [
                 "f5591325b29aa478"
-            ]
-        ]
-    },
-    {
-        "id": "100ce984f4ece639",
-        "type": "mqtt in",
-        "z": "eda7241b54bb3bab",
-        "d": true,
-        "name": "",
-        "topic": "xbox-temp-sensor/sensor/xbox_temperature/state",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "bb00bcd9e2f502fd",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 250,
-        "y": 540,
-        "wires": [
-            [
-                "bca657bfafb23325"
-            ]
-        ]
-    },
-    {
-        "id": "5de0e43a69b7285a",
-        "type": "debug",
-        "z": "eda7241b54bb3bab",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "bca657bfafb23325",
-        "type": "smooth",
-        "z": "eda7241b54bb3bab",
-        "name": "",
-        "property": "payload",
-        "action": "mean",
-        "count": "10",
-        "round": "1",
-        "mult": "single",
-        "reduce": false,
-        "x": 580,
-        "y": 540,
-        "wires": [
-            [
-                "5de0e43a69b7285a"
             ]
         ]
     },
