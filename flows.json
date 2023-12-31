@@ -907,8 +907,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1017.1428718566895,
-        "y": 352.85716819763184,
+        "x": 870,
+        "y": 380,
         "wires": []
     },
     {
@@ -923,59 +923,9 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1017.1428718566895,
-        "y": 432.85716819763184,
+        "x": 870,
+        "y": 460,
         "wires": []
-    },
-    {
-        "id": "2898e7100656463d",
-        "type": "change",
-        "z": "b12c15a675080578",
-        "name": "true",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 510,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "163b401dfdbbf1b8",
-        "type": "change",
-        "z": "b12c15a675080578",
-        "name": "false",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 490,
-        "y": 580,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "445c9dc62b48bc07",
@@ -990,8 +940,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 537.1428718566895,
-        "y": 272.85716819763184,
+        "x": 562.8571281433105,
+        "y": 287.14283180236816,
         "wires": []
     },
     {
@@ -1013,8 +963,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 717.1428718566895,
-        "y": 352.85716819763184,
+        "x": 570,
+        "y": 380,
         "wires": [
             [
                 "b671cce6d1ba84d2"
@@ -1040,8 +990,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 717.1428718566895,
-        "y": 432.85716819763184,
+        "x": 570,
+        "y": 460,
         "wires": [
             [
                 "908954f71d858337"
@@ -1081,12 +1031,10 @@
         "y": 392.85716819763184,
         "wires": [
             [
-                "2898e7100656463d",
                 "445c9dc62b48bc07",
                 "54d452286393b91c"
             ],
             [
-                "163b401dfdbbf1b8",
                 "60cac9800ae110ad"
             ]
         ]
