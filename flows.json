@@ -1006,7 +1006,7 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": false,
-        "service_domain": "",
+        "service_domain": "switch",
         "service": "turn_on",
         "entityId": [
             "switch.utility_closet_fan_socket"
@@ -1017,7 +1017,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 690,
+        "x": 710,
         "y": 420,
         "wires": [
             [
@@ -1033,16 +1033,18 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": false,
+        "service_domain": "switch",
         "service": "turn_off",
         "entityId": [
             "switch.utility_closet_fan_socket"
         ],
         "data": "",
         "dataType": "jsonata",
+        "mergecontext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 720,
+        "x": 710,
         "y": 500,
         "wires": [
             [
