@@ -676,12 +676,14 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": true,
+        "service_domain": "",
         "service": "turn_off",
         "entityId": [
             "switch.ender3v2_power"
         ],
         "data": "",
         "dataType": "jsonata",
+        "mergecontext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
@@ -747,20 +749,22 @@
         "id": "c6ec5766a42c82b7",
         "type": "api-call-service",
         "z": "4093e1bc0be41abd",
-        "name": "Ender3v2 Power OFF",
+        "name": "Voron Power OFF",
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": true,
+        "service_domain": "",
         "service": "turn_off",
         "entityId": [
             "switch.voron_power_switch_0"
         ],
         "data": "",
         "dataType": "jsonata",
+        "mergecontext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1360,
+        "x": 1450,
         "y": 1220,
         "wires": [
             []
