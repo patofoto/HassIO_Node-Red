@@ -115,7 +115,7 @@
         "type": "debug",
         "z": "4093e1bc0be41abd",
         "name": "debug 20",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -713,7 +713,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "",
+        "entityidfilter": "input_boolean.auto_shutdown",
         "outputinitially": false,
         "haltifstate": "",
         "halt_if_type": "str",
@@ -736,7 +736,7 @@
             }
         ],
         "x": 270,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "e05a6876b5c3d602",
