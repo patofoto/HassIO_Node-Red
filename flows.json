@@ -103,7 +103,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 270,
-        "y": 920,
+        "y": 640,
         "wires": [
             [
                 "45859c3e68dedf69"
@@ -122,8 +122,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 920,
+        "x": 680,
+        "y": 640,
         "wires": []
     },
     {
@@ -1198,6 +1198,43 @@
         "parseMode": "",
         "x": 1440,
         "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "0cec881a9929f598",
+        "type": "mqtt in",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "voron_2.4_350_mqtt/klipper/state/print_stats/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 740,
+        "wires": [
+            [
+                "7fa6f9d2a2d2baf0"
+            ]
+        ]
+    },
+    {
+        "id": "7fa6f9d2a2d2baf0",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 740,
         "wires": []
     },
     {
