@@ -750,7 +750,7 @@
         "z": "4093e1bc0be41abd",
         "name": "Voron",
         "server": "6f49639effa0204d",
-        "autoStart": false,
+        "autoStart": true,
         "mObjSel": [
             "print_stats",
             "display_status"
