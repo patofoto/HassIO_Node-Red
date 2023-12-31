@@ -1076,9 +1076,11 @@
         "outputinitially": false,
         "outputonchanged": false,
         "entity_id": "sensor.server_closet_temperature_mqtt",
-        "halt_if": "",
-        "halt_if_type": "str",
-        "outputs": 1,
+        "state_type": "habool",
+        "halt_if": "85",
+        "halt_if_type": "num",
+        "halt_if_compare": "gte",
+        "outputs": 2,
         "x": 230,
         "y": 440,
         "wires": [
@@ -1086,7 +1088,8 @@
                 "2898e7100656463d",
                 "445c9dc62b48bc07",
                 "163b401dfdbbf1b8"
-            ]
+            ],
+            []
         ]
     },
     {
