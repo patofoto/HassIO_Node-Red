@@ -1070,7 +1070,7 @@
                 "value": ""
             }
         ],
-        "updateinterval": "",
+        "updateinterval": "15",
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
         "outputinitially": false,
