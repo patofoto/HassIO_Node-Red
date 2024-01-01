@@ -1197,63 +1197,6 @@
         ]
     },
     {
-        "id": "f4af94d76f0db7d6",
-        "type": "server-state-changed",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "server": "250dc57f3ec20508",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": [],
-        "outputInitially": false,
-        "ifState": "true",
-        "ifStateType": "bool",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": false,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "input_boolean.auto_shutdown",
-        "outputinitially": false,
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "output_only_on_state_change": false,
-        "x": 240,
-        "y": 1180,
-        "wires": [
-            [
-                "e05a6876b5c3d602",
-                "3c9a87aa20f68f32"
-            ],
-            []
-        ]
-    },
-    {
         "id": "3e02ef5a156e419c",
         "type": "server-state-changed",
         "z": "4093e1bc0be41abd",
@@ -1298,10 +1241,13 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 310,
-        "y": 1020,
+        "x": 230,
+        "y": 1180,
         "wires": [
-            [],
+            [
+                "e05a6876b5c3d602",
+                "3c9a87aa20f68f32"
+            ],
             []
         ]
     },
