@@ -464,7 +464,7 @@
         "wires": [
             [
                 "e34c51da90862f8e",
-                "599a1a9c1a4a6c75"
+                "4409cd6ae35f9aba"
             ]
         ]
     },
@@ -668,33 +668,6 @@
         "x": 980,
         "y": 240,
         "wires": []
-    },
-    {
-        "id": "599a1a9c1a4a6c75",
-        "type": "api-call-service",
-        "z": "4093e1bc0be41abd",
-        "name": "Ender3v2 Power OFF",
-        "server": "250dc57f3ec20508",
-        "version": 5,
-        "debugenabled": true,
-        "service_domain": "switch",
-        "service": "turn_off",
-        "entityId": [
-            "switch.ender3v2_power"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1460,
-        "y": 980,
-        "wires": [
-            [
-                "aabda50bb7a9fdb8"
-            ]
-        ]
     },
     {
         "id": "f4af94d76f0db7d6",
@@ -1243,7 +1216,7 @@
         "id": "4409cd6ae35f9aba",
         "type": "api-call-service",
         "z": "4093e1bc0be41abd",
-        "name": "",
+        "name": "Ender3v2 Power OFF",
         "server": "250dc57f3ec20508",
         "version": 3,
         "debugenabled": false,
@@ -1256,10 +1229,12 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1450,
-        "y": 500,
+        "x": 1460,
+        "y": 980,
         "wires": [
-            []
+            [
+                "aabda50bb7a9fdb8"
+            ]
         ]
     },
     {
