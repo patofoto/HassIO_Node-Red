@@ -72,6 +72,11 @@
         "server": "10.0.10.13:7125"
     },
     {
+        "id": "6f49639effa0204d",
+        "type": "moonNode-connector",
+        "server": "10.0.10.45:7125"
+    },
+    {
         "id": "250dc57f3ec20508",
         "type": "server",
         "name": "Home Assistant",
@@ -83,11 +88,6 @@
         "cacheJson": true,
         "heartbeat": false,
         "heartbeatInterval": "30"
-    },
-    {
-        "id": "6f49639effa0204d",
-        "type": "moonNode-connector",
-        "server": "10.0.10.45:7125"
     },
     {
         "id": "96f9066197e5f75a",
@@ -670,55 +670,6 @@
         "wires": []
     },
     {
-        "id": "f4af94d76f0db7d6",
-        "type": "server-state-changed",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "server": "250dc57f3ec20508",
-        "version": 5,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "input_boolean.auto_shutdown",
-        "outputinitially": false,
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "outputs": 1,
-        "output_only_on_state_change": false,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 270,
-        "y": 1180,
-        "wires": [
-            [
-                "e05a6876b5c3d602",
-                "3c9a87aa20f68f32"
-            ]
-        ]
-    },
-    {
         "id": "9083bc1475d846cc",
         "type": "moonNode-monitor",
         "z": "4093e1bc0be41abd",
@@ -1191,14 +1142,18 @@
         "z": "4093e1bc0be41abd",
         "name": "Ender3v2 Power OFF",
         "server": "250dc57f3ec20508",
-        "version": 3,
+        "version": 5,
         "debugenabled": false,
-        "service_domain": "switch",
+        "domain": "switch",
         "service": "turn_off",
-        "entityId": "switch.ender3v2_power",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.ender3v2_power"
+        ],
         "data": "",
         "dataType": "jsonata",
-        "mergecontext": "",
+        "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
@@ -1216,14 +1171,18 @@
         "z": "4093e1bc0be41abd",
         "name": "Voron Power OFF",
         "server": "250dc57f3ec20508",
-        "version": 3,
+        "version": 5,
         "debugenabled": false,
-        "service_domain": "switch",
+        "domain": "switch",
         "service": "turn_off",
-        "entityId": "switch.voron_power_switch_0",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.voron_power_switch_0"
+        ],
         "data": "",
         "dataType": "jsonata",
-        "mergecontext": "",
+        "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
@@ -1232,6 +1191,55 @@
         "wires": [
             [
                 "bb46ba1283fc458a"
+            ]
+        ]
+    },
+    {
+        "id": "f4af94d76f0db7d6",
+        "type": "server-state-changed",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "server": "250dc57f3ec20508",
+        "version": 5,
+        "outputs": 1,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.auto_shutdown",
+        "outputinitially": false,
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "output_only_on_state_change": false,
+        "x": 270,
+        "y": 1180,
+        "wires": [
+            [
+                "e05a6876b5c3d602",
+                "3c9a87aa20f68f32"
             ]
         ]
     },
@@ -1293,17 +1301,17 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": false,
-        "service_domain": "switch",
         "service": "turn_on",
         "entityId": [
             "switch.utility_closet_fan_socket"
         ],
         "data": "",
         "dataType": "jsonata",
-        "mergecontext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "service_domain": "switch",
+        "mergecontext": "",
         "x": 570,
         "y": 380,
         "wires": [
@@ -1320,17 +1328,17 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": false,
-        "service_domain": "switch",
         "service": "turn_off",
         "entityId": [
             "switch.utility_closet_fan_socket"
         ],
         "data": "",
         "dataType": "jsonata",
-        "mergecontext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
+        "service_domain": "switch",
+        "mergecontext": "",
         "x": 570,
         "y": 460,
         "wires": [
@@ -1346,6 +1354,9 @@
         "name": "Temperature >=85",
         "server": "250dc57f3ec20508",
         "version": 3,
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputs": 2,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -1358,8 +1369,6 @@
             }
         ],
         "updateinterval": "15",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
         "outputinitially": false,
         "outputonchanged": false,
         "entity_id": "sensor.server_closet_temperature_mqtt",
@@ -1367,7 +1376,6 @@
         "halt_if": "85",
         "halt_if_type": "num",
         "halt_if_compare": "gte",
-        "outputs": 2,
         "x": 257.14287185668945,
         "y": 392.85716819763184,
         "wires": [
