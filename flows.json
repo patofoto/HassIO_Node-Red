@@ -1247,8 +1247,8 @@
         "server": "250dc57f3ec20508",
         "version": 3,
         "debugenabled": false,
-        "service_domain": "",
-        "service": "",
+        "service_domain": "switch",
+        "service": "turn_off",
         "entityId": "switch.ender3v2_power",
         "data": "",
         "dataType": "jsonata",
@@ -1256,7 +1256,7 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1410,
+        "x": 1450,
         "y": 500,
         "wires": [
             []
