@@ -1371,7 +1371,7 @@
         "server": "250dc57f3ec20508",
         "version": 3,
         "exposeAsEntityConfig": "",
-        "updateInterval": "",
+        "updateInterval": "15",
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
         "outputInitially": false,
