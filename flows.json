@@ -1309,18 +1309,22 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": false,
+        "domain": "switch",
         "service": "turn_on",
+        "areaId": [],
+        "deviceId": [],
         "entityId": [
             "switch.utility_closet_fan_socket"
         ],
         "data": "",
         "dataType": "jsonata",
+        "mergeContext": "",
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
         "service_domain": "switch",
         "mergecontext": "",
-        "x": 570,
+        "x": 560,
         "y": 380,
         "wires": [
             [
