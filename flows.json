@@ -1362,9 +1362,17 @@
         "name": "Temperature >=85",
         "server": "250dc57f3ec20508",
         "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "",
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
-        "outputs": 2,
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.server_closet_temperature_mqtt",
+        "ifState": "",
+        "ifStateType": "str",
+        "outputs": 1,
+        "outputProperties": [],
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -1390,9 +1398,6 @@
             [
                 "445c9dc62b48bc07",
                 "54d452286393b91c"
-            ],
-            [
-                "60cac9800ae110ad"
             ]
         ]
     },
