@@ -677,7 +677,7 @@
         "server": "250dc57f3ec20508",
         "version": 5,
         "debugenabled": true,
-        "service_domain": "",
+        "service_domain": "switch",
         "service": "turn_off",
         "entityId": [
             "switch.ender3v2_power"
