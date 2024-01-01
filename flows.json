@@ -744,33 +744,6 @@
         ]
     },
     {
-        "id": "c6ec5766a42c82b7",
-        "type": "api-call-service",
-        "z": "4093e1bc0be41abd",
-        "name": "Voron Power OFF",
-        "server": "250dc57f3ec20508",
-        "version": 5,
-        "debugenabled": true,
-        "service_domain": "switch",
-        "service": "turn_off",
-        "entityId": [
-            "switch.voron_power_switch_0"
-        ],
-        "data": "",
-        "dataType": "jsonata",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1450,
-        "y": 1280,
-        "wires": [
-            [
-                "bb46ba1283fc458a"
-            ]
-        ]
-    },
-    {
         "id": "3c9a87aa20f68f32",
         "type": "switch",
         "z": "4093e1bc0be41abd",
@@ -1107,7 +1080,7 @@
         "wires": [
             [
                 "4a1d2ec82a9f0d46",
-                "c6ec5766a42c82b7"
+                "0d3558e5186e1710"
             ]
         ]
     },
@@ -1254,10 +1227,12 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1210,
-        "y": 1600,
+        "x": 1450,
+        "y": 1280,
         "wires": [
-            []
+            [
+                "bb46ba1283fc458a"
+            ]
         ]
     },
     {
