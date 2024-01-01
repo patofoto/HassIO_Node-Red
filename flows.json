@@ -1240,6 +1240,29 @@
         "wires": []
     },
     {
+        "id": "4409cd6ae35f9aba",
+        "type": "api-call-service",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "server": "250dc57f3ec20508",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "",
+        "service": "",
+        "entityId": "switch.ender3v2_power",
+        "data": "",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1410,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "b671cce6d1ba84d2",
         "type": "debug",
         "z": "b12c15a675080578",
