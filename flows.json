@@ -1201,12 +1201,13 @@
         "name": "",
         "server": "250dc57f3ec20508",
         "version": 5,
-        "outputs": 1,
+        "outputs": 2,
         "exposeAsEntityConfig": "",
         "entityId": [],
         "outputInitially": false,
-        "ifState": "",
-        "ifStateType": "str",
+        "ifState": "true",
+        "ifStateType": "bool",
+        "ifStateOperator": "is",
         "outputOnlyOnStateChange": false,
         "for": "0",
         "forType": "num",
@@ -1246,7 +1247,8 @@
             [
                 "e05a6876b5c3d602",
                 "3c9a87aa20f68f32"
-            ]
+            ],
+            []
         ]
     },
     {
