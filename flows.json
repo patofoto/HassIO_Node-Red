@@ -1213,8 +1213,9 @@
         "version": 5,
         "outputs": 2,
         "exposeAsEntityConfig": "",
+        "entityId": "input_boolean.auto_shutdown",
         "entityIdType": "exact",
-        "outputInitially": false,
+        "outputInitially": true,
         "stateType": "str",
         "ifState": "true",
         "ifStateType": "bool",
@@ -1248,7 +1249,7 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 190,
+        "x": 250,
         "y": 1180,
         "wires": [
             [
