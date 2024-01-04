@@ -1216,7 +1216,7 @@
         "entityId": "input_boolean.auto_shutdown",
         "entityIdType": "exact",
         "outputInitially": true,
-        "stateType": "str",
+        "stateType": "habool",
         "ifState": "true",
         "ifStateType": "bool",
         "ifStateOperator": "is",
