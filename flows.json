@@ -3,7 +3,7 @@
         "id": "4093e1bc0be41abd",
         "type": "tab",
         "label": "MQTT",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -11,7 +11,7 @@
         "id": "b12c15a675080578",
         "type": "tab",
         "label": "Server Closet Fan",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -77,18 +77,26 @@
         "server": "10.0.10.45:7125"
     },
     {
-        "id": "250dc57f3ec20508",
+        "id": "d877b97445ce290d",
         "type": "server",
         "name": "Home Assistant",
         "version": 5,
-        "addon": true,
+        "addon": false,
         "rejectUnauthorizedCerts": true,
         "ha_boolean": "y|yes|true|on|home|open",
         "connectionDelay": true,
         "cacheJson": true,
         "heartbeat": false,
         "heartbeatInterval": "30",
-        "statusSeparator": "",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
         "enableGlobalContextStore": false
     },
     {
@@ -1143,7 +1151,7 @@
         "type": "api-call-service",
         "z": "4093e1bc0be41abd",
         "name": "Ender3v2 Power OFF",
-        "server": "250dc57f3ec20508",
+        "server": "d877b97445ce290d",
         "version": 5,
         "debugenabled": false,
         "domain": "switch",
@@ -1172,7 +1180,7 @@
         "type": "api-call-service",
         "z": "4093e1bc0be41abd",
         "name": "Voron Power OFF",
-        "server": "250dc57f3ec20508",
+        "server": "d877b97445ce290d",
         "version": 5,
         "debugenabled": false,
         "domain": "switch",
@@ -1201,11 +1209,10 @@
         "type": "server-state-changed",
         "z": "4093e1bc0be41abd",
         "name": "",
-        "server": "250dc57f3ec20508",
+        "server": "d877b97445ce290d",
         "version": 5,
         "outputs": 2,
         "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.auto_shutdown",
         "entityIdType": "exact",
         "outputInitially": false,
         "stateType": "str",
@@ -1241,7 +1248,7 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 230,
+        "x": 170,
         "y": 1180,
         "wires": [
             [
@@ -1306,7 +1313,7 @@
         "type": "api-call-service",
         "z": "b12c15a675080578",
         "name": "",
-        "server": "250dc57f3ec20508",
+        "server": "d877b97445ce290d",
         "version": 5,
         "debugenabled": false,
         "domain": "switch",
@@ -1337,7 +1344,7 @@
         "type": "api-call-service",
         "z": "b12c15a675080578",
         "name": "",
-        "server": "250dc57f3ec20508",
+        "server": "d877b97445ce290d",
         "version": 5,
         "debugenabled": false,
         "domain": "switch",
@@ -1368,7 +1375,7 @@
         "type": "poll-state",
         "z": "b12c15a675080578",
         "name": "Temperature >=85",
-        "server": "250dc57f3ec20508",
+        "server": "d877b97445ce290d",
         "version": 3,
         "exposeAsEntityConfig": "",
         "updateInterval": "15",
@@ -1536,9 +1543,15 @@
         "type": "server-state-changed",
         "z": "eda7241b54bb3bab",
         "name": "Start",
-        "server": "250dc57f3ec20508",
+        "server": "d877b97445ce290d",
         "version": 5,
-        "outputs": 2,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entityId": [],
+        "outputInitially": false,
+        "ifState": "",
+        "ifStateType": "str",
+        "outputOnlyOnStateChange": false,
         "for": 0,
         "forType": "num",
         "forUnits": "minutes",
@@ -1560,9 +1573,6 @@
         "wires": [
             [
                 "32cfb961f06d7f0b"
-            ],
-            [
-                "62a125cfc757cc53"
             ]
         ]
     }
