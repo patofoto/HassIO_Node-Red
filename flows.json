@@ -3,7 +3,7 @@
         "id": "4093e1bc0be41abd",
         "type": "tab",
         "label": "MQTT",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -11,7 +11,7 @@
         "id": "b12c15a675080578",
         "type": "tab",
         "label": "Server Closet Fan",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -1411,52 +1411,6 @@
             [
                 "60cac9800ae110ad"
             ]
-        ]
-    },
-    {
-        "id": "0a88a21e07818f02",
-        "type": "poll-state",
-        "z": "b12c15a675080578",
-        "name": "",
-        "server": "250dc57f3ec20508",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "60",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.server_closet_temperature_mqtt",
-        "stateType": "str",
-        "ifState": "85",
-        "ifStateType": "num",
-        "ifStateOperator": "gte",
-        "outputs": 2,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 230,
-        "y": 600,
-        "wires": [
-            [],
-            []
         ]
     },
     {
