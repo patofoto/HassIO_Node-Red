@@ -3,7 +3,6 @@
     "description": "A Node-RED Project",
     "version": "0.0.1",
     "dependencies": {
-        "node-red-contrib-home-assistant-websocket": "0.62.2",
         "node-red-contrib-hourglass": "1.5.0",
         "node-red-contrib-chronos": "1.19.0",
         "node-red-contrib-moonnode": "0.1.5",
