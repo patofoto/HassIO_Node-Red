@@ -1254,60 +1254,7 @@
         "wires": [
             [
                 "e05a6876b5c3d602",
-                "3c9a87aa20f68f32"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "adea3b33aaf6a11c",
-        "type": "server-state-changed",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "server": "d877b97445ce290d",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.auto_shutdown",
-        "entityIdType": "exact",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "true",
-        "ifStateType": "bool",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 250,
-        "y": 960,
-        "wires": [
-            [
+                "3c9a87aa20f68f32",
                 "a3631c9ccd7be097"
             ],
             [
@@ -1328,7 +1275,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 940,
+        "y": 980,
         "wires": []
     },
     {
@@ -1344,7 +1291,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 980,
+        "y": 1360,
         "wires": []
     },
     {
