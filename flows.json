@@ -1205,7 +1205,7 @@
         ]
     },
     {
-        "id": "3e02ef5a156e419c",
+        "id": "f1c47a741a7f5622",
         "type": "server-state-changed",
         "z": "4093e1bc0be41abd",
         "name": "",
@@ -1216,7 +1216,7 @@
         "entityId": "input_boolean.auto_shutdown",
         "entityIdType": "exact",
         "outputInitially": false,
-        "stateType": "habool",
+        "stateType": "str",
         "ifState": "true",
         "ifStateType": "bool",
         "ifStateOperator": "is",
@@ -1249,68 +1249,14 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 230,
-        "y": 1180,
+        "x": 250,
+        "y": 1160,
         "wires": [
             [
                 "e05a6876b5c3d602",
                 "3c9a87aa20f68f32"
             ],
             []
-        ]
-    },
-    {
-        "id": "f1c47a741a7f5622",
-        "type": "server-state-changed",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "server": "d877b97445ce290d",
-        "version": 5,
-        "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.auto_shutdown",
-        "entityIdType": "exact",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 270,
-        "y": 980,
-        "wires": [
-            [
-                "e05a6876b5c3d602",
-                "3c9a87aa20f68f32"
-            ]
         ]
     },
     {
