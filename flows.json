@@ -1216,7 +1216,7 @@
         "entityId": "input_boolean.auto_shutdown",
         "entityIdType": "exact",
         "outputInitially": false,
-        "stateType": "str",
+        "stateType": "habool",
         "ifState": "true",
         "ifStateType": "bool",
         "ifStateOperator": "is",
@@ -1307,7 +1307,10 @@
         "x": 270,
         "y": 980,
         "wires": [
-            []
+            [
+                "e05a6876b5c3d602",
+                "3c9a87aa20f68f32"
+            ]
         ]
     },
     {
