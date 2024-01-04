@@ -81,7 +81,7 @@
         "type": "server",
         "name": "Home Assistant",
         "version": 5,
-        "addon": false,
+        "addon": true,
         "rejectUnauthorizedCerts": true,
         "ha_boolean": "y|yes|true|on|home|open",
         "connectionDelay": true,
