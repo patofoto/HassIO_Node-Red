@@ -1220,7 +1220,7 @@
         "ifState": "true",
         "ifStateType": "bool",
         "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
+        "outputOnlyOnStateChange": false,
         "for": "0",
         "forType": "num",
         "forUnits": "minutes",
