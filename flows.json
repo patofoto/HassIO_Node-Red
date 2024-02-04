@@ -1208,6 +1208,7 @@
         "id": "f1c47a741a7f5622",
         "type": "server-state-changed",
         "z": "4093e1bc0be41abd",
+        "d": true,
         "name": "",
         "server": "d877b97445ce290d",
         "version": 5,
