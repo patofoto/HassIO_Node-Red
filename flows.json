@@ -1027,10 +1027,14 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "true"
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
             },
             {
-                "t": "false"
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
             }
         ],
         "checkall": "true",
