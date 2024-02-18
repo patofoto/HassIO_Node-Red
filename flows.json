@@ -1018,14 +1018,14 @@
         "ifState": "true",
         "ifStateType": "bool",
         "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
+        "outputOnlyOnStateChange": false,
+        "for": "1",
         "forType": "num",
         "forUnits": "seconds",
         "ignorePrevStateNull": false,
         "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": true,
-        "ignoreCurrentStateUnknown": true,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
         "outputProperties": [
             {
