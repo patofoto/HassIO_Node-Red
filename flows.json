@@ -1145,7 +1145,7 @@
         "type": "debug",
         "z": "4093e1bc0be41abd",
         "name": "debug 48",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1188,10 +1188,11 @@
         "y": 1440,
         "wires": [
             [
-                "2d2bea1f0ac5f59d",
-                "d55327655a45384e"
+                "2d2bea1f0ac5f59d"
             ],
-            []
+            [
+                "d55327655a45384e"
+            ]
         ]
     },
     {
