@@ -202,8 +202,7 @@
             [],
             [
                 "39742f4938cc7a09",
-                "d252993f105e19bc",
-                "f8171432a2fd98d7"
+                "d252993f105e19bc"
             ],
             [],
             [],
@@ -422,35 +421,6 @@
         "wires": []
     },
     {
-        "id": "4496f17b005259f2",
-        "type": "inject",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1160,
-        "y": 860,
-        "wires": [
-            [
-                "f8171432a2fd98d7"
-            ]
-        ]
-    },
-    {
         "id": "39742f4938cc7a09",
         "type": "chronos-delay",
         "z": "4093e1bc0be41abd",
@@ -509,7 +479,6 @@
         "id": "c36824865ed96062",
         "type": "moonNode-monitor",
         "z": "4093e1bc0be41abd",
-        "d": true,
         "name": "Ender3v2",
         "server": "347b0fac569fd9db",
         "autoStart": true,
@@ -552,20 +521,6 @@
                 "709e4550d774b93d"
             ]
         ]
-    },
-    {
-        "id": "f8171432a2fd98d7",
-        "type": "telegrambot-notify",
-        "z": "4093e1bc0be41abd",
-        "d": true,
-        "name": "",
-        "bot": "822f395fa7984149",
-        "chatId": "1951007350",
-        "message": "Printer Auto Shutdown Started",
-        "parseMode": "",
-        "x": 1440,
-        "y": 860,
-        "wires": []
     },
     {
         "id": "46a4ee90663a50d8",
@@ -684,7 +639,6 @@
         "id": "9083bc1475d846cc",
         "type": "moonNode-monitor",
         "z": "4093e1bc0be41abd",
-        "d": true,
         "name": "Voron",
         "server": "6f49639effa0204d",
         "autoStart": true,
@@ -876,8 +830,7 @@
             [],
             [
                 "311f22294b8f3cdf",
-                "fd2d787c913db35d",
-                "06848d9af143b681"
+                "fd2d787c913db35d"
             ],
             [],
             [],
@@ -991,35 +944,6 @@
         "wires": []
     },
     {
-        "id": "b72b41ffbdd7a0ca",
-        "type": "inject",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1160,
-        "y": 1160,
-        "wires": [
-            [
-                "06848d9af143b681"
-            ]
-        ]
-    },
-    {
         "id": "311f22294b8f3cdf",
         "type": "chronos-delay",
         "z": "4093e1bc0be41abd",
@@ -1095,20 +1019,6 @@
                 "b2b8c913609ea3e5"
             ]
         ]
-    },
-    {
-        "id": "06848d9af143b681",
-        "type": "telegrambot-notify",
-        "z": "4093e1bc0be41abd",
-        "d": true,
-        "name": "",
-        "bot": "822f395fa7984149",
-        "chatId": "1951007350",
-        "message": "Printer Auto Shutdown Started",
-        "parseMode": "",
-        "x": 1440,
-        "y": 1160,
-        "wires": []
     },
     {
         "id": "0cec881a9929f598",
@@ -1210,7 +1120,6 @@
         "id": "f1c47a741a7f5622",
         "type": "server-state-changed",
         "z": "4093e1bc0be41abd",
-        "d": true,
         "name": "",
         "server": "d877b97445ce290d",
         "version": 5,
