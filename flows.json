@@ -1003,66 +1003,6 @@
         ]
     },
     {
-        "id": "f1c47a741a7f5622",
-        "type": "server-state-changed",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "server": "d877b97445ce290d",
-        "version": 5,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.auto_shutdown",
-        "entityIdType": "exact",
-        "outputInitially": true,
-        "stateType": "str",
-        "ifState": "true",
-        "ifStateType": "bool",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": false,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 250,
-        "y": 1180,
-        "wires": [
-            [
-                "e05a6876b5c3d602",
-                "a3631c9ccd7be097",
-                "3c9a87aa20f68f32"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "a3631c9ccd7be097",
-        "type": "debug",
-        "z": "4093e1bc0be41abd",
-        "name": "debug 45",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 980,
-        "wires": []
-    },
-    {
         "id": "73f4cf159f0b3075",
         "type": "debug",
         "z": "4093e1bc0be41abd",
@@ -1225,11 +1165,12 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 310,
-        "y": 1660,
+        "x": 230,
+        "y": 1300,
         "wires": [
             [
-                "2d2bea1f0ac5f59d"
+                "2d2bea1f0ac5f59d",
+                "3c9a87aa20f68f32"
             ],
             [
                 "d55327655a45384e"
@@ -1248,8 +1189,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 1620,
+        "x": 600,
+        "y": 1400,
         "wires": []
     },
     {
@@ -1264,8 +1205,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 1700,
+        "x": 600,
+        "y": 1460,
         "wires": []
     },
     {
