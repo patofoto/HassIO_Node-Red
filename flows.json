@@ -1186,6 +1186,42 @@
         "wires": []
     },
     {
+        "id": "3e506af35a5d1b9a",
+        "type": "api-current-state",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_boolean.auto_shutdown",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 290,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "b671cce6d1ba84d2",
         "type": "debug",
         "z": "b12c15a675080578",
