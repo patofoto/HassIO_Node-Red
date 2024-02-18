@@ -1186,15 +1186,15 @@
         "wires": []
     },
     {
-        "id": "3e506af35a5d1b9a",
+        "id": "23f3df202e7c49b7",
         "type": "api-current-state",
         "z": "4093e1bc0be41abd",
-        "name": "",
+        "name": "Auto Shutdown",
         "server": "d877b97445ce290d",
         "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
+        "outputs": 2,
+        "halt_if": "true",
+        "halt_if_type": "bool",
         "halt_if_compare": "is",
         "entity_id": "input_boolean.auto_shutdown",
         "state_type": "str",
@@ -1205,6 +1205,12 @@
                 "propertyType": "msg",
                 "value": "",
                 "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
             }
         ],
         "for": "0",
@@ -1215,29 +1221,286 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 290,
-        "y": 1400,
+        "x": 680,
+        "y": 1620,
         "wires": [
             [
-                "60b7e0e1930e4597"
-            ]
+                "19d7bb4ce971d53f",
+                "40e77fa6e73cca67"
+            ],
+            []
         ]
     },
     {
-        "id": "60b7e0e1930e4597",
+        "id": "2fbebb0b48ac1188",
         "type": "debug",
         "z": "4093e1bc0be41abd",
         "name": "debug 47",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 1440,
+        "x": 1380,
+        "y": 1560,
         "wires": []
+    },
+    {
+        "id": "d373d4a63ea8923a",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 48",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "1aa63b43e73c9cb7",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 49",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "f6e20e54762b37ce",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 50",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "99ddf996c5076dfc",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 51",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "9ac8cdfb18e94831",
+        "type": "moonNode-command",
+        "z": "4093e1bc0be41abd",
+        "name": "Shutdown Klipper",
+        "command": "SHUTDOWN_MACHINE",
+        "server": "6f49639effa0204d",
+        "stateless": false,
+        "x": 1110,
+        "y": 1640,
+        "wires": [
+            [
+                "d373d4a63ea8923a"
+            ],
+            [
+                "1aa63b43e73c9cb7"
+            ],
+            [
+                "f6e20e54762b37ce"
+            ]
+        ]
+    },
+    {
+        "id": "b9876a4a58360d40",
+        "type": "api-call-service",
+        "z": "4093e1bc0be41abd",
+        "name": "Voron Power OFF",
+        "server": "d877b97445ce290d",
+        "version": 5,
+        "debugenabled": false,
+        "domain": "switch",
+        "service": "turn_off",
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "switch.voron_power_switch_0"
+        ],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1110,
+        "y": 1580,
+        "wires": [
+            [
+                "2fbebb0b48ac1188"
+            ]
+        ]
+    },
+    {
+        "id": "40e77fa6e73cca67",
+        "type": "chronos-delay",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "config": "6c4b6868601ff61a",
+        "delayType": "fixedDuration",
+        "fixedDuration": "3",
+        "fixedDurationUnit": "minutes",
+        "randomDuration1": "1",
+        "randomDuration2": "5",
+        "randomDurationUnit": "seconds",
+        "randomizerMillis": false,
+        "whenType": "time",
+        "whenValue": "",
+        "offset": "0",
+        "random": false,
+        "preserveCtrlProps": false,
+        "ignoreCtrlProps": false,
+        "x": 870,
+        "y": 1640,
+        "wires": [
+            [
+                "9ac8cdfb18e94831"
+            ]
+        ]
+    },
+    {
+        "id": "19d7bb4ce971d53f",
+        "type": "chronos-delay",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "config": "6c4b6868601ff61a",
+        "delayType": "fixedDuration",
+        "fixedDuration": "4",
+        "fixedDurationUnit": "minutes",
+        "randomDuration1": "1",
+        "randomDuration2": "5",
+        "randomDurationUnit": "seconds",
+        "randomizerMillis": false,
+        "whenType": "time",
+        "whenValue": "",
+        "offset": "0",
+        "random": false,
+        "preserveCtrlProps": false,
+        "ignoreCtrlProps": false,
+        "x": 870,
+        "y": 1600,
+        "wires": [
+            [
+                "99ddf996c5076dfc",
+                "b9876a4a58360d40"
+            ]
+        ]
+    },
+    {
+        "id": "db1a66477a333850",
+        "type": "switch",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "property": "payload.fullModel.print_stats.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "standby",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "printing",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "complete",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "paused",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "cancelled",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "error",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": true,
+        "outputs": 6,
+        "x": 470,
+        "y": 1620,
+        "wires": [
+            [],
+            [],
+            [
+                "23f3df202e7c49b7"
+            ],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "standby",
+            "printing",
+            "complete",
+            "paused",
+            "cancelled",
+            "error"
+        ]
+    },
+    {
+        "id": "2938f8a4576fe7d3",
+        "type": "moonNode-monitor",
+        "z": "4093e1bc0be41abd",
+        "name": "Voron",
+        "server": "6f49639effa0204d",
+        "autoStart": true,
+        "mObjSel": [
+            "print_stats",
+            "display_status"
+        ],
+        "mObjList": "{\"objects\":[{\"object\":\"gcode\",\"selected\":false},{\"object\":\"webhooks\",\"selected\":false},{\"object\":\"configfile\",\"selected\":false},{\"object\":\"mcu\",\"selected\":false},{\"object\":\"mcu EBBCan\",\"selected\":false},{\"object\":\"gcode_move\",\"selected\":false},{\"object\":\"print_stats\",\"selected\":false},{\"object\":\"virtual_sdcard\",\"selected\":false},{\"object\":\"pause_resume\",\"selected\":false},{\"object\":\"display_status\",\"selected\":false},{\"object\":\"gcode_macro CANCEL_PRINT\",\"selected\":false},{\"object\":\"gcode_macro PAUSE\",\"selected\":false},{\"object\":\"gcode_macro RESUME\",\"selected\":false},{\"object\":\"gcode_macro SET_PAUSE_NEXT_LAYER\",\"selected\":false},{\"object\":\"gcode_macro SET_PAUSE_AT_LAYER\",\"selected\":false},{\"object\":\"gcode_macro SET_PRINT_STATS_INFO\",\"selected\":false},{\"object\":\"gcode_macro _TOOLHEAD_PARK_PAUSE_CANCEL\",\"selected\":false},{\"object\":\"gcode_macro _CLIENT_EXTRUDE\",\"selected\":false},{\"object\":\"gcode_macro _CLIENT_RETRACT\",\"selected\":false},{\"object\":\"stepper_enable\",\"selected\":false},{\"object\":\"tmc2209 stepper_x\",\"selected\":false},{\"object\":\"tmc2209 stepper_y\",\"selected\":false},{\"object\":\"tmc2209 stepper_z\",\"selected\":false},{\"object\":\"tmc2209 stepper_z1\",\"selected\":false},{\"object\":\"tmc2209 stepper_z2\",\"selected\":false},{\"object\":\"tmc2209 stepper_z3\",\"selected\":false},{\"object\":\"tmc2209 extruder\",\"selected\":false},{\"object\":\"fan\",\"selected\":false},{\"object\":\"heaters\",\"selected\":false},{\"object\":\"heater_fan hotend_fan\",\"selected\":false},{\"object\":\"heater_bed\",\"selected\":false},{\"object\":\"temperature_sensor buildplate\",\"selected\":false},{\"object\":\"temperature_sensor chamber\",\"selected\":false},{\"object\":\"temperature_sensor EBB_NTC\",\"selected\":false},{\"object\":\"temperature_host CM4\",\"selected\":false},{\"object\":\"temperature_sensor CM4\",\"selected\":false},{\"object\":\"probe\",\"selected\":false},{\"object\":\"controller_fan controller_fan\",\"selected\":false},{\"object\":\"heater_fan nevermore_fan\",\"selected\":false},{\"object\":\"quad_gantry_level\",\"selected\":false},{\"object\":\"bed_mesh\",\"selected\":false},{\"object\":\"neopixel disco\",\"selected\":false},{\"object\":\"exclude_object\",\"selected\":false},{\"object\":\"neopixel sb_leds\",\"selected\":false},{\"object\":\"gcode_macro _sb_vars\",\"selected\":false},{\"object\":\"gcode_macro _set_sb_leds\",\"selected\":false},{\"object\":\"gcode_macro _set_sb_leds_by_name\",\"selected\":false},{\"object\":\"gcode_macro _set_logo_leds\",\"selected\":false},{\"object\":\"gcode_macro _set_nozzle_leds\",\"selected\":false},{\"object\":\"gcode_macro set_logo_leds_off\",\"selected\":false},{\"object\":\"gcode_macro set_nozzle_leds_on\",\"selected\":false},{\"object\":\"gcode_macro set_nozzle_leds_off\",\"selected\":false},{\"object\":\"gcode_macro status_off\",\"selected\":false},{\"object\":\"gcode_macro status_ready\",\"selected\":false},{\"object\":\"gcode_macro status_busy\",\"selected\":false},{\"object\":\"gcode_macro status_heating\",\"selected\":false},{\"object\":\"gcode_macro status_leveling\",\"selected\":false},{\"object\":\"gcode_macro status_homing\",\"selected\":false},{\"object\":\"gcode_macro status_cleaning\",\"selected\":false},{\"object\":\"gcode_macro status_meshing\",\"selected\":false},{\"object\":\"gcode_macro status_calibrating_z\",\"selected\":false},{\"object\":\"gcode_macro status_printing\",\"selected\":false},{\"object\":\"gcode_macro _KNOMI_STATUS\",\"selected\":false},{\"object\":\"gcode_macro BED_MESH_CALIBRATE\",\"selected\":false},{\"object\":\"gcode_macro LINE_PURGE\",\"selected\":false},{\"object\":\"gcode_macro VORON_PURGE\",\"selected\":false},{\"object\":\"gcode_macro SMART_PARK\",\"selected\":false},{\"object\":\"gcode_macro _KAMP_Settings\",\"selected\":false},{\"object\":\"gcode_macro PRINT_START\",\"selected\":false},{\"object\":\"gcode_macro PRINT_END\",\"selected\":false},{\"object\":\"gcode_macro PARK\",\"selected\":false},{\"object\":\"gcode_macro G32\",\"selected\":false},{\"object\":\"gcode_macro PROBE_OFFSET_CALIBRATE\",\"selected\":false},{\"object\":\"gcode_macro PID_AUTOTUNE_EXTRUDER_210\",\"selected\":false},{\"object\":\"gcode_macro PID_AUTOTUNE_BED_60\",\"selected\":false},{\"object\":\"gcode_macro EXTRUDE_100\",\"selected\":false},{\"object\":\"gcode_macro CLEAN_NOZZLE\",\"selected\":false},{\"object\":\"gcode_macro _User_Variables\",\"selected\":false},{\"object\":\"gcode_macro _Probe_Variables\",\"selected\":false},{\"object\":\"gcode_macro _klicky_check_variables_version\",\"selected\":false},{\"object\":\"gcode_macro _KlickyDebug\",\"selected\":false},{\"object\":\"gcode_macro _exit_point\",\"selected\":false},{\"object\":\"gcode_macro _entry_point\",\"selected\":false},{\"object\":\"gcode_macro _Homing_Variables\",\"selected\":false},{\"object\":\"gcode_macro Attach_Probe_Lock\",\"selected\":false},{\"object\":\"gcode_macro Dock_Probe_Unlock\",\"selected\":false},{\"object\":\"gcode_macro _Probe_Unlock\",\"selected\":false},{\"object\":\"gcode_macro _Probe_Lock\",\"selected\":false},{\"object\":\"gcode_macro _DeployKlickyDock\",\"selected\":false},{\"object\":\"gcode_macro _RetractKlickyDock\",\"selected\":false},{\"object\":\"gcode_macro Attach_Probe\",\"selected\":false},{\"object\":\"gcode_macro Dock_Probe\",\"selected\":false},{\"object\":\"gcode_macro PROBE_CALIBRATE\",\"selected\":false},{\"object\":\"gcode_macro PROBE_ACCURACY\",\"selected\":false},{\"object\":\"gcode_macro _Umbilical_Path\",\"selected\":false},{\"object\":\"gcode_macro _Home_Z_\",\"selected\":false},{\"object\":\"gcode_macro _CheckProbe\",\"selected\":false},{\"object\":\"gcode_macro _SetProbeState\",\"selected\":false},{\"object\":\"gcode_macro _Park_Toolhead\",\"selected\":false},{\"object\":\"gcode_macro _klicky_status_ready\",\"selected\":false},{\"object\":\"gcode_macro _klicky_status_busy\",\"selected\":false},{\"object\":\"gcode_macro _klicky_status_leveling\",\"selected\":false},{\"object\":\"gcode_macro _klicky_status_homing\",\"selected\":false},{\"object\":\"gcode_macro _klicky_status_cleaning\",\"selected\":false},{\"object\":\"gcode_macro _klicky_status_meshing\",\"selected\":false},{\"object\":\"gcode_macro _klicky_status_calibrating_z\",\"selected\":false},{\"object\":\"gcode_macro QUAD_GANTRY_LEVEL\",\"selected\":false},{\"object\":\"gcode_macro GET_TIMELAPSE_SETUP\",\"selected\":false},{\"object\":\"gcode_macro _SET_TIMELAPSE_SETUP\",\"selected\":false},{\"object\":\"gcode_macro TIMELAPSE_TAKE_FRAME\",\"selected\":false},{\"object\":\"gcode_macro _TIMELAPSE_NEW_FRAME\",\"selected\":false},{\"object\":\"gcode_macro HYPERLAPSE\",\"selected\":false},{\"object\":\"gcode_macro TIMELAPSE_RENDER\",\"selected\":false},{\"object\":\"gcode_macro TEST_STREAM_DELAY\",\"selected\":false},{\"object\":\"motion_report\",\"selected\":false},{\"object\":\"query_endstops\",\"selected\":false},{\"object\":\"idle_timeout\",\"selected\":false},{\"object\":\"system_stats\",\"selected\":false},{\"object\":\"manual_probe\",\"selected\":false},{\"object\":\"toolhead\",\"selected\":false},{\"object\":\"extruder\",\"selected\":false}]}",
+        "x": 250,
+        "y": 1640,
+        "wires": [
+            [
+                "db1a66477a333850"
+            ],
+            [],
+            []
+        ]
     },
     {
         "id": "b671cce6d1ba84d2",
