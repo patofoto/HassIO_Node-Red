@@ -58,15 +58,6 @@
         "sunPositions": []
     },
     {
-        "id": "822f395fa7984149",
-        "type": "telegrambot-config",
-        "d": true,
-        "botname": "@patofoto_bot",
-        "usernames": "pato",
-        "chatIds": "1951007350",
-        "pollInterval": "300"
-    },
-    {
         "id": "347b0fac569fd9db",
         "type": "moonNode-connector",
         "server": "10.0.1.13:7125"
