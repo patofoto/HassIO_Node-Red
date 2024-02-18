@@ -1107,46 +1107,6 @@
         "wires": []
     },
     {
-        "id": "f9ef9092fe550a06",
-        "type": "trigger-state",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "server": "d877b97445ce290d",
-        "version": 4,
-        "inputs": 0,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entityId": "input_boolean.auto_shutdown",
-        "entityIdType": "exact",
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "bool",
-                "comparatorValue": "true"
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": false,
-        "stateType": "str",
-        "enableInput": false,
-        "x": 270,
-        "y": 1280,
-        "wires": [
-            [
-                "63691f16a74f6643",
-                "73f4cf159f0b3075"
-            ],
-            [
-                "fc300362cc224546"
-            ]
-        ]
-    },
-    {
         "id": "3c9a87aa20f68f32",
         "type": "switch",
         "z": "4093e1bc0be41abd",
@@ -1168,11 +1128,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 530,
-        "y": 1480,
+        "x": 550,
+        "y": 1280,
         "wires": [
-            [],
-            []
+            [
+                "63691f16a74f6643"
+            ],
+            [
+                "fc300362cc224546"
+            ]
         ]
     },
     {
