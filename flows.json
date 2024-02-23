@@ -91,6 +91,48 @@
         "enableGlobalContextStore": false
     },
     {
+        "id": "c4cb13b29f76e818",
+        "type": "ha-device-config",
+        "name": "Voron Auto Power Off",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "2328d9bf02ed9dc7",
+        "type": "ha-entity-config",
+        "server": "d877b97445ce290d",
+        "deviceConfig": "c4cb13b29f76e818",
+        "name": "Voron Auto Power Off",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Voron Auto Power Off"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": "switch"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
@@ -1138,6 +1180,75 @@
                 "fc300362cc224546"
             ]
         ]
+    },
+    {
+        "id": "aaa159b8320a06d2",
+        "type": "ha-switch",
+        "z": "4093e1bc0be41abd",
+        "name": "Voron Auto Power",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 2,
+        "entityConfig": "2328d9bf02ed9dc7",
+        "enableInput": false,
+        "outputOnStateChange": false,
+        "outputProperties": [
+            {
+                "property": "outputType",
+                "propertyType": "msg",
+                "value": "state change",
+                "valueType": "str"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 310,
+        "y": 1480,
+        "wires": [
+            [
+                "2690485fd8b191eb"
+            ],
+            [
+                "bf95d89b32670be4"
+            ]
+        ]
+    },
+    {
+        "id": "2690485fd8b191eb",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 48",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "bf95d89b32670be4",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 49",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1520,
+        "wires": []
     },
     {
         "id": "b671cce6d1ba84d2",
