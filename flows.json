@@ -1136,7 +1136,14 @@
         "timeoutUnits": "seconds",
         "checkCurrentState": true,
         "blockInputOverrides": true,
-        "outputProperties": [],
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
         "entityLocation": "data",
         "entityLocationType": "none",
         "x": 1040,
