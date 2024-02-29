@@ -100,39 +100,6 @@
         "swVersion": ""
     },
     {
-        "id": "2328d9bf02ed9dc7",
-        "type": "ha-entity-config",
-        "server": "d877b97445ce290d",
-        "deviceConfig": "c4cb13b29f76e818",
-        "name": "Voron Auto Power Off",
-        "version": "6",
-        "entityType": "switch",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Voron Auto Power Off"
-            },
-            {
-                "property": "icon",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": "switch"
-            }
-        ],
-        "resend": false,
-        "debugEnabled": false
-    },
-    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
