@@ -1117,6 +1117,34 @@
         ]
     },
     {
+        "id": "8c739273efbc421e",
+        "type": "ha-wait-until",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "server": "d877b97445ce290d",
+        "version": 2,
+        "outputs": 1,
+        "entityId": "input_boolean.auto_shutdown",
+        "entityIdFilterType": "exact",
+        "property": "",
+        "comparator": "is",
+        "value": "true",
+        "valueType": "bool",
+        "timeout": "0",
+        "timeoutType": "num",
+        "timeoutUnits": "seconds",
+        "checkCurrentState": true,
+        "blockInputOverrides": true,
+        "outputProperties": [],
+        "entityLocation": "data",
+        "entityLocationType": "none",
+        "x": 1120,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "b671cce6d1ba84d2",
         "type": "debug",
         "z": "b12c15a675080578",
