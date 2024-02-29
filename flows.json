@@ -492,8 +492,7 @@
         "wires": [
             [
                 "78b7bdf7ac2dc4ef",
-                "28a1627ecbb4cfb1",
-                "8c739273efbc421e"
+                "28a1627ecbb4cfb1"
             ],
             [
                 "6bb11160f1e86e60"
@@ -1114,43 +1113,6 @@
             ],
             [
                 "fc300362cc224546"
-            ]
-        ]
-    },
-    {
-        "id": "8c739273efbc421e",
-        "type": "ha-wait-until",
-        "z": "4093e1bc0be41abd",
-        "name": "",
-        "server": "d877b97445ce290d",
-        "version": 2,
-        "outputs": 1,
-        "entityId": "input_boolean.auto_shutdown",
-        "entityIdFilterType": "exact",
-        "property": "",
-        "comparator": "is",
-        "value": "true",
-        "valueType": "bool",
-        "timeout": "0",
-        "timeoutType": "num",
-        "timeoutUnits": "seconds",
-        "checkCurrentState": true,
-        "blockInputOverrides": true,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "ON",
-                "valueType": "str"
-            }
-        ],
-        "entityLocation": "data",
-        "entityLocationType": "none",
-        "x": 1040,
-        "y": 800,
-        "wires": [
-            [
-                "5e41ab864410b63a"
             ]
         ]
     },
