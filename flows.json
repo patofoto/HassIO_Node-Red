@@ -65,7 +65,7 @@
     {
         "id": "6f49639effa0204d",
         "type": "moonNode-connector",
-        "server": "10.0.10.45:7125"
+        "server": "10.0.1.44:7125"
     },
     {
         "id": "d877b97445ce290d",
