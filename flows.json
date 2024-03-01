@@ -91,15 +91,6 @@
         "enableGlobalContextStore": false
     },
     {
-        "id": "c4cb13b29f76e818",
-        "type": "ha-device-config",
-        "name": "Voron Auto Power Off",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
