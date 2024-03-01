@@ -472,7 +472,7 @@
         "z": "4093e1bc0be41abd",
         "name": "Ender3v2",
         "server": "347b0fac569fd9db",
-        "autoStart": true,
+        "autoStart": false,
         "mObjSel": [
             "print_stats",
             "display_status"
@@ -632,7 +632,7 @@
         "z": "4093e1bc0be41abd",
         "name": "Voron",
         "server": "6f49639effa0204d",
-        "autoStart": true,
+        "autoStart": false,
         "mObjSel": [
             "print_stats",
             "display_status"
