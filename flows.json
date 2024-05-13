@@ -1232,7 +1232,7 @@
         "updateIntervalUnits": "seconds",
         "outputInitially": false,
         "outputOnChanged": false,
-        "entityId": "sensor.server_closet_temperature",
+        "entityId": "sensor.server_temp_sensor_server_temperature",
         "ifState": "85",
         "ifStateType": "num",
         "ifStateOperator": "gte",
