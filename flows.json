@@ -1108,6 +1108,63 @@
         ]
     },
     {
+        "id": "4ca70188678080c8",
+        "type": "server-state-changed",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "server": "d877b97445ce290d",
+        "version": 5,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entityId": "input_boolean.auto_shutdown",
+        "entityIdType": "exact",
+        "outputInitially": false,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 350,
+        "y": 1580,
+        "wires": [
+            [
+                "f95e63380582f810"
+            ]
+        ]
+    },
+    {
+        "id": "f95e63380582f810",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 45",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1580,
+        "wires": []
+    },
+    {
         "id": "b671cce6d1ba84d2",
         "type": "debug",
         "z": "b12c15a675080578",
