@@ -1170,7 +1170,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.utility_closet_fan_socket"
+            "switch.utility_closet_fan_socket_1"
         ],
         "data": "",
         "dataType": "jsonata",
@@ -1201,7 +1201,7 @@
         "areaId": [],
         "deviceId": [],
         "entityId": [
-            "switch.utility_closet_fan_socket"
+            "switch.utility_closet_fan_socket_1"
         ],
         "data": "",
         "dataType": "jsonata",
