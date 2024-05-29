@@ -472,7 +472,7 @@
         "z": "4093e1bc0be41abd",
         "name": "Ender3v2",
         "server": "347b0fac569fd9db",
-        "autoStart": false,
+        "autoStart": true,
         "mObjSel": [
             "print_stats",
             "display_status"
