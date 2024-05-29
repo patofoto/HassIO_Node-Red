@@ -266,12 +266,12 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "true",
+                "v": "on",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "false",
+                "v": "off",
                 "vt": "str"
             }
         ],
@@ -1140,29 +1140,14 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 350,
-        "y": 1580,
+        "x": 270,
+        "y": 1180,
         "wires": [
             [
-                "f95e63380582f810"
+                "e05a6876b5c3d602",
+                "3c9a87aa20f68f32"
             ]
         ]
-    },
-    {
-        "id": "f95e63380582f810",
-        "type": "debug",
-        "z": "4093e1bc0be41abd",
-        "name": "debug 45",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 1580,
-        "wires": []
     },
     {
         "id": "b671cce6d1ba84d2",
