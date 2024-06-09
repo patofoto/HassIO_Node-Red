@@ -1312,6 +1312,43 @@
         ]
     },
     {
+        "id": "19821eef124f26a1",
+        "type": "mqtt in",
+        "z": "b12c15a675080578",
+        "name": "",
+        "topic": "server_closet/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 580,
+        "wires": [
+            [
+                "9b3aabfd5257b0c0"
+            ]
+        ]
+    },
+    {
+        "id": "9b3aabfd5257b0c0",
+        "type": "debug",
+        "z": "b12c15a675080578",
+        "name": "debug 45",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 580,
+        "wires": []
+    },
+    {
         "id": "f5591325b29aa478",
         "type": "debug",
         "z": "eda7241b54bb3bab",
