@@ -1162,8 +1162,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
-        "y": 380,
+        "x": 990,
+        "y": 680,
         "wires": []
     },
     {
@@ -1178,25 +1178,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "445c9dc62b48bc07",
-        "type": "debug",
-        "z": "b12c15a675080578",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 562.8571281433105,
-        "y": 287.14283180236816,
+        "x": 1030,
+        "y": 600,
         "wires": []
     },
     {
@@ -1222,8 +1205,8 @@
         "queue": "none",
         "service_domain": "switch",
         "mergecontext": "",
-        "x": 560,
-        "y": 380,
+        "x": 800,
+        "y": 680,
         "wires": [
             [
                 "b671cce6d1ba84d2"
@@ -1253,61 +1236,11 @@
         "queue": "none",
         "service_domain": "switch",
         "mergecontext": "",
-        "x": 560,
-        "y": 460,
+        "x": 780,
+        "y": 600,
         "wires": [
             [
                 "908954f71d858337"
-            ]
-        ]
-    },
-    {
-        "id": "b89cf62ecef9cc0e",
-        "type": "poll-state",
-        "z": "b12c15a675080578",
-        "name": "Temperature >=85",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "15",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.server_temp_sensor_server_temperature",
-        "ifState": "85",
-        "ifStateType": "num",
-        "ifStateOperator": "gte",
-        "outputs": 2,
-        "outputProperties": [],
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "updateinterval": "15",
-        "outputinitially": false,
-        "outputonchanged": false,
-        "entity_id": "sensor.server_closet_temperature_mqtt",
-        "state_type": "habool",
-        "halt_if": "85",
-        "halt_if_type": "num",
-        "halt_if_compare": "gte",
-        "x": 270,
-        "y": 420,
-        "wires": [
-            [
-                "445c9dc62b48bc07",
-                "54d452286393b91c"
-            ],
-            [
-                "60cac9800ae110ad"
             ]
         ]
     },
@@ -1325,10 +1258,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 230,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
-                "9b3aabfd5257b0c0"
+                "9b3aabfd5257b0c0",
+                "7f994415db1c9c1b"
             ]
         ]
     },
@@ -1337,16 +1271,49 @@
         "type": "debug",
         "z": "b12c15a675080578",
         "name": "debug 45",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 580,
+        "x": 540,
+        "y": 560,
         "wires": []
+    },
+    {
+        "id": "7f994415db1c9c1b",
+        "type": "switch",
+        "z": "b12c15a675080578",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "85",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "85",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 640,
+        "wires": [
+            [
+                "60cac9800ae110ad"
+            ],
+            [
+                "54d452286393b91c"
+            ]
+        ]
     },
     {
         "id": "f5591325b29aa478",
