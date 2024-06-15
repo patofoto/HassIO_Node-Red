@@ -1480,22 +1480,6 @@
         ]
     },
     {
-        "id": "2fce7d87d2c21016",
-        "type": "debug",
-        "z": "977950aa0bbb9b92",
-        "name": "debug 47",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 620,
-        "wires": []
-    },
-    {
         "id": "75d2a44de9a1fd14",
         "type": "poll-state",
         "z": "977950aa0bbb9b92",
@@ -1525,9 +1509,40 @@
         "x": 360,
         "y": 620,
         "wires": [
-            [
-                "2fce7d87d2c21016"
-            ]
+            []
+        ]
+    },
+    {
+        "id": "c46eaa547145d655",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 1",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_01_16_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 560,
+        "wires": [
+            []
         ]
     }
 ]
