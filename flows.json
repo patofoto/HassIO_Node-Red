@@ -2070,7 +2070,7 @@
         "updateIntervalUnits": "seconds",
         "outputInitially": false,
         "outputOnChanged": false,
-        "entityId": "sensor.suarez_vue_123_1mon",
+        "entityId": "sensor.suarez_vue_123_1min",
         "stateType": "str",
         "ifState": "",
         "ifStateType": "str",
