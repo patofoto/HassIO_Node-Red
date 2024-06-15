@@ -1672,7 +1672,337 @@
             }
         ],
         "x": 360,
-        "y": 660,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b462aab9f7e736f0",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 14",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_14_6_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f75bd869539e087",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 15",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_15_14_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9fc48246816019a",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 17",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_17_13_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c12368087d1f822a",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 19",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_19_12_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82d51c41944ec30b",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 20",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_20_7_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "084e4d896b928a44",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 21",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_21_11_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48e112f2e2ed3f0f",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 23",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_23_10_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "044d1c8f02f99c20",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 25",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_25_9_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59f30f8304d5fcb4",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 26",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_26_1_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d5b62be90e3c03b",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 28",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_28_8_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 860,
         "wires": [
             []
         ]
