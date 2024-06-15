@@ -1480,71 +1480,6 @@
         ]
     },
     {
-        "id": "e63349871bf3c29e",
-        "type": "api-current-state",
-        "z": "977950aa0bbb9b92",
-        "name": "",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "sensor.breaker_04_3_1min",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "override_topic": false,
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 600,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5f54a6e174a60d55",
-        "type": "inject",
-        "z": "977950aa0bbb9b92",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 290,
-        "y": 240,
-        "wires": [
-            [
-                "e63349871bf3c29e"
-            ]
-        ]
-    },
-    {
         "id": "2fce7d87d2c21016",
         "type": "debug",
         "z": "977950aa0bbb9b92",
@@ -1564,7 +1499,7 @@
         "id": "75d2a44de9a1fd14",
         "type": "poll-state",
         "z": "977950aa0bbb9b92",
-        "name": "",
+        "name": "Breaker 4",
         "server": "d877b97445ce290d",
         "version": 3,
         "exposeAsEntityConfig": "",
@@ -1587,7 +1522,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 450,
+        "x": 360,
         "y": 620,
         "wires": [
             [
