@@ -2088,7 +2088,6 @@
         "y": 1040,
         "wires": [
             [
-                "31631509a8b0c5b9",
                 "bb8d8fe35b15f7b4"
             ]
         ]
@@ -2105,8 +2104,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
-        "y": 1120,
+        "x": 1240,
+        "y": 1040,
         "wires": []
     },
     {
@@ -2125,7 +2124,9 @@
         "x": 740,
         "y": 1040,
         "wires": [
-            []
+            [
+                "62bb623752604af9"
+            ]
         ]
     },
     {
@@ -2140,8 +2141,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 790,
-        "y": 1120,
+        "x": 990,
+        "y": 1040,
         "wires": [
             [
                 "ee199f28bc4833cd"
@@ -2162,10 +2163,10 @@
         "decimals": "2",
         "decimals2": 0,
         "x": 530,
-        "y": 1120,
+        "y": 1040,
         "wires": [
             [
-                "62bb623752604af9"
+                "31631509a8b0c5b9"
             ]
         ]
     }
