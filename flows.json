@@ -2084,11 +2084,12 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 520,
+        "x": 320,
         "y": 1040,
         "wires": [
             [
-                "31631509a8b0c5b9"
+                "31631509a8b0c5b9",
+                "bb8d8fe35b15f7b4"
             ]
         ]
     },
@@ -2148,5 +2149,42 @@
                 "ee199f28bc4833cd"
             ]
         ]
+    },
+    {
+        "id": "bb8d8fe35b15f7b4",
+        "type": "calculator",
+        "z": "977950aa0bbb9b92",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "60",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 530,
+        "y": 1160,
+        "wires": [
+            [
+                "9e5c920fe43c7f9e"
+            ]
+        ]
+    },
+    {
+        "id": "9e5c920fe43c7f9e",
+        "type": "debug",
+        "z": "977950aa0bbb9b92",
+        "name": "debug 47",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1160,
+        "wires": []
     }
 ]
