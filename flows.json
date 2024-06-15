@@ -1509,7 +1509,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 370,
+        "x": 610,
         "y": 240,
         "wires": [
             [
@@ -1529,8 +1529,37 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 260,
+        "x": 900,
+        "y": 240,
         "wires": []
+    },
+    {
+        "id": "5f54a6e174a60d55",
+        "type": "inject",
+        "z": "977950aa0bbb9b92",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "e63349871bf3c29e"
+            ]
+        ]
     }
 ]
