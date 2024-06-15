@@ -2015,7 +2015,7 @@
         "server": "d877b97445ce290d",
         "version": 3,
         "exposeAsEntityConfig": "",
-        "updateInterval": "15",
+        "updateInterval": "5",
         "updateIntervalType": "num",
         "updateIntervalUnits": "seconds",
         "outputInitially": false,
