@@ -2125,9 +2125,7 @@
         "x": 740,
         "y": 1040,
         "wires": [
-            [
-                "62bb623752604af9"
-            ]
+            []
         ]
     },
     {
@@ -2159,15 +2157,16 @@
         "outputMsgField": "payload",
         "operation": "div",
         "constant": "60",
-        "round": false,
+        "round": true,
         "truncate": false,
-        "decimals": 0,
+        "decimals": "2",
         "decimals2": 0,
         "x": 530,
         "y": 1160,
         "wires": [
             [
-                "9e5c920fe43c7f9e"
+                "9e5c920fe43c7f9e",
+                "62bb623752604af9"
             ]
         ]
     },
@@ -2183,7 +2182,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
+        "x": 980,
         "y": 1160,
         "wires": []
     }
