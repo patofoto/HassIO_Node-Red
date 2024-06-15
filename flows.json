@@ -1545,47 +1545,6 @@
         ]
     },
     {
-        "id": "fb1b7e2323a03594",
-        "type": "server-state-changed",
-        "z": "977950aa0bbb9b92",
-        "name": "",
-        "server": "d877b97445ce290d",
-        "version": 5,
-        "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entityId": "sensor.breaker_04_3_1min",
-        "entityIdType": "exact",
-        "outputInitially": false,
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 420,
-        "y": 400,
-        "wires": [
-            [
-                "2fce7d87d2c21016"
-            ]
-        ]
-    },
-    {
         "id": "2fce7d87d2c21016",
         "type": "debug",
         "z": "977950aa0bbb9b92",
@@ -1597,8 +1556,43 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 400,
+        "x": 740,
+        "y": 620,
         "wires": []
+    },
+    {
+        "id": "75d2a44de9a1fd14",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_04_3_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "2fce7d87d2c21016"
+            ]
+        ]
     }
 ]
