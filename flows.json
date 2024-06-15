@@ -2098,15 +2098,15 @@
         "type": "debug",
         "z": "977950aa0bbb9b92",
         "name": "debug 46",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 1160,
+        "x": 1020,
+        "y": 1120,
         "wires": []
     },
     {
@@ -2140,8 +2140,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 990,
-        "y": 1160,
+        "x": 790,
+        "y": 1120,
         "wires": [
             [
                 "ee199f28bc4833cd"
@@ -2161,8 +2161,8 @@
         "truncate": false,
         "decimals": "2",
         "decimals2": 0,
-        "x": 550,
-        "y": 1160,
+        "x": 530,
+        "y": 1120,
         "wires": [
             [
                 "62bb623752604af9"
