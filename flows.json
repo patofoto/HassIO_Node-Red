@@ -99,6 +99,56 @@
         "enableGlobalContextStore": false
     },
     {
+        "id": "ea7de78034904e5d",
+        "type": "ha-device-config",
+        "name": "Current Electricity Cost",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "61835e7aa6d5a15e",
+        "type": "ha-entity-config",
+        "server": "d877b97445ce290d",
+        "deviceConfig": "ea7de78034904e5d",
+        "name": "Current Electricity Cost",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Current Electricity Cost"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": "monetary"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "USD"
+            },
+            {
+                "property": "state_class",
+                "value": "total_increasing"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
@@ -2054,7 +2104,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
+        "x": 1220,
         "y": 1040,
         "wires": []
     },
@@ -2072,6 +2122,26 @@
         "decimals": "2",
         "decimals2": 0,
         "x": 740,
+        "y": 1040,
+        "wires": [
+            [
+                "62bb623752604af9"
+            ]
+        ]
+    },
+    {
+        "id": "62bb623752604af9",
+        "type": "ha-sensor",
+        "z": "977950aa0bbb9b92",
+        "name": "Current Electricity Cost",
+        "entityConfig": "61835e7aa6d5a15e",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 990,
         "y": 1040,
         "wires": [
             [
