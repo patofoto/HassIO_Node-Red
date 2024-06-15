@@ -2006,5 +2006,38 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "d150040222a37eec",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 28",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "15",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.suarez_vue_123_1mon",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 500,
+        "y": 1100,
+        "wires": [
+            []
+        ]
     }
 ]
