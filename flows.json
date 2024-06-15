@@ -23,6 +23,14 @@
         "info": ""
     },
     {
+        "id": "977950aa0bbb9b92",
+        "type": "tab",
+        "label": "Breaker Box",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "bb00bcd9e2f502fd",
         "type": "mqtt-broker",
         "name": "MQTT Broker",
@@ -1470,5 +1478,59 @@
                 "32cfb961f06d7f0b"
             ]
         ]
+    },
+    {
+        "id": "e63349871bf3c29e",
+        "type": "api-current-state",
+        "z": "977950aa0bbb9b92",
+        "name": "",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.breaker_01_16_1min",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "fde4d350cfaaf39e"
+            ]
+        ]
+    },
+    {
+        "id": "fde4d350cfaaf39e",
+        "type": "debug",
+        "z": "977950aa0bbb9b92",
+        "name": "debug 46",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 260,
+        "wires": []
     }
 ]
