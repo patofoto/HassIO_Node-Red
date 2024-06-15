@@ -2098,15 +2098,15 @@
         "type": "debug",
         "z": "977950aa0bbb9b92",
         "name": "debug 46",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 1040,
+        "x": 1200,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2141,7 +2141,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 990,
-        "y": 1040,
+        "y": 1160,
         "wires": [
             [
                 "ee199f28bc4833cd"
@@ -2152,38 +2152,21 @@
         "id": "bb8d8fe35b15f7b4",
         "type": "calculator",
         "z": "977950aa0bbb9b92",
-        "name": "",
+        "name": "Watts to Kw",
         "inputMsgField": "payload",
         "outputMsgField": "payload",
         "operation": "div",
-        "constant": "60",
+        "constant": "1000",
         "round": true,
         "truncate": false,
         "decimals": "2",
         "decimals2": 0,
-        "x": 530,
+        "x": 550,
         "y": 1160,
         "wires": [
             [
-                "9e5c920fe43c7f9e",
                 "62bb623752604af9"
             ]
         ]
-    },
-    {
-        "id": "9e5c920fe43c7f9e",
-        "type": "debug",
-        "z": "977950aa0bbb9b92",
-        "name": "debug 47",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 1160,
-        "wires": []
     }
 ]
