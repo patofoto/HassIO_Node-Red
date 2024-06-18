@@ -1274,7 +1274,7 @@
         "y": 1620,
         "wires": [
             [
-                "b8ed2d1880704a54"
+                "735a498a219df345"
             ]
         ]
     },
@@ -1345,10 +1345,12 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1210,
+        "x": 650,
         "y": 1620,
         "wires": [
-            []
+            [
+                "b8ed2d1880704a54"
+            ]
         ]
     },
     {
