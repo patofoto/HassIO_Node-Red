@@ -1340,7 +1340,7 @@
         "name": "Livingroom Temp",
         "entityConfig": "69ae5e9d2637ba0d",
         "version": 0,
-        "state": "payload",
+        "state": "payload.tF",
         "stateType": "msg",
         "attributes": [],
         "inputOverride": "allow",
