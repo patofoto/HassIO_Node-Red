@@ -149,6 +149,56 @@
         "debugEnabled": false
     },
     {
+        "id": "991ab62fb329553c",
+        "type": "ha-device-config",
+        "name": "Livingroom Temp",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "69ae5e9d2637ba0d",
+        "type": "ha-entity-config",
+        "server": "d877b97445ce290d",
+        "deviceConfig": "991ab62fb329553c",
+        "name": "Livingroom Temp",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Livingroom Temp"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": "temperature"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "°F"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": true
+    },
+    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
@@ -1282,6 +1332,24 @@
         "x": 860,
         "y": 1760,
         "wires": []
+    },
+    {
+        "id": "735a498a219df345",
+        "type": "ha-sensor",
+        "z": "4093e1bc0be41abd",
+        "name": "Livingroom Temp",
+        "entityConfig": "69ae5e9d2637ba0d",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1210,
+        "y": 1620,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "b671cce6d1ba84d2",
