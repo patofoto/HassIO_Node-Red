@@ -1306,8 +1306,7 @@
         "y": 1620,
         "wires": [
             [
-                "b8ed2d1880704a54",
-                "041941cd76598e4b"
+                "b8ed2d1880704a54"
             ]
         ]
     },
@@ -1345,8 +1344,7 @@
         "y": 1760,
         "wires": [
             [
-                "fb2801cb6003e398",
-                "c8d9f90b0c8fc278"
+                "fb2801cb6003e398"
             ]
         ]
     },
@@ -1366,42 +1364,6 @@
         "x": 860,
         "y": 1760,
         "wires": []
-    },
-    {
-        "id": "041941cd76598e4b",
-        "type": "ha-sensor",
-        "z": "4093e1bc0be41abd",
-        "name": "Livingroom Temp",
-        "entityConfig": "66d895f9f33ff286",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 610,
-        "y": 1500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c8d9f90b0c8fc278",
-        "type": "ha-sensor",
-        "z": "4093e1bc0be41abd",
-        "name": "Livingroom Humidity",
-        "entityConfig": "72f888723d876266",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 620,
-        "y": 1680,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "b671cce6d1ba84d2",
