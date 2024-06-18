@@ -158,47 +158,6 @@
         "swVersion": ""
     },
     {
-        "id": "69ae5e9d2637ba0d",
-        "type": "ha-entity-config",
-        "server": "d877b97445ce290d",
-        "deviceConfig": "991ab62fb329553c",
-        "name": "Livingroom Temp",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Livingroom Temp"
-            },
-            {
-                "property": "icon",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": "temperature"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "°F"
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": false,
-        "debugEnabled": true
-    },
-    {
         "id": "82f8936be67d6762",
         "type": "ha-device-config",
         "name": "Livingroom Humidity",
@@ -206,47 +165,6 @@
         "manufacturer": "Node-RED",
         "model": "",
         "swVersion": ""
-    },
-    {
-        "id": "548d9ecf5b10f5a5",
-        "type": "ha-entity-config",
-        "server": "d877b97445ce290d",
-        "deviceConfig": "82f8936be67d6762",
-        "name": "Livingroom Humidity",
-        "version": "6",
-        "entityType": "sensor",
-        "haConfig": [
-            {
-                "property": "name",
-                "value": "Livingroom Humidity"
-            },
-            {
-                "property": "icon",
-                "value": ""
-            },
-            {
-                "property": "entity_picture",
-                "value": ""
-            },
-            {
-                "property": "entity_category",
-                "value": ""
-            },
-            {
-                "property": "device_class",
-                "value": "moisture"
-            },
-            {
-                "property": "unit_of_measurement",
-                "value": "%"
-            },
-            {
-                "property": "state_class",
-                "value": "measurement"
-            }
-        ],
-        "resend": false,
-        "debugEnabled": false
     },
     {
         "id": "96f9066197e5f75a",
