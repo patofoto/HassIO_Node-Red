@@ -1362,7 +1362,7 @@
         "y": 1760,
         "wires": [
             [
-                "fb2801cb6003e398"
+                "ce5a5a9863ea5d35"
             ]
         ]
     },
@@ -1415,10 +1415,12 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 700,
-        "y": 1840,
+        "x": 620,
+        "y": 1760,
         "wires": [
-            []
+            [
+                "fb2801cb6003e398"
+            ]
         ]
     },
     {
