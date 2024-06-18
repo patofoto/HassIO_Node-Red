@@ -1345,7 +1345,7 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 650,
+        "x": 630,
         "y": 1620,
         "wires": [
             [
