@@ -1306,7 +1306,7 @@
         "y": 1620,
         "wires": [
             [
-                "041941cd76598e4b"
+                "b8ed2d1880704a54"
             ]
         ]
     },
@@ -1344,7 +1344,7 @@
         "y": 1760,
         "wires": [
             [
-                "c8d9f90b0c8fc278"
+                "fb2801cb6003e398"
             ]
         ]
     },
@@ -1377,12 +1377,10 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 630,
-        "y": 1620,
+        "x": 610,
+        "y": 1500,
         "wires": [
-            [
-                "b8ed2d1880704a54"
-            ]
+            []
         ]
     },
     {
@@ -1398,11 +1396,9 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 620,
-        "y": 1760,
+        "y": 1680,
         "wires": [
-            [
-                "fb2801cb6003e398"
-            ]
+            []
         ]
     },
     {
