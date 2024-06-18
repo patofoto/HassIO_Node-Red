@@ -1208,6 +1208,43 @@
         ]
     },
     {
+        "id": "79706fa3c6c5640f",
+        "type": "mqtt in",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "shellyht/status/temperature:0",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 1620,
+        "wires": [
+            [
+                "b8ed2d1880704a54"
+            ]
+        ]
+    },
+    {
+        "id": "b8ed2d1880704a54",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 47",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1620,
+        "wires": []
+    },
+    {
         "id": "b671cce6d1ba84d2",
         "type": "debug",
         "z": "b12c15a675080578",
