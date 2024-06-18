@@ -199,6 +199,56 @@
         "debugEnabled": true
     },
     {
+        "id": "82f8936be67d6762",
+        "type": "ha-device-config",
+        "name": "Livingroom Humidity",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "548d9ecf5b10f5a5",
+        "type": "ha-entity-config",
+        "server": "d877b97445ce290d",
+        "deviceConfig": "82f8936be67d6762",
+        "name": "Livingroom Humidity",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Livingroom Humidity"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": "moisture"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "%"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
@@ -1351,6 +1401,24 @@
             [
                 "b8ed2d1880704a54"
             ]
+        ]
+    },
+    {
+        "id": "ce5a5a9863ea5d35",
+        "type": "ha-sensor",
+        "z": "4093e1bc0be41abd",
+        "name": "Livingroom Humidity",
+        "entityConfig": "548d9ecf5b10f5a5",
+        "version": 0,
+        "state": "payload.rh",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 700,
+        "y": 1840,
+        "wires": [
+            []
         ]
     },
     {
