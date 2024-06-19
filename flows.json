@@ -149,24 +149,6 @@
         "debugEnabled": false
     },
     {
-        "id": "991ab62fb329553c",
-        "type": "ha-device-config",
-        "name": "Livingroom Temp",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
-        "id": "82f8936be67d6762",
-        "type": "ha-device-config",
-        "name": "Livingroom Humidity",
-        "hwVersion": "",
-        "manufacturer": "Node-RED",
-        "model": "",
-        "swVersion": ""
-    },
-    {
         "id": "96f9066197e5f75a",
         "type": "mqtt in",
         "z": "4093e1bc0be41abd",
