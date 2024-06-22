@@ -2061,7 +2061,7 @@
         "id": "d150040222a37eec",
         "type": "poll-state",
         "z": "977950aa0bbb9b92",
-        "name": "Breaker 28",
+        "name": "Total",
         "server": "d877b97445ce290d",
         "version": 3,
         "exposeAsEntityConfig": "",
@@ -2084,7 +2084,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 318.57142639160156,
+        "x": 308.57142639160156,
         "y": 1067.1428565979004,
         "wires": [
             [
