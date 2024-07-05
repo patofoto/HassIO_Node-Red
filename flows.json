@@ -1309,7 +1309,7 @@
         "type": "debug",
         "z": "4093e1bc0be41abd",
         "name": "debug 49",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1319,6 +1319,44 @@
         "statusType": "auto",
         "x": 1000,
         "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "e1c579fd9b610a73",
+        "type": "mqtt in",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "espresense/devices/pato_s_apple_watch/kitchen",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 640,
+        "y": 1920,
+        "wires": [
+            [
+                "77143e1afa87465a"
+            ]
+        ]
+    },
+    {
+        "id": "77143e1afa87465a",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.distance",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 1920,
         "wires": []
     },
     {
