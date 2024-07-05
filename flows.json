@@ -1360,6 +1360,44 @@
         "wires": []
     },
     {
+        "id": "a61d89faee56f35c",
+        "type": "mqtt in",
+        "z": "4093e1bc0be41abd",
+        "name": "",
+        "topic": "espresense/devices/alexa_s_iphone_14/studio",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 640,
+        "y": 2100,
+        "wires": [
+            [
+                "765ff1ccf30a6dac"
+            ]
+        ]
+    },
+    {
+        "id": "765ff1ccf30a6dac",
+        "type": "debug",
+        "z": "4093e1bc0be41abd",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.distance",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 2100,
+        "wires": []
+    },
+    {
         "id": "b671cce6d1ba84d2",
         "type": "debug",
         "z": "b12c15a675080578",
