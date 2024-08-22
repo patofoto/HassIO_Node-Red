@@ -2,7 +2,7 @@
     {
         "id": "4093e1bc0be41abd",
         "type": "tab",
-        "label": "MQTT",
+        "label": "3D Printers Auto Shutdown",
         "disabled": false,
         "info": "",
         "env": []
