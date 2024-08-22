@@ -2209,7 +2209,7 @@
         "exposeAsEntityConfig": "",
         "entities": {
             "entity": [
-                "switch.studio_detections_person"
+                "binary_sensor.studio_person_detected"
             ],
             "substring": [],
             "regex": []
@@ -2230,7 +2230,7 @@
         "outputInitially": false,
         "stateType": "str",
         "enableInput": false,
-        "x": 450,
+        "x": 470,
         "y": 320,
         "wires": [
             [
