@@ -1006,7 +1006,7 @@
             "substring": [],
             "regex": []
         },
-        "outputInitially": false,
+        "outputInitially": true,
         "stateType": "str",
         "ifState": "",
         "ifStateType": "str",
