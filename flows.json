@@ -1965,7 +1965,7 @@
         "truncate": false,
         "decimals": "2",
         "decimals2": 0,
-        "x": 720,
+        "x": 620,
         "y": 1060,
         "wires": [
             [
@@ -1985,7 +1985,7 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 970,
+        "x": 950,
         "y": 1060,
         "wires": [
             [
@@ -2006,8 +2006,8 @@
         "truncate": false,
         "decimals": "2",
         "decimals2": 0,
-        "x": 510,
-        "y": 1120,
+        "x": 710,
+        "y": 1140,
         "wires": [
             []
         ]
