@@ -16,13 +16,6 @@
         "env": []
     },
     {
-        "id": "eda7241b54bb3bab",
-        "type": "tab",
-        "label": "Xbox Timer",
-        "disabled": true,
-        "info": ""
-    },
-    {
         "id": "977950aa0bbb9b92",
         "type": "tab",
         "label": "Breaker Box",
@@ -31,10 +24,17 @@
         "env": []
     },
     {
+        "id": "eda7241b54bb3bab",
+        "type": "tab",
+        "label": "Xbox Timer",
+        "disabled": true,
+        "info": ""
+    },
+    {
         "id": "2a4a08eaa2a1d9f2",
         "type": "tab",
         "label": "Motion Alerts Test",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -1052,7 +1052,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
+        "x": 1030,
         "y": 680,
         "wires": []
     },
@@ -1210,166 +1210,6 @@
             ],
             [
                 "54d452286393b91c"
-            ]
-        ]
-    },
-    {
-        "id": "f5591325b29aa478",
-        "type": "debug",
-        "z": "eda7241b54bb3bab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "elapsed.time",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 790,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "ec557a05a496946b",
-        "type": "inject",
-        "z": "eda7241b54bb3bab",
-        "name": "Status",
-        "props": [
-            {
-                "p": "command",
-                "v": "status",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 370,
-        "y": 340,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
-            ]
-        ],
-        "icon": "node-red-contrib-home-assistant-websocket/ha-current-state.svg"
-    },
-    {
-        "id": "68b0ab3e7edb9b7e",
-        "type": "inject",
-        "z": "eda7241b54bb3bab",
-        "name": "Reset",
-        "props": [
-            {
-                "p": "command",
-                "v": "reset",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 370,
-        "y": 400,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
-            ]
-        ],
-        "icon": "font-awesome/fa-times-circle"
-    },
-    {
-        "id": "62a125cfc757cc53",
-        "type": "change",
-        "z": "eda7241b54bb3bab",
-        "name": "Stop",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "command",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "stop",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 350,
-        "y": 220,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
-            ]
-        ]
-    },
-    {
-        "id": "32cfb961f06d7f0b",
-        "type": "hourglass",
-        "z": "eda7241b54bb3bab",
-        "name": "",
-        "persistId": "",
-        "humanizeLocale": "",
-        "x": 580,
-        "y": 140,
-        "wires": [
-            [
-                "f5591325b29aa478"
-            ]
-        ]
-    },
-    {
-        "id": "bf616e196635595b",
-        "type": "server-state-changed",
-        "z": "eda7241b54bb3bab",
-        "name": "Start",
-        "server": "d877b97445ce290d",
-        "version": 6,
-        "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entities": {
-            "entity": [],
-            "substring": [],
-            "regex": []
-        },
-        "outputInitially": false,
-        "ifState": "",
-        "ifStateType": "str",
-        "outputOnlyOnStateChange": false,
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "command",
-                "propertyType": "msg",
-                "value": "start",
-                "valueType": "str"
-            }
-        ],
-        "x": 130,
-        "y": 140,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
             ]
         ]
     },
@@ -2013,6 +1853,166 @@
         ]
     },
     {
+        "id": "f5591325b29aa478",
+        "type": "debug",
+        "z": "eda7241b54bb3bab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "elapsed.time",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ec557a05a496946b",
+        "type": "inject",
+        "z": "eda7241b54bb3bab",
+        "name": "Status",
+        "props": [
+            {
+                "p": "command",
+                "v": "status",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ]
+        ],
+        "icon": "node-red-contrib-home-assistant-websocket/ha-current-state.svg"
+    },
+    {
+        "id": "68b0ab3e7edb9b7e",
+        "type": "inject",
+        "z": "eda7241b54bb3bab",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "command",
+                "v": "reset",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ]
+        ],
+        "icon": "font-awesome/fa-times-circle"
+    },
+    {
+        "id": "62a125cfc757cc53",
+        "type": "change",
+        "z": "eda7241b54bb3bab",
+        "name": "Stop",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "command",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ]
+        ]
+    },
+    {
+        "id": "32cfb961f06d7f0b",
+        "type": "hourglass",
+        "z": "eda7241b54bb3bab",
+        "name": "",
+        "persistId": "",
+        "humanizeLocale": "",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "f5591325b29aa478"
+            ]
+        ]
+    },
+    {
+        "id": "bf616e196635595b",
+        "type": "server-state-changed",
+        "z": "eda7241b54bb3bab",
+        "name": "Start",
+        "server": "d877b97445ce290d",
+        "version": 6,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": false,
+        "ifState": "",
+        "ifStateType": "str",
+        "outputOnlyOnStateChange": false,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "command",
+                "propertyType": "msg",
+                "value": "start",
+                "valueType": "str"
+            }
+        ],
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ]
+        ]
+    },
+    {
         "id": "11960f1224eb83d9",
         "type": "trigger-state",
         "z": "2a4a08eaa2a1d9f2",
@@ -2061,7 +2061,7 @@
         "type": "debug",
         "z": "2a4a08eaa2a1d9f2",
         "name": "debug 47",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2077,7 +2077,7 @@
         "type": "debug",
         "z": "2a4a08eaa2a1d9f2",
         "name": "debug 48",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
