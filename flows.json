@@ -34,14 +34,11 @@
         "id": "c1dd0e9b777590b4",
         "type": "group",
         "z": "4093e1bc0be41abd",
+        "name": "Ender3 v2",
         "style": {
-            "stroke": "#2b2b2b",
-            "stroke-opacity": "1",
-            "fill": "#181818",
-            "fill-opacity": "0.5",
-            "label": true,
-            "label-position": "nw",
-            "color": "#cccccc"
+            "stroke": "#0070c0",
+            "fill": "#3f93cf",
+            "label": true
         },
         "nodes": [
             "aabda50bb7a9fdb8",
@@ -70,14 +67,11 @@
         "id": "13142860a7f4ebb8",
         "type": "group",
         "z": "4093e1bc0be41abd",
+        "name": "Voron 2.4",
         "style": {
-            "stroke": "#2b2b2b",
-            "stroke-opacity": "1",
-            "fill": "#181818",
-            "fill-opacity": "0.5",
+            "stroke": "#ff0000",
             "label": true,
-            "label-position": "nw",
-            "color": "#cccccc"
+            "fill": "#ff0000"
         },
         "nodes": [
             "9083bc1475d846cc",
