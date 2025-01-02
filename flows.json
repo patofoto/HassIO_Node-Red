@@ -31,14 +31,6 @@
         "info": ""
     },
     {
-        "id": "2a4a08eaa2a1d9f2",
-        "type": "tab",
-        "label": "Motion Alerts Test",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "bb00bcd9e2f502fd",
         "type": "mqtt-broker",
         "name": "MQTT Broker",
@@ -2011,81 +2003,5 @@
                 "32cfb961f06d7f0b"
             ]
         ]
-    },
-    {
-        "id": "11960f1224eb83d9",
-        "type": "trigger-state",
-        "z": "2a4a08eaa2a1d9f2",
-        "name": "",
-        "server": "d877b97445ce290d",
-        "version": 5,
-        "inputs": 0,
-        "outputs": 2,
-        "exposeAsEntityConfig": "",
-        "entities": {
-            "entity": [
-                "binary_sensor.studio_person_detected"
-            ],
-            "substring": [],
-            "regex": []
-        },
-        "debugEnabled": false,
-        "constraints": [
-            {
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": ""
-            }
-        ],
-        "customOutputs": [],
-        "outputInitially": false,
-        "stateType": "str",
-        "enableInput": false,
-        "x": 470,
-        "y": 320,
-        "wires": [
-            [
-                "c82721fb6b7aeae6"
-            ],
-            [
-                "05168bc9e6c7673e"
-            ]
-        ]
-    },
-    {
-        "id": "c82721fb6b7aeae6",
-        "type": "debug",
-        "z": "2a4a08eaa2a1d9f2",
-        "name": "debug 47",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 960,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "05168bc9e6c7673e",
-        "type": "debug",
-        "z": "2a4a08eaa2a1d9f2",
-        "name": "debug 48",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 960,
-        "y": 380,
-        "wires": []
     }
 ]
