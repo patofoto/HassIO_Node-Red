@@ -1142,7 +1142,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1030,
+        "x": 1070,
         "y": 680,
         "wires": []
     },
@@ -1158,7 +1158,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1030,
+        "x": 1070,
         "y": 600,
         "wires": []
     },
@@ -1189,7 +1189,7 @@
         "service": "turn_on",
         "service_domain": "switch",
         "mergecontext": "",
-        "x": 830,
+        "x": 840,
         "y": 680,
         "wires": [
             [
@@ -1224,7 +1224,7 @@
         "service": "turn_off",
         "service_domain": "switch",
         "mergecontext": "",
-        "x": 810,
+        "x": 840,
         "y": 600,
         "wires": [
             [
@@ -1245,7 +1245,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 260,
+        "x": 220,
         "y": 640,
         "wires": [
             [
@@ -1266,7 +1266,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
+        "x": 580,
         "y": 560,
         "wires": []
     },
