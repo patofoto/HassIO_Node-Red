@@ -215,6 +215,56 @@
         "debugEnabled": false
     },
     {
+        "id": "bb26e7c50150a983",
+        "type": "ha-device-config",
+        "name": "Server Closet Temp",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "d936a8f6a1d3d3f0",
+        "type": "ha-entity-config",
+        "server": "d877b97445ce290d",
+        "deviceConfig": "bb26e7c50150a983",
+        "name": "Server Closet Temp",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Server Closet Temp"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": "temperature"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "°F"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "aabda50bb7a9fdb8",
         "type": "debug",
         "z": "4093e1bc0be41abd",
@@ -1246,11 +1296,12 @@
         "rh": 0,
         "inputs": 0,
         "x": 220,
-        "y": 640,
+        "y": 600,
         "wires": [
             [
                 "9b3aabfd5257b0c0",
-                "7f994415db1c9c1b"
+                "7f994415db1c9c1b",
+                "2754f05e110c83d6"
             ]
         ]
     },
@@ -1302,6 +1353,42 @@
                 "54d452286393b91c"
             ]
         ]
+    },
+    {
+        "id": "2754f05e110c83d6",
+        "type": "ha-sensor",
+        "z": "b12c15a675080578",
+        "name": "Server Closet Temp",
+        "entityConfig": "d936a8f6a1d3d3f0",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "970e6b5202db1ea2"
+            ]
+        ]
+    },
+    {
+        "id": "970e6b5202db1ea2",
+        "type": "debug",
+        "z": "b12c15a675080578",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 480,
+        "wires": []
     },
     {
         "id": "75d2a44de9a1fd14",
