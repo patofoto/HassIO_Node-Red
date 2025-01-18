@@ -265,6 +265,56 @@
         "debugEnabled": false
     },
     {
+        "id": "0292df99e8b53f70",
+        "type": "ha-device-config",
+        "name": "Xbox Cabinet Temp",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "0d9230c7fb240faf",
+        "type": "ha-entity-config",
+        "server": "d877b97445ce290d",
+        "deviceConfig": "0292df99e8b53f70",
+        "name": "Xbox Cabinet Temp",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Xbos Cabinet Temp"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": "temperature"
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "°F"
+            },
+            {
+                "property": "state_class",
+                "value": "measurement"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
         "id": "aabda50bb7a9fdb8",
         "type": "debug",
         "z": "4093e1bc0be41abd",
@@ -1192,8 +1242,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
-        "y": 680,
+        "x": 1330,
+        "y": 200,
         "wires": []
     },
     {
@@ -1208,8 +1258,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
-        "y": 600,
+        "x": 1330,
+        "y": 120,
         "wires": []
     },
     {
@@ -1239,8 +1289,8 @@
         "service": "turn_on",
         "service_domain": "switch",
         "mergecontext": "",
-        "x": 840,
-        "y": 680,
+        "x": 1100,
+        "y": 200,
         "wires": [
             [
                 "b671cce6d1ba84d2"
@@ -1274,8 +1324,8 @@
         "service": "turn_off",
         "service_domain": "switch",
         "mergecontext": "",
-        "x": 840,
-        "y": 600,
+        "x": 1100,
+        "y": 120,
         "wires": [
             [
                 "908954f71d858337"
@@ -1326,8 +1376,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 570,
-        "y": 640,
+        "x": 830,
+        "y": 160,
         "wires": [
             [
                 "60cac9800ae110ad"
@@ -1371,6 +1421,63 @@
         "statusType": "auto",
         "x": 820,
         "y": 480,
+        "wires": []
+    },
+    {
+        "id": "0e7b7de846dfcc71",
+        "type": "mqtt in",
+        "z": "b12c15a675080578",
+        "name": "",
+        "topic": "xbox_sensor/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 620,
+        "wires": [
+            [
+                "25e86e853fa1e5c9"
+            ]
+        ]
+    },
+    {
+        "id": "25e86e853fa1e5c9",
+        "type": "ha-sensor",
+        "z": "b12c15a675080578",
+        "name": "Xbox Cabinet Temp",
+        "entityConfig": "0d9230c7fb240faf",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 610,
+        "y": 620,
+        "wires": [
+            [
+                "90bebfed90f1d7e3"
+            ]
+        ]
+    },
+    {
+        "id": "90bebfed90f1d7e3",
+        "type": "debug",
+        "z": "b12c15a675080578",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 620,
         "wires": []
     },
     {
