@@ -1282,7 +1282,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
+        "x": 860,
         "y": 480,
         "wires": []
     },
@@ -1300,7 +1300,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 350,
-        "y": 620,
+        "y": 560,
         "wires": [
             [
                 "25e86e853fa1e5c9"
@@ -1320,7 +1320,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 610,
-        "y": 620,
+        "y": 560,
         "wires": [
             [
                 "90bebfed90f1d7e3"
@@ -1340,7 +1340,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-        "y": 620,
+        "y": 560,
         "wires": []
     },
     {
