@@ -1299,27 +1299,10 @@
         "y": 600,
         "wires": [
             [
-                "9b3aabfd5257b0c0",
                 "7f994415db1c9c1b",
                 "2754f05e110c83d6"
             ]
         ]
-    },
-    {
-        "id": "9b3aabfd5257b0c0",
-        "type": "debug",
-        "z": "b12c15a675080578",
-        "name": "debug 45",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "7f994415db1c9c1b",
