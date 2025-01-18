@@ -1295,8 +1295,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 220,
-        "y": 600,
+        "x": 320,
+        "y": 480,
         "wires": [
             [
                 "2754f05e110c83d6"
@@ -1369,7 +1369,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
+        "x": 820,
         "y": 480,
         "wires": []
     },
