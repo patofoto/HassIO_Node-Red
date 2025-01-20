@@ -2171,8 +2171,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 360,
-        "y": 580,
+        "x": 362.85716247558594,
+        "y": 651.4285545349121,
         "wires": [
             [
                 "3df54d66abf37fb4"
@@ -2195,11 +2195,11 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 630,
-        "y": 580,
+        "x": 632.8571624755859,
+        "y": 651.4285545349121,
         "wires": [
             [
-                "68dec82cf1d1f8e6"
+                "d826b2d4d7fa5687"
             ]
         ]
     },
@@ -2215,27 +2215,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 580,
+        "x": 1142.857162475586,
+        "y": 651.4285545349121,
         "wires": []
-    },
-    {
-        "id": "68dec82cf1d1f8e6",
-        "type": "html",
-        "z": "7e444a4605ca8cc2",
-        "name": "",
-        "property": "payload",
-        "outproperty": "payload",
-        "tag": "",
-        "ret": "html",
-        "as": "single",
-        "chr": "_",
-        "x": 870,
-        "y": 580,
-        "wires": [
-            [
-                "d826b2d4d7fa5687"
-            ]
-        ]
     }
 ]
