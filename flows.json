@@ -2246,7 +2246,7 @@
         "name": "",
         "url": "https://www.eversource.com/cg/customer/supplier",
         "urlType": "str",
-        "keywords": "rate",
+        "keywords": "supplier",
         "showFound": true,
         "showNotFound": true,
         "x": 690,
