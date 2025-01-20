@@ -2226,11 +2226,11 @@
         "name": "",
         "property": "payload",
         "outproperty": "payload",
-        "tag": "td.standerdSupplierRate",
+        "tag": "td.standerdSupplierRate bold center",
         "ret": "html",
         "as": "single",
         "chr": "_",
-        "x": 850,
+        "x": 890,
         "y": 580,
         "wires": [
             [
