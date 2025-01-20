@@ -2175,7 +2175,8 @@
         "y": 640,
         "wires": [
             [
-                "3df54d66abf37fb4"
+                "3df54d66abf37fb4",
+                "ea0efa7d9f8afca8"
             ]
         ]
     },
@@ -2226,16 +2227,32 @@
         "name": "",
         "property": "payload",
         "outproperty": "payload",
-        "tag": "table.supplierDetails > div:nth-child(1) > div.marginRight > table",
+        "tag": "#supplierDetails > div:nth-child(1) > div.marginRight > table",
         "ret": "text",
         "as": "single",
         "chr": "_",
-        "x": 1150,
+        "x": 1140,
         "y": 640,
         "wires": [
             [
                 "d826b2d4d7fa5687"
             ]
+        ]
+    },
+    {
+        "id": "ea0efa7d9f8afca8",
+        "type": "text-analyzer",
+        "z": "7e444a4605ca8cc2",
+        "name": "",
+        "url": "https://www.eversource.com/cg/customer/supplier",
+        "urlType": "str",
+        "keywords": "rate",
+        "showFound": true,
+        "showNotFound": true,
+        "x": 690,
+        "y": 320,
+        "wires": [
+            []
         ]
     }
 ]
