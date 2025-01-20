@@ -2175,8 +2175,7 @@
         "y": 640,
         "wires": [
             [
-                "3df54d66abf37fb4",
-                "ea0efa7d9f8afca8"
+                "3df54d66abf37fb4"
             ]
         ]
     },
@@ -2227,50 +2226,16 @@
         "name": "",
         "property": "payload",
         "outproperty": "payload",
-        "tag": "#supplierDetails > div:nth-child(1) > div.marginRight > table",
+        "tag": "table.col-sm-12 col-md-12 table table-bordered table-striped marginTop",
         "ret": "text",
         "as": "single",
         "chr": "_",
-        "x": 1140,
+        "x": 1180,
         "y": 640,
         "wires": [
             [
                 "d826b2d4d7fa5687"
             ]
         ]
-    },
-    {
-        "id": "ea0efa7d9f8afca8",
-        "type": "text-analyzer",
-        "z": "7e444a4605ca8cc2",
-        "name": "",
-        "url": "https://www.eversource.com/cg/customer/supplier",
-        "urlType": "str",
-        "keywords": "supplier",
-        "showFound": true,
-        "showNotFound": true,
-        "x": 690,
-        "y": 320,
-        "wires": [
-            [
-                "670bb722d3dbcd78"
-            ]
-        ]
-    },
-    {
-        "id": "670bb722d3dbcd78",
-        "type": "debug",
-        "z": "7e444a4605ca8cc2",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 320,
-        "wires": []
     }
 ]
