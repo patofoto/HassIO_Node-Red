@@ -31,6 +31,14 @@
         "info": ""
     },
     {
+        "id": "7e444a4605ca8cc2",
+        "type": "tab",
+        "label": "Web Scraping",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c1dd0e9b777590b4",
         "type": "group",
         "z": "4093e1bc0be41abd",
@@ -2140,6 +2148,57 @@
             [
                 "32cfb961f06d7f0b"
             ]
+        ]
+    },
+    {
+        "id": "c68269fc22a8c7f9",
+        "type": "inject",
+        "z": "7e444a4605ca8cc2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 580,
+        "wires": [
+            [
+                "3df54d66abf37fb4"
+            ]
+        ]
+    },
+    {
+        "id": "3df54d66abf37fb4",
+        "type": "http request",
+        "z": "7e444a4605ca8cc2",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 580,
+        "wires": [
+            []
         ]
     }
 ]
