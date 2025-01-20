@@ -2226,11 +2226,11 @@
         "name": "",
         "property": "payload",
         "outproperty": "payload",
-        "tag": "table.col-sm-12 col-md-12 table table-bordered table-striped marginTop",
+        "tag": "#supplierDetails > div:nth-child(1) > div.marginRight > table > tbody > tr:nth-child(1) > td.standerdSupplierRate.bold.center",
         "ret": "text",
         "as": "single",
         "chr": "_",
-        "x": 1180,
+        "x": 1340,
         "y": 640,
         "wires": [
             [
