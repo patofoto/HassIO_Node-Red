@@ -2195,7 +2195,7 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 590,
+        "x": 630,
         "y": 580,
         "wires": [
             [
@@ -2226,11 +2226,11 @@
         "name": "",
         "property": "payload",
         "outproperty": "payload",
-        "tag": "#supplierDetails > div:nth-child(1) > div.marginRight > table",
+        "tag": "",
         "ret": "html",
         "as": "single",
         "chr": "_",
-        "x": 960,
+        "x": 870,
         "y": 580,
         "wires": [
             [
