@@ -2195,7 +2195,7 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 690,
+        "x": 750,
         "y": 640,
         "wires": [
             [
@@ -2215,7 +2215,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1480,
+        "x": 1580,
         "y": 640,
         "wires": []
     },
@@ -2227,10 +2227,10 @@
         "property": "payload",
         "outproperty": "payload",
         "tag": "class=\"col-sm-12 col-md-12 table table-bordered table-striped marginTop\"",
-        "ret": "html",
+        "ret": "text",
         "as": "single",
         "chr": "_",
-        "x": 1110,
+        "x": 1190,
         "y": 640,
         "wires": [
             [
