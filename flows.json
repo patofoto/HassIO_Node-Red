@@ -2187,7 +2187,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "",
+        "url": "https://www.eversource.com/cg/customer/supplier",
         "tls": "",
         "persist": false,
         "proxy": "",
