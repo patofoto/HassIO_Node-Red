@@ -1,13 +1,5 @@
 [
     {
-        "id": "4093e1bc0be41abd",
-        "type": "tab",
-        "label": "3D Printers Auto Shutdown",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "b12c15a675080578",
         "type": "tab",
         "label": "MQTT Server",
@@ -24,6 +16,14 @@
         "env": []
     },
     {
+        "id": "7e444a4605ca8cc2",
+        "type": "tab",
+        "label": "Web Scraping",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "eda7241b54bb3bab",
         "type": "tab",
         "label": "Xbox Timer",
@@ -31,10 +31,10 @@
         "info": ""
     },
     {
-        "id": "7e444a4605ca8cc2",
+        "id": "4093e1bc0be41abd",
         "type": "tab",
-        "label": "Web Scraping",
-        "disabled": false,
+        "label": "3D Printers Auto Shutdown",
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -321,6 +321,1007 @@
         ],
         "resend": false,
         "debugEnabled": false
+    },
+    {
+        "id": "19821eef124f26a1",
+        "type": "mqtt in",
+        "z": "b12c15a675080578",
+        "name": "",
+        "topic": "server_closet_sensor/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 480,
+        "wires": [
+            [
+                "2754f05e110c83d6"
+            ]
+        ]
+    },
+    {
+        "id": "2754f05e110c83d6",
+        "type": "ha-sensor",
+        "z": "b12c15a675080578",
+        "name": "Server Closet Temp",
+        "entityConfig": "d936a8f6a1d3d3f0",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "970e6b5202db1ea2"
+            ]
+        ]
+    },
+    {
+        "id": "970e6b5202db1ea2",
+        "type": "debug",
+        "z": "b12c15a675080578",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "0e7b7de846dfcc71",
+        "type": "mqtt in",
+        "z": "b12c15a675080578",
+        "name": "",
+        "topic": "xbox_sensor/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [
+                "25e86e853fa1e5c9"
+            ]
+        ]
+    },
+    {
+        "id": "25e86e853fa1e5c9",
+        "type": "ha-sensor",
+        "z": "b12c15a675080578",
+        "name": "Xbox Cabinet Temp",
+        "entityConfig": "0d9230c7fb240faf",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 610,
+        "y": 560,
+        "wires": [
+            [
+                "90bebfed90f1d7e3"
+            ]
+        ]
+    },
+    {
+        "id": "90bebfed90f1d7e3",
+        "type": "debug",
+        "z": "b12c15a675080578",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "75d2a44de9a1fd14",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 4",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_04_3_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c46eaa547145d655",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 1",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_01_16_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e826c9d92f9a2647",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 2",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_02_2_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b520d552322df1eb",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 8",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_08_4_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63f2609c933e5cb7",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 10",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_10_5_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c81f14cf3c17c0e",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 13",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_13_15_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b462aab9f7e736f0",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 14",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_14_6_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f75bd869539e087",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 15",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_15_14_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9fc48246816019a",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 17",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_17_13_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c12368087d1f822a",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 19",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_19_12_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82d51c41944ec30b",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 20",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_20_7_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "084e4d896b928a44",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 21",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_21_11_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48e112f2e2ed3f0f",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 23",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_23_10_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "044d1c8f02f99c20",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 25",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_25_9_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 360,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59f30f8304d5fcb4",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 26",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_26_1_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d5b62be90e3c03b",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Breaker 28",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.breaker_28_8_1min",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 700,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d150040222a37eec",
+        "type": "poll-state",
+        "z": "977950aa0bbb9b92",
+        "name": "Total",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "exposeAsEntityConfig": "",
+        "updateInterval": "5",
+        "updateIntervalType": "num",
+        "updateIntervalUnits": "seconds",
+        "outputInitially": false,
+        "outputOnChanged": false,
+        "entityId": "sensor.suarez_vue_123_1d",
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputs": 1,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 310,
+        "y": 1060,
+        "wires": [
+            [
+                "31631509a8b0c5b9"
+            ]
+        ]
+    },
+    {
+        "id": "ee199f28bc4833cd",
+        "type": "debug",
+        "z": "977950aa0bbb9b92",
+        "name": "debug 46",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "31631509a8b0c5b9",
+        "type": "calculator",
+        "z": "977950aa0bbb9b92",
+        "name": "Electricity Rate",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "0.8995",
+        "round": true,
+        "truncate": false,
+        "decimals": "2",
+        "decimals2": 0,
+        "x": 620,
+        "y": 1060,
+        "wires": [
+            [
+                "62bb623752604af9"
+            ]
+        ]
+    },
+    {
+        "id": "62bb623752604af9",
+        "type": "ha-sensor",
+        "z": "977950aa0bbb9b92",
+        "name": "Current Electricity Cost",
+        "entityConfig": "61835e7aa6d5a15e",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 950,
+        "y": 1060,
+        "wires": [
+            [
+                "ee199f28bc4833cd"
+            ]
+        ]
+    },
+    {
+        "id": "bb8d8fe35b15f7b4",
+        "type": "calculator",
+        "z": "977950aa0bbb9b92",
+        "name": "Watts to Kw",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "1000",
+        "round": true,
+        "truncate": false,
+        "decimals": "2",
+        "decimals2": 0,
+        "x": 710,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c68269fc22a8c7f9",
+        "type": "inject",
+        "z": "7e444a4605ca8cc2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 520,
+        "y": 640,
+        "wires": [
+            [
+                "3df54d66abf37fb4"
+            ]
+        ]
+    },
+    {
+        "id": "3df54d66abf37fb4",
+        "type": "http request",
+        "z": "7e444a4605ca8cc2",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.eversource.com/cg/customer/supplier",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 750,
+        "y": 640,
+        "wires": [
+            [
+                "7c4973233d3eadeb"
+            ]
+        ]
+    },
+    {
+        "id": "d826b2d4d7fa5687",
+        "type": "debug",
+        "z": "7e444a4605ca8cc2",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "7c4973233d3eadeb",
+        "type": "html",
+        "z": "7e444a4605ca8cc2",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "table.col-sm-12 col-md-12 table table-bordered table-striped marginTop",
+        "ret": "text",
+        "as": "single",
+        "chr": "_",
+        "x": 1180,
+        "y": 640,
+        "wires": [
+            [
+                "d826b2d4d7fa5687"
+            ]
+        ]
+    },
+    {
+        "id": "f5591325b29aa478",
+        "type": "debug",
+        "z": "eda7241b54bb3bab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "elapsed.time",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ec557a05a496946b",
+        "type": "inject",
+        "z": "eda7241b54bb3bab",
+        "name": "Status",
+        "props": [
+            {
+                "p": "command",
+                "v": "status",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ]
+        ],
+        "icon": "node-red-contrib-home-assistant-websocket/ha-current-state.svg"
+    },
+    {
+        "id": "68b0ab3e7edb9b7e",
+        "type": "inject",
+        "z": "eda7241b54bb3bab",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "command",
+                "v": "reset",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ]
+        ],
+        "icon": "font-awesome/fa-times-circle"
+    },
+    {
+        "id": "62a125cfc757cc53",
+        "type": "change",
+        "z": "eda7241b54bb3bab",
+        "name": "Stop",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "command",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ]
+        ]
+    },
+    {
+        "id": "32cfb961f06d7f0b",
+        "type": "hourglass",
+        "z": "eda7241b54bb3bab",
+        "name": "",
+        "persistId": "",
+        "humanizeLocale": "",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "f5591325b29aa478"
+            ]
+        ]
+    },
+    {
+        "id": "bf616e196635595b",
+        "type": "server-state-changed",
+        "z": "eda7241b54bb3bab",
+        "name": "Start",
+        "server": "d877b97445ce290d",
+        "version": 6,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": false,
+        "ifState": "",
+        "ifStateType": "str",
+        "outputOnlyOnStateChange": false,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "command",
+                "propertyType": "msg",
+                "value": "start",
+                "valueType": "str"
+            }
+        ],
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "32cfb961f06d7f0b"
+            ]
+        ]
     },
     {
         "id": "aabda50bb7a9fdb8",
@@ -1234,1007 +2235,6 @@
             [
                 "e05a6876b5c3d602",
                 "3c9a87aa20f68f32"
-            ]
-        ]
-    },
-    {
-        "id": "19821eef124f26a1",
-        "type": "mqtt in",
-        "z": "b12c15a675080578",
-        "name": "",
-        "topic": "server_closet_sensor/temperature",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "bb00bcd9e2f502fd",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 320,
-        "y": 480,
-        "wires": [
-            [
-                "2754f05e110c83d6"
-            ]
-        ]
-    },
-    {
-        "id": "2754f05e110c83d6",
-        "type": "ha-sensor",
-        "z": "b12c15a675080578",
-        "name": "Server Closet Temp",
-        "entityConfig": "d936a8f6a1d3d3f0",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 610,
-        "y": 480,
-        "wires": [
-            [
-                "970e6b5202db1ea2"
-            ]
-        ]
-    },
-    {
-        "id": "970e6b5202db1ea2",
-        "type": "debug",
-        "z": "b12c15a675080578",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "0e7b7de846dfcc71",
-        "type": "mqtt in",
-        "z": "b12c15a675080578",
-        "name": "",
-        "topic": "xbox_sensor/temperature",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "bb00bcd9e2f502fd",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 350,
-        "y": 560,
-        "wires": [
-            [
-                "25e86e853fa1e5c9"
-            ]
-        ]
-    },
-    {
-        "id": "25e86e853fa1e5c9",
-        "type": "ha-sensor",
-        "z": "b12c15a675080578",
-        "name": "Xbox Cabinet Temp",
-        "entityConfig": "0d9230c7fb240faf",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 610,
-        "y": 560,
-        "wires": [
-            [
-                "90bebfed90f1d7e3"
-            ]
-        ]
-    },
-    {
-        "id": "90bebfed90f1d7e3",
-        "type": "debug",
-        "z": "b12c15a675080578",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "75d2a44de9a1fd14",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 4",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_04_3_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 700,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c46eaa547145d655",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 1",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_01_16_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 360,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e826c9d92f9a2647",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 2",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_02_2_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 700,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b520d552322df1eb",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 8",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_08_4_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 700,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "63f2609c933e5cb7",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 10",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_10_5_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 700,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7c81f14cf3c17c0e",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 13",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_13_15_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 360,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b462aab9f7e736f0",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 14",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_14_6_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 700,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8f75bd869539e087",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 15",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_15_14_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 360,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a9fc48246816019a",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 17",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_17_13_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 360,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c12368087d1f822a",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 19",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_19_12_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 360,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "82d51c41944ec30b",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 20",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_20_7_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 700,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "084e4d896b928a44",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 21",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_21_11_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 360,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "48e112f2e2ed3f0f",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 23",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_23_10_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 360,
-        "y": 800,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "044d1c8f02f99c20",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 25",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_25_9_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 360,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "59f30f8304d5fcb4",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 26",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_26_1_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 700,
-        "y": 800,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3d5b62be90e3c03b",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Breaker 28",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.breaker_28_8_1min",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 700,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d150040222a37eec",
-        "type": "poll-state",
-        "z": "977950aa0bbb9b92",
-        "name": "Total",
-        "server": "d877b97445ce290d",
-        "version": 3,
-        "exposeAsEntityConfig": "",
-        "updateInterval": "5",
-        "updateIntervalType": "num",
-        "updateIntervalUnits": "seconds",
-        "outputInitially": false,
-        "outputOnChanged": false,
-        "entityId": "sensor.suarez_vue_123_1d",
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputs": 1,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            }
-        ],
-        "x": 310,
-        "y": 1060,
-        "wires": [
-            [
-                "31631509a8b0c5b9"
-            ]
-        ]
-    },
-    {
-        "id": "ee199f28bc4833cd",
-        "type": "debug",
-        "z": "977950aa0bbb9b92",
-        "name": "debug 46",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "31631509a8b0c5b9",
-        "type": "calculator",
-        "z": "977950aa0bbb9b92",
-        "name": "Electricity Rate",
-        "inputMsgField": "payload",
-        "outputMsgField": "payload",
-        "operation": "mult",
-        "constant": "0.8995",
-        "round": true,
-        "truncate": false,
-        "decimals": "2",
-        "decimals2": 0,
-        "x": 620,
-        "y": 1060,
-        "wires": [
-            [
-                "62bb623752604af9"
-            ]
-        ]
-    },
-    {
-        "id": "62bb623752604af9",
-        "type": "ha-sensor",
-        "z": "977950aa0bbb9b92",
-        "name": "Current Electricity Cost",
-        "entityConfig": "61835e7aa6d5a15e",
-        "version": 0,
-        "state": "payload",
-        "stateType": "msg",
-        "attributes": [],
-        "inputOverride": "allow",
-        "outputProperties": [],
-        "x": 950,
-        "y": 1060,
-        "wires": [
-            [
-                "ee199f28bc4833cd"
-            ]
-        ]
-    },
-    {
-        "id": "bb8d8fe35b15f7b4",
-        "type": "calculator",
-        "z": "977950aa0bbb9b92",
-        "name": "Watts to Kw",
-        "inputMsgField": "payload",
-        "outputMsgField": "payload",
-        "operation": "div",
-        "constant": "1000",
-        "round": true,
-        "truncate": false,
-        "decimals": "2",
-        "decimals2": 0,
-        "x": 710,
-        "y": 1140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f5591325b29aa478",
-        "type": "debug",
-        "z": "eda7241b54bb3bab",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "elapsed.time",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 790,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "ec557a05a496946b",
-        "type": "inject",
-        "z": "eda7241b54bb3bab",
-        "name": "Status",
-        "props": [
-            {
-                "p": "command",
-                "v": "status",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 370,
-        "y": 340,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
-            ]
-        ],
-        "icon": "node-red-contrib-home-assistant-websocket/ha-current-state.svg"
-    },
-    {
-        "id": "68b0ab3e7edb9b7e",
-        "type": "inject",
-        "z": "eda7241b54bb3bab",
-        "name": "Reset",
-        "props": [
-            {
-                "p": "command",
-                "v": "reset",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 370,
-        "y": 400,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
-            ]
-        ],
-        "icon": "font-awesome/fa-times-circle"
-    },
-    {
-        "id": "62a125cfc757cc53",
-        "type": "change",
-        "z": "eda7241b54bb3bab",
-        "name": "Stop",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "command",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "stop",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 350,
-        "y": 220,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
-            ]
-        ]
-    },
-    {
-        "id": "32cfb961f06d7f0b",
-        "type": "hourglass",
-        "z": "eda7241b54bb3bab",
-        "name": "",
-        "persistId": "",
-        "humanizeLocale": "",
-        "x": 580,
-        "y": 140,
-        "wires": [
-            [
-                "f5591325b29aa478"
-            ]
-        ]
-    },
-    {
-        "id": "bf616e196635595b",
-        "type": "server-state-changed",
-        "z": "eda7241b54bb3bab",
-        "name": "Start",
-        "server": "d877b97445ce290d",
-        "version": 6,
-        "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entities": {
-            "entity": [],
-            "substring": [],
-            "regex": []
-        },
-        "outputInitially": false,
-        "ifState": "",
-        "ifStateType": "str",
-        "outputOnlyOnStateChange": false,
-        "for": 0,
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "command",
-                "propertyType": "msg",
-                "value": "start",
-                "valueType": "str"
-            }
-        ],
-        "x": 130,
-        "y": 140,
-        "wires": [
-            [
-                "32cfb961f06d7f0b"
-            ]
-        ]
-    },
-    {
-        "id": "c68269fc22a8c7f9",
-        "type": "inject",
-        "z": "7e444a4605ca8cc2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 520,
-        "y": 640,
-        "wires": [
-            [
-                "3df54d66abf37fb4"
-            ]
-        ]
-    },
-    {
-        "id": "3df54d66abf37fb4",
-        "type": "http request",
-        "z": "7e444a4605ca8cc2",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://www.eversource.com/cg/customer/supplier",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "basic",
-        "senderr": false,
-        "headers": [],
-        "x": 750,
-        "y": 640,
-        "wires": [
-            [
-                "7c4973233d3eadeb"
-            ]
-        ]
-    },
-    {
-        "id": "d826b2d4d7fa5687",
-        "type": "debug",
-        "z": "7e444a4605ca8cc2",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1580,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "7c4973233d3eadeb",
-        "type": "html",
-        "z": "7e444a4605ca8cc2",
-        "name": "",
-        "property": "payload",
-        "outproperty": "payload",
-        "tag": "table.col-sm-12 col-md-12 table table-bordered table-striped marginTop",
-        "ret": "text",
-        "as": "single",
-        "chr": "_",
-        "x": 1180,
-        "y": 640,
-        "wires": [
-            [
-                "d826b2d4d7fa5687"
             ]
         ]
     }
