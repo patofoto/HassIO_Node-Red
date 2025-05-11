@@ -216,7 +216,7 @@
             },
             {
                 "property": "state_class",
-                "value": "total_increasing"
+                "value": "total"
             }
         ],
         "resend": false,
