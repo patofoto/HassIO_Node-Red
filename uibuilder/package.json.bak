@@ -1,9 +1,8 @@
 {
+  "version": "7.2.0",
   "name": "uib_root",
-  "version": "6.8.2",
   "description": "Root configuration and data folder for uibuilder",
   "scripts": {},
-  "dependencies": {},
   "homepage": "",
   "bugs": "",
   "author": "",
@@ -11,5 +10,10 @@
   "repository": "",
   "uibuilder": {
     "packages": {}
-  }
+  },
+  "path": "/config/projects/HassIO_Node-Red/uibuilder",
+  "devDependencies": {},
+  "peerDependencies": {},
+  "_id": "uib_root@7.2.0",
+  "dependencies": {}
 }
