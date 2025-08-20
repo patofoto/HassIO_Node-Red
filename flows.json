@@ -363,7 +363,7 @@
         "type": "mqtt in",
         "z": "b12c15a675080578",
         "name": "",
-        "topic": "voron_2.4_350_mqtt/klipper/state/print_stats/state",
+        "topic": "payload.value",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
@@ -371,7 +371,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 470,
+        "x": 350,
         "y": 280,
         "wires": [
             [
