@@ -388,12 +388,36 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
+        "x": 1100,
         "y": 280,
         "wires": []
+    },
+    {
+        "id": "c8ad6b4ca510f561",
+        "type": "switch",
+        "z": "b12c15a675080578",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1370,
+        "y": 540,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "75d2a44de9a1fd14",
