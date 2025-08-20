@@ -365,7 +365,7 @@
         "name": "",
         "topic": "voron_2.4_350_mqtt/klipper/state/print_stats/state",
         "qos": "2",
-        "datatype": "json",
+        "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
         "nl": false,
         "rap": true,
