@@ -359,6 +359,25 @@
         "wires": []
     },
     {
+        "id": "538cca9e0d03aad7",
+        "type": "mqtt in",
+        "z": "b12c15a675080578",
+        "name": "",
+        "topic": "voron_2.4_350_mqtt/klipper/state/print_stats",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 450,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "75d2a44de9a1fd14",
         "type": "poll-state",
         "z": "977950aa0bbb9b92",
