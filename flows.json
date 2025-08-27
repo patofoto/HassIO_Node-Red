@@ -414,7 +414,7 @@
         "type": "mqtt in",
         "z": "b12c15a675080578",
         "name": "",
-        "topic": "sensors/c1001/B43A458A5964/state",
+        "topic": "sensors/c1001/B43A458A5964/raw",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
