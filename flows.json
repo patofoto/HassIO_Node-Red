@@ -62,16 +62,6 @@
         "sunPositions": []
     },
     {
-        "id": "347b0fac569fd9db",
-        "type": "moonNode-connector",
-        "server": "10.0.10.157:7125"
-    },
-    {
-        "id": "6f49639effa0204d",
-        "type": "moonNode-connector",
-        "server": "10.0.1.44:7125"
-    },
-    {
         "id": "d877b97445ce290d",
         "type": "server",
         "name": "Home Assistant",
