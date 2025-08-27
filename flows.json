@@ -420,6 +420,25 @@
         ]
     },
     {
+        "id": "11d20940ccf28e50",
+        "type": "mqtt in",
+        "z": "b12c15a675080578",
+        "name": "",
+        "topic": "sensors/c1001/B43A458A5964/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb00bcd9e2f502fd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 440,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "75d2a44de9a1fd14",
         "type": "poll-state",
         "z": "977950aa0bbb9b92",
