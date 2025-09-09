@@ -414,7 +414,7 @@
         "type": "mqtt in",
         "z": "b12c15a675080578",
         "name": "",
-        "topic": "mmWave/studio/B43A458A5964/status",
+        "topic": "mmWave/studio/B43A458A5964/state",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
@@ -443,7 +443,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
+        "x": 820,
         "y": 160,
         "wires": []
     },
