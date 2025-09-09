@@ -414,7 +414,7 @@
         "type": "mqtt in",
         "z": "b12c15a675080578",
         "name": "",
-        "topic": "mmWave/studio/B43A458A5964/raw",
+        "topic": "mmWave/studio/B43A458A5964/status",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "bb00bcd9e2f502fd",
