@@ -1186,7 +1186,7 @@
         "z": "41a604722886c33c",
         "name": "",
         "topic": "device/Printer Serial/report",
-        "qos": "2",
+        "qos": "0",
         "datatype": "auto-detect",
         "broker": "a64aa9e328a0babd",
         "nl": false,
