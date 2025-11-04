@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "41a604722886c33c",
+        "type": "tab",
+        "label": "Bambu X1C",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "bb00bcd9e2f502fd",
         "type": "mqtt-broker",
         "name": "MQTT Broker",
