@@ -271,9 +271,9 @@
         "cert": "",
         "key": "",
         "ca": "",
-        "certname": "ca_cert.pem",
+        "certname": "",
         "keyname": "",
-        "caname": "",
+        "caname": "ca_cert.pem",
         "servername": "",
         "verifyservercert": true,
         "alpnprotocol": ""
