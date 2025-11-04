@@ -237,7 +237,7 @@
         "type": "mqtt-broker",
         "name": "Bambu X1C",
         "broker": "10.0.10.89",
-        "port": "8883",
+        "port": "1883",
         "clientid": "",
         "autoConnect": true,
         "usetls": false,
