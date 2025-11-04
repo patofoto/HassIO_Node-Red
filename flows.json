@@ -243,6 +243,37 @@
         "debugEnabled": false
     },
     {
+        "id": "a64aa9e328a0babd",
+        "type": "mqtt-broker",
+        "name": "Bambu X1C",
+        "broker": "10.0.10.89",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "19821eef124f26a1",
         "type": "mqtt in",
         "z": "b12c15a675080578",
@@ -1157,6 +1188,25 @@
             [
                 "d826b2d4d7fa5687"
             ]
+        ]
+    },
+    {
+        "id": "2730b808a9f3d7d1",
+        "type": "mqtt in",
+        "z": "41a604722886c33c",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a64aa9e328a0babd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 680,
+        "wires": [
+            []
         ]
     }
 ]
