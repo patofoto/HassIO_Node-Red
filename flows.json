@@ -60,16 +60,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "6c4b6868601ff61a",
-        "type": "chronos-config",
-        "name": "Greenwich, CT",
-        "latitudeType": "num",
-        "longitudeType": "num",
-        "timezone": "-5",
-        "timezoneType": "str",
-        "sunPositions": []
-    },
-    {
         "id": "d877b97445ce290d",
         "type": "server",
         "name": "Home Assistant",
