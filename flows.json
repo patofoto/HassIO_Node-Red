@@ -1195,7 +1195,7 @@
         "type": "mqtt in",
         "z": "41a604722886c33c",
         "name": "",
-        "topic": "",
+        "topic": "print",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "a64aa9e328a0babd",
