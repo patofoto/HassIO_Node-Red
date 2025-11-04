@@ -275,7 +275,7 @@
         "keyname": "",
         "caname": "",
         "servername": "",
-        "verifyservercert": true,
+        "verifyservercert": false,
         "alpnprotocol": ""
     },
     {
