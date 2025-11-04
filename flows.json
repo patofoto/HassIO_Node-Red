@@ -1184,6 +1184,7 @@
         "id": "2730b808a9f3d7d1",
         "type": "mqtt in",
         "z": "41a604722886c33c",
+        "d": true,
         "name": "",
         "topic": "#",
         "qos": "0",
