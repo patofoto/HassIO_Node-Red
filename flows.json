@@ -238,7 +238,7 @@
         "name": "Bambu X1C",
         "broker": "10.0.10.89",
         "port": "8883",
-        "tls": "f2436e08abdbfce3",
+        "tls": "52d0ce480ff25de6",
         "clientid": "",
         "autoConnect": true,
         "usetls": true,
@@ -265,7 +265,7 @@
         "sessionExpiry": ""
     },
     {
-        "id": "f2436e08abdbfce3",
+        "id": "52d0ce480ff25de6",
         "type": "tls-config",
         "name": "",
         "cert": "",
@@ -273,7 +273,7 @@
         "ca": "",
         "certname": "",
         "keyname": "",
-        "caname": "ca_cert.pem",
+        "caname": "",
         "servername": "",
         "verifyservercert": true,
         "alpnprotocol": ""
