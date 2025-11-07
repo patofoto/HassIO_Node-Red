@@ -26,7 +26,7 @@
     {
         "id": "41a604722886c33c",
         "type": "tab",
-        "label": "Bambu X1C",
+        "label": "Spoolman",
         "disabled": false,
         "info": "",
         "env": []
@@ -233,6 +233,20 @@
         "debugEnabled": false
     },
     {
+        "id": "52d0ce480ff25de6",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
         "id": "a64aa9e328a0babd",
         "type": "mqtt-broker",
         "name": "Bambu X1C",
@@ -263,20 +277,6 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
-    },
-    {
-        "id": "52d0ce480ff25de6",
-        "type": "tls-config",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "",
-        "keyname": "",
-        "caname": "",
-        "servername": "",
-        "verifyservercert": false,
-        "alpnprotocol": ""
     },
     {
         "id": "19821eef124f26a1",
