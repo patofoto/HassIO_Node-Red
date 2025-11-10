@@ -1232,5 +1232,47 @@
         "x": 720,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "81bb2afe2d33c60c",
+        "type": "api-current-state",
+        "z": "41a604722886c33c",
+        "name": "",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "",
+        "state_type": "str",
+        "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "string",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 420,
+        "y": 420,
+        "wires": [
+            []
+        ]
     }
 ]
