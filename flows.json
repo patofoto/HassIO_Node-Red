@@ -1200,7 +1200,7 @@
         "type": "mqtt in",
         "z": "41a604722886c33c",
         "name": "",
-        "topic": "device/00M09B451200742/report",
+        "topic": "device/0948AD561200160/report",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "a64aa9e328a0babd",
@@ -1208,7 +1208,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 700,
+        "x": 690,
         "y": 660,
         "wires": [
             [
