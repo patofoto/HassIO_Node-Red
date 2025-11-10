@@ -1244,7 +1244,7 @@
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "sensor.h2d_0948ad561200160_ams_1_tray_4.tag_uid",
+        "entity_id": "sensor.h2d_0948ad561200160_ams_1_tray_4",
         "state_type": "str",
         "blockInputOverrides": true,
         "outputProperties": [
@@ -1269,7 +1269,7 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 590,
+        "x": 560,
         "y": 420,
         "wires": [
             [
