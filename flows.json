@@ -249,8 +249,8 @@
     {
         "id": "a64aa9e328a0babd",
         "type": "mqtt-broker",
-        "name": "Bambu X1C",
-        "broker": "10.0.10.89",
+        "name": "Bambu H2D",
+        "broker": "10.0.10.64",
         "port": "8883",
         "tls": "52d0ce480ff25de6",
         "clientid": "",
