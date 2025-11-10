@@ -1232,5 +1232,34 @@
         "x": 720,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "b91228f33b598aca",
+        "type": "ha-get-entities",
+        "z": "41a604722886c33c",
+        "name": "",
+        "server": "d877b97445ce290d",
+        "version": 1,
+        "rules": [
+            {
+                "condition": "state_object",
+                "property": "entity_id",
+                "logic": "is",
+                "value": "",
+                "valueType": "str"
+            }
+        ],
+        "outputType": "array",
+        "outputEmptyResults": false,
+        "outputLocationType": "msg",
+        "outputLocation": "payload",
+        "outputResultsCount": 1,
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "c20751848b7bc7fa"
+            ]
+        ]
     }
 ]
