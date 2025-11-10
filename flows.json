@@ -1272,7 +1272,25 @@
         "x": 560,
         "y": 420,
         "wires": [
-            []
+            [
+                "dd847edb045fee3d"
+            ]
         ]
+    },
+    {
+        "id": "dd847edb045fee3d",
+        "type": "debug",
+        "z": "41a604722886c33c",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 420,
+        "wires": []
     }
 ]
