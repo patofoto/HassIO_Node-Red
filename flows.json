@@ -1290,8 +1290,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1400,
-        "y": 420,
+        "x": 1080,
+        "y": 620,
         "wires": []
     },
     {
@@ -1319,7 +1319,8 @@
         "y": 420,
         "wires": [
             [
-                "81bb2afe2d33c60c"
+                "81bb2afe2d33c60c",
+                "f111e2b5848b1dfd"
             ]
         ]
     },
@@ -1359,10 +1360,28 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 580,
-        "y": 360,
+        "x": 600,
+        "y": 540,
         "wires": [
-            []
+            [
+                "746e3dac4cfe8735"
+            ]
         ]
+    },
+    {
+        "id": "746e3dac4cfe8735",
+        "type": "debug",
+        "z": "41a604722886c33c",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 540,
+        "wires": []
     }
 ]
