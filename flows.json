@@ -1269,8 +1269,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 560,
-        "y": 420,
+        "x": 600,
+        "y": 620,
         "wires": [
             [
                 "dd847edb045fee3d"
@@ -1290,7 +1290,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
+        "x": 1400,
         "y": 420,
         "wires": []
     },
@@ -1321,6 +1321,48 @@
             [
                 "81bb2afe2d33c60c"
             ]
+        ]
+    },
+    {
+        "id": "f111e2b5848b1dfd",
+        "type": "api-current-state",
+        "z": "41a604722886c33c",
+        "name": "",
+        "server": "d877b97445ce290d",
+        "version": 3,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "sensor.h2d_0948ad561200160_ams_1_tray_3",
+        "state_type": "str",
+        "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "string",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 580,
+        "y": 360,
+        "wires": [
+            []
         ]
     }
 ]
